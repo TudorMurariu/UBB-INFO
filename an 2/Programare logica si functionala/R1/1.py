@@ -5,7 +5,7 @@ l2 = [8,9,8]
 # substituie(l1 l2 .. ln, x, new_l1..n) = { [] , l = [] }
 #                                      { new_l1..n + substituie(l2 l3 .. ln, x, new_l1..n) , l1 == x si l != [] }
 #                                      { substituie(l2 l3 .. ln, x, new_l1..n) l1 != x si l != [] }
-#
+# 
 
 def substituie(l, x, l_new):
     if l == [] :
