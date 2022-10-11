@@ -1,29 +1,44 @@
 package model;
 
-import Utils.Constants;
+import utils.Constants;
 
 import java.time.LocalDateTime;
 
-public class MessageTask extends Task{
-    private String message;
+public class MessageTask extends Task {
+    private String mesaj;
     private String from;
     private String to;
+
     private LocalDateTime date;
 
-    public MessageTask(String taskId, String description, String message, String from, String to, LocalDateTime date) {
+    @Override
+    public void execute() {
+        System.out.println(toString());
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                " " + mesaj +
+                " " + from +
+                " " + to +
+                " " + date.format(Constants.DATE_TIME_FORMATTER);
+    }
+
+    public MessageTask(String taskId, String description, String mesaj, String from, String to, LocalDateTime date) {
         super(taskId, description);
-        this.message = message;
+        this.mesaj = mesaj;
         this.from = from;
         this.to = to;
         this.date = date;
     }
 
-    public String getMessage() {
-        return message;
+    public String getMesaj() {
+        return mesaj;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setMesaj(String mesaj) {
+        this.mesaj = mesaj;
     }
 
     public String getFrom() {
@@ -48,19 +63,5 @@ public class MessageTask extends Task{
 
     public void setDate(LocalDateTime date) {
         this.date = date;
-    }
-
-    @Override
-    public void execute() {
-        System.out.println(toString());
-    }
-
-    @Override
-    public String toString() {
-        return super.toString() +
-                " " + this.message +
-                " " + this.from +
-                " " + this.to +
-                date.format(Constants.DATE_TIME_FORMATTER);
     }
 }

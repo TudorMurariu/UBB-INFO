@@ -1,9 +1,11 @@
 package model;
+
 import java.util.Objects;
 
-public abstract class Task {
+public class Task {
     private String taskId;
     private String description;
+
 
     public Task(String taskId, String description) {
         this.taskId = taskId;
@@ -26,25 +28,31 @@ public abstract class Task {
         this.description = description;
     }
 
-    public abstract void execute();
+    public void execute() {
 
-    public String toString() {
-        return taskId + " " + this.description;
     }
 
     @Override
-    public boolean equals(Object o) {
-        if(this == o)
+    public String toString(){
+        return taskId+" " + description;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this==obj) {
             return true;
-        else if(!(o instanceof Task))
-            return  false;
-        Task task = (Task) o;
-        return getTaskId().equals(task.getTaskId())
-                && getDescription().equals(task.getDescription());
+        }
+        if(!(obj instanceof Task))
+            return false;
+
+        Task task = (Task)obj;
+
+        return Objects.equals(getTaskId(), task.getTaskId()) &&
+                Objects.equals(getDescription(), task.getDescription());
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode(){
         return Objects.hash(getTaskId(), getDescription());
     }
 }
