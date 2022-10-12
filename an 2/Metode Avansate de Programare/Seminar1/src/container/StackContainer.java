@@ -11,7 +11,7 @@ public class StackContainer extends ContainerSuperclass {
     }
 
     @Override
-    public Task remove() throws Exception {
+    public Task remove() {
         if(!isEmpty()) {
             size--;
             return tasks[size];

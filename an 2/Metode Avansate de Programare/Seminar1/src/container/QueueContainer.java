@@ -12,9 +12,9 @@ public class QueueContainer extends ContainerSuperclass {
         inc = 0;
     }
     @Override
-    public Task remove() throws Exception {
+    public Task remove() {
         if(inc >= size)
-            throw new Exception("List empty");
+            return null;
 
         return tasks[inc--];
     }

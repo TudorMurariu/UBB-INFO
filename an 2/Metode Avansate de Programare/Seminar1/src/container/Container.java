@@ -3,7 +3,7 @@ package container;
 import model.Task;
 
 public interface Container {
-    Task remove() throws Exception;
+    Task remove();
     void add(Task task);
     int size();
     boolean isEmpty();
