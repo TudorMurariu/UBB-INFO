@@ -5,7 +5,7 @@ import model.Task;
 import static utils.Constants.INITIAL_STACK_SIZE;
 
 public class StackContainer implements Container {
-    private  Task[] tasks;
+    private Task[] tasks;
     private int size;
 
     public StackContainer() {
@@ -40,6 +40,6 @@ public class StackContainer implements Container {
 
     @Override
     public boolean isEmpty() {
-        return size==0;
+        return size == 0;
     }
 }
