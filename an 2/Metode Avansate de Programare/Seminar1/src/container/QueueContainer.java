@@ -4,32 +4,33 @@ import model.Task;
 
 import java.util.LinkedList;
 
-public class QueueContainer implements Container {
+public class QueueContainer extends ContainerSuperclass {
 
-    private LinkedList<Task> tasks;
-    private int size;
-
+    private int inc;
     public QueueContainer() {
-        size = 0;
-        tasks = new LinkedList<>();
+        super();
+        inc = 0;
     }
     @Override
-    public Task remove() {
-        return tasks.remove();
+    public Task remove() throws Exception {
+        if(inc >= size)
+            throw new Exception("List empty");
+
+        return tasks[inc--];
     }
 
     @Override
     public void add(Task task) {
-        tasks.add(task);
+        tasks[size++] = task;
     }
 
     @Override
     public int size() {
-        return size;
+        return size - inc;
     }
 
     @Override
     public boolean isEmpty() {
-        return tasks.isEmpty();
+        return size == inc;
     }
 }

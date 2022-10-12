@@ -4,17 +4,14 @@ import model.Task;
 
 import static utils.Constants.INITIAL_STACK_SIZE;
 
-public class StackContainer implements Container {
-    private Task[] tasks;
-    private int size;
+public class StackContainer extends ContainerSuperclass {
 
     public StackContainer() {
-        size = 0;
-        tasks = new Task[INITIAL_STACK_SIZE];
+        super();
     }
 
     @Override
-    public Task remove() {
+    public Task remove() throws Exception {
         if(!isEmpty()) {
             size--;
             return tasks[size];
