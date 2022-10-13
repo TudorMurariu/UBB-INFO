@@ -16,7 +16,7 @@ public class QueueContainer extends ContainerSuperclass {
         if(inc >= size)
             return null;
 
-        return tasks[inc--];
+        return tasks[inc++];
     }
 
     @Override

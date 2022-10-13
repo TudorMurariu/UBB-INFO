@@ -2,6 +2,7 @@ package run;
 
 import container.Strategy;
 import model.MessageTask;
+import runner.DelayTaskRunner;
 import runner.PrinterTaskRunner;
 import runner.StrategyTaskRunner;
 
@@ -31,8 +32,9 @@ public class TestRunner {
         runner.addTask(messages[2]);
         runner.executeAll();*/
 
-        StrategyTaskRunner runner = new StrategyTaskRunner(Strategy.LIFO);
-        PrinterTaskRunner printer = new PrinterTaskRunner(runner);
+        StrategyTaskRunner runner = new StrategyTaskRunner(Strategy.FIFO);
+        DelayTaskRunner printer = new DelayTaskRunner(runner);
+        //PrinterTaskRunner printer = new PrinterTaskRunner(runner);
 
         MessageTask[] messages = getMessages();
         printer.addTask(messages[0]);
