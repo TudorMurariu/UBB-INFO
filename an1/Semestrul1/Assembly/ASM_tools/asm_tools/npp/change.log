@@ -1,0 +1,26 @@
+Notepad++ 7.5.1 new featurs/enhancements & bug-fixes:
+
+1.  Fix some excluded language cannot be remembered bug.
+2.  Fix a localization regression bug.
+3.  Fix the bug that Notepad++ create "%APPDATA%\local\notepad++" folder in local conf mode.
+4.  Add Visual Prolog language support.
+5.  Add auto-completion support for batch file (*.bat).
+6.  Enhance Function List for PHP and JavaScript.
+7.  Enhance Shortcut Mapper by adding category column.
+8.  Make double click work for language menu disabling/enabling in preferences dialog.
+9.  Make double click work to improve file extension movement in Preferences dialog.
+10. Fix bug: language menu item is restored back on the wrong zone.
+11. Add a spiritual quote.
+
+
+
+Included plugins:
+
+1.  NppExport v0.2.8 (32-bit x86 only)
+2.  Converter 4.2.1
+3.  Mime Tool 2.1
+
+
+Updater (Installer only):
+
+* WinGup v4.1

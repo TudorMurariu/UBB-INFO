@@ -1,0 +1,78 @@
+New features in v1.6:
+
+* No symbol or segment/section limit
+* Fixed bug in PE output IMPORT section with imports from multiple DLLs
+* Faster symbol lookup
+* Default file extension added to output name
+* Support for response files, with comments
+* Better support for COFF libraries
+* Fixed bug when searching LIB paths, which ignored last path on list
+* Added paging to info screen, and updated text of it
+* Better case-sensitivity / case-insensitivity handling with libraries
+* Added support for symbol alias OMF records
+
+New features in v1.5b:
+
+* Fixed bug in COM/EXE output formats whereby offsets into segments that were less than paragraph aligned (byte, word aligned etc.) were incorrect if segment did not end up paragraph aligned. 
+
+New features in v1.5a:
+
+* Fixed bug with LIDATA records in OMF object files which always treated them as uninitialised data. 
+
+New features in v1.5:
+
+* Added support for win32 COFF files 
+* Strips debug sections 
+* Added command-line setting of entry point 
+* Doesn't pad segments where unnecessary
+
+New features in v1.4:
+
+* Added support for resource files 
+* Added option to set subsystem/os version for PE output 
+* Added code to set time/date stamps for PE output 
+* Added POSIX subsystem option for PE output 
+* Native subsystem is known not to work, due to lack of checksum. 
+* Added support for COMDEF and BAKPAT OMF records to support MSVC 1.5 
+
+New features in v1.3:
+
+* Added support for default libraries specified in object files 
+* Added library search path support 
+* Added native mode PE support 
+* Fixed some bugs in PE exports 
+
+New features in v1.2:
+
+* Fixed 'disappearing data' bug when combining segments 
+* Fixed bug in fixup relocations when combining segments 
+* Fixed Import table bug (PE format) 
+* Fixed bug with groups from multiple object files
+
+New features in v1.1:
+
+* Fixed bug in PE output, which prevented files being loaded at addresses other than the image base 
+* Added support for user-specified stub files to PE output option 
+
+New features in v1.0:
+
+* Now generates PE files for Win32. 
+* Can generate DLLs. 
+* Win32 import library provided. 
+* Lots of Win32 options command-line configurable. 
+* Fixed bug with self-relative fixups. 
+* Fixed bug with empty groups. 
+
+New features in v0.02:
+
+* Now handles LIB files. 
+* Handles Imports/Exports. (But not supported by output formats!) 
+* Generates MAP file. 
+
+Version 0.01 features:
+
+* Handles OBJ files. 
+* Generates COM files. 
+* Generates EXE files. 
+* Command line switch to choose whether to emit data for uninitialised segments. 
+* Case sensitivity supported. 

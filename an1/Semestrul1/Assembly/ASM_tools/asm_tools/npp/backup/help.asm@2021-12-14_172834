@@ -1,0 +1,65 @@
+bits 32 ; assembling for the 32 bits architecture
+
+; declare the EntryPoint (a label defining the very first instruction of the program)
+global start        
+
+; declare external functions needed by our program
+extern exit, printf ; tell nasm that exit exists even if we won't be defining it
+import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+                          ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+import printf msvcrt.dll
+; our data is declared here (the variables needed by our program)
+segment data use32 class=data
+    ; ...
+    text db "22 3 5 200 77 700",10,0
+    linie_noua db 10,0
+    format db "%d",0
+    x dw 0fffdh
+; our code starts here
+segment code use32 class=code
+    start:
+        ; ...
+        mov esi , [esp + 4]
+        mov edi , [esp + 12]
+        
+        repeta:
+            LODSB ; al = [esi] , esi++
+            ; Verificam daca in al avem o cifra:
+            cmp al , '0'
+                jge and1
+                jmp continue
+            and1:
+            cmp al , '9'
+            jg continue
+                ; daca avem in al o cifra atunci o adaugam in SirIesire1
+                STOSB ; edi = al , edi++
+                
+            continue:
+            cmp al , 0
+            je outside
+        jmp repeta
+        outside:
+        
+        mov esi , [esp + 8]
+        
+        repeta2:
+            LODSB ; al = [esi] , esi++
+            ; Verificam daca in al avem o cifra:
+            cmp al , '0'
+                jge and2
+                jmp continue2
+            and2:
+            cmp al , '9'
+            jg continue2
+            ; daca avem in al o cifra atunci o adaugam in SirIesire1
+            STOSB ; edi = al , edi++
+            continue2:
+            cmp al , 0
+            je outside2
+        jmp repeta2
+        outside2: 
+        
+        
+        ; exit(0)
+        push    dword 0      ; push the parameter for exit onto the stack
+        call    [exit]       ; call exit to terminate the program

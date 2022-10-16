@@ -1,0 +1,161 @@
+%ifndef _TEMPLATE_MAC_
+%define _TEMPLATE_MAC_
+
+;===========================================================================================================;
+; NAME              PARAMETERS              DETAILS                                                         ;
+;===========================================================================================================;
+; PROG              any, used for           PROG exemplu: starts a 32 bits code segment, solves some        ;
+; PROGRAM           documentation only      external functions (imports) and defines the entry point        ;
+;___________________________________________________________________________________________________________;
+; ENDPROG           none or some "press any ENDPROG "apasa": optional macro for exiting a PROG-based program;
+; ENDPROGRAM        key " string(s)         will ask for a key press (if a message is given)                ;
+;                                           and exit with return code = SUCCESS                             ;
+;___________________________________________________________________________________________________________;
+; VARS              any, used for           VARS: switch to a data segment; can be used before and/or after ;
+; VARIABLES         documentation only      the PROG block                                                  ;
+;___________________________________________________________________________________________________________;
+; newline           none                    str: db "ok.", nl: emit 13 and 10 control codes                 ; 
+; nl                                        (carriage return and line feed), usually inside a string, to    ;
+;                                           advance the cursor to the beginning of a new line               ;
+;___________________________________________________________________________________________________________;
+; zstring/ZSTRING   at least one            txt: zstring "text terminat in zero": generate a null-terminated;
+; stringz/STRINGZ                           (C-like) string                                                 ;
+;___________________________________________________________________________________________________________;
+; PRINT             at least one            PRINT "Mesaj": switch to 'data' segment, emit the parameters    ;
+;                                           linked to a local label, switch back to original segment, call  ;
+;                                           printf and free the stack. Automatically preserves all registers;
+;___________________________________________________________________________________________________________;
+; PRINTLN           at least one            PRINTLN "Mesaj": appends a newline to the arguments and calls   ;
+; PRINTNL                                   PRINT (see above...)                                            ;
+;___________________________________________________________________________________________________________;
+; WAITKEY           one optional            will print a message (if given) and wait for a key being pressed;
+;___________________________________________________________________________________________________________;
+; DBGBREAK          none                    inserts a one-byte debug-break                                  ;
+;___________________________________________________________________________________________________________;
+
+
+;;
+;; Start a basic program by calling this macro
+;;
+%macro PROG 0-*
+    %xdefine PROGRAM_NAME %1            ; will simply remember the first parameter (in case one is given...)
+
+    ;
+    ; BEGIN a 32-bits PROGRAM
+    ;
+    bits 32
+    ; declare the EntryPoint (a label defining the very first instruction of the program)
+    global start        
+
+    ; tell nasm what symbols to accept (they do exist) even if we won't be defining them here
+    extern ExitProcess, printf, _getch
+
+    import ExitProcess kernel32.dll     ; google "ExitProcess msdn" => "Ends the calling process and all its threads." DLL: Kernel32.dll
+    import printf msvcrt.dll            ; msvcrt.dll contains printf and all the other important C-runtime specific functions
+    import _getch msvcrt.dll
+
+    ; our code starts here, switch to a segment named 'code' and declare the 'start' label
+    segment code public use32 class=code
+    segment code                        ; avoid attributes redeclaration warnings: let __SECT__ capture this definition without attributes
+        start:
+%endmacro
+%define PROGRAM PROG                    ; create an alias for PROG
+
+
+;;
+;; Waits for a key press and cleanly exits the program
+;;
+%macro ENDPROG 0-1+
+    %if %0 > 0
+        WAITKEY %1
+    %endif
+
+    push 0
+    call [ExitProcess]
+%endmacro
+
+%define ENDPROGRAM ENDPROG              ; create an alias for PROG
+
+
+;;
+;; Will simply switch to the data segment
+;;
+%macro VARS 0-*
+%ifndef _TPL_DATA_SEGMENT_DEFINED_
+    ; make sure we only specify the public/use32/class=code attributes once
+    ; this way we avoid some unnecessary warnings
+    segment data public use32 class=code
+    segment data                        ; avoid warning, let __SECT__ know this definition without attributes
+    %define _TPL_DATA_SEGMENT_DEFINED_
+%else
+    ; otherwise, we only need to give its name as the attributes are already known
+    segment data
+%endif
+%endmacro
+
+%define VARIABLES VARS                  ; create an alias for PROG
+%define ENDVARS                         ; placeholder for doing stuff after var declarations
+%define ENDVARIABLES ENDVARS            ; alias
+
+
+;;
+;; Give symbolic names to carriage return and line feed codes
+;;
+%idefine newline    13, 10
+%idefine nl         newline
+
+
+;;
+;; Safely (no altered registers) and easily print a text
+;;
+%macro PRINT 1+
+    ; switch to data segment to emit the string(s)
+    %ifndef _TPL_DATA_SEGMENT_DEFINED_
+        ; make sure we only specify the public/use32/class=code attributes once
+        ; this way we avoid some unnecessary warnings
+        [segment data public use32 class=code]
+        %define _TPL_DATA_SEGMENT_DEFINED_
+    %else
+        ; otherwise, we only need to give its name as the attributes are already known
+        [segment data]
+    %endif
+
+    %%str: db %1, 0
+    __SECT__
+    pusha
+    push dword %%str
+    call [printf]
+    add esp, 4
+    popa
+%endmacro
+
+;;
+;; Same as PRINT but automatically append a nl
+;;
+%macro PRINTLN 1+
+    PRINT %1, nl
+%endmacro
+%define PRINTNL PRINTLN
+
+;;
+;; Wait for a key press without altering registers
+;;
+%macro WAITKEY 0-1+
+    %if %0 > 0
+        PRINT %1
+    %endif
+    pusha
+    call [_getch]
+    popa
+%endmacro
+
+;;
+;; Trigger the debugger right at this instruction
+;;
+%macro DBGBREAK 0
+    db 0xcc ; int 3, but this way we know it's the short encoding (there are two ways to encode it)
+%endmacro
+
+
+%endif ; %ifndef _TEMPLATE_MAC_
+

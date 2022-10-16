@@ -1,0 +1,12 @@
+#include "windows.h"
+
+AboutDlg DIALOG 10, 20, 170, 70
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Generic Win32 GUI Application"
+FONT 10, "Arial"
+BEGIN
+    DEFPUSHBUTTON   "&Ok", IDOK, 60, 50, 40, 15
+    CTEXT           "Sample GUI Application for NASM/ALINK", 101, 10, 10, 150, 8
+    CTEXT           "A native Win32 executable", 102, 10, 20, 150, 8
+END
+

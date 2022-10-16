@@ -1,0 +1,5 @@
+Sa se controleze o lista de filme.
+ Un film are urmatoarele proprietati : ID , titlu , descriere , numar_stele
+ pe langa adaugare , stergere si cautare mai trebuie sa exitse si o functionalitate de rapoarte:
+	-raport1 : sorteaza lista de filme dupa stele in mod descrescator
+	-raport2 afiseaza primele 3 filme cu cele mai multe stele daca exista 
