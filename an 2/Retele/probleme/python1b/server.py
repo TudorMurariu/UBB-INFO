@@ -5,8 +5,11 @@
 #	python client.py
 import socket
 
-TCP_IP = "127.0.0.1"
-TCP_PORT = 8888
+TCP_IP = str(socket.gethostbyname(socket.gethostname()))#"127.0.0.1"
+TCP_PORT = socket.htons(8888)
+
+#print "nume: ", socket.gethostname()
+#print "IP: ", socket.gethostbyname(socket.gethostname())
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((TCP_IP, TCP_PORT))
@@ -17,7 +20,8 @@ while 1:
 	print 'Connection address:', addr
 	data = conn.recv(10)
 	print "Am primit de la client", data
-	if not data: break
+	if not data: 
+		break
 	print "Am trimis la client", 2*int(data)
 	conn.send(str(2*int(data)))  # echo
 conn.close()

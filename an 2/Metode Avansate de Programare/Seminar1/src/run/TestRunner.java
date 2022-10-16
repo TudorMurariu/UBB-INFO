@@ -24,7 +24,7 @@ public class TestRunner {
         };
     }
 
-    public static void run() {
+    public static void run(Strategy strategy) {
         /*StrategyTaskRunner runner = new StrategyTaskRunner(Strategy.LIFO);
         MessageTask[] messages = getMessages();
         runner.addTask(messages[0]);
@@ -32,7 +32,7 @@ public class TestRunner {
         runner.addTask(messages[2]);
         runner.executeAll();*/
 
-        StrategyTaskRunner runner = new StrategyTaskRunner(Strategy.FIFO);
+        StrategyTaskRunner runner = new StrategyTaskRunner(strategy);
         DelayTaskRunner printer = new DelayTaskRunner(runner);
         //PrinterTaskRunner printer = new PrinterTaskRunner(runner);
 

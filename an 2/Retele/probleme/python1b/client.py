@@ -5,8 +5,11 @@
 #	python client.py
 import socket
 
-TCP_IP = "127.0.0.1"
-TCP_PORT = 8888
+#print "nume: ", socket.gethostname()
+#print "IP: ", socket.gethostbyname(socket.gethostname())
+
+TCP_IP = str(socket.gethostbyname(socket.gethostname()))#"127.0.0.1"
+TCP_PORT = socket.htons(8888)
 MESSAGE = str(input("Dati un numar: "))
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

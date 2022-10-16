@@ -6,6 +6,7 @@ import runner.StrategyTaskRunner;
 
 public class Main {
     public static void main(String[] args) {
-        TestRunner.run();
+        Strategy strategy = Strategy.valueOf(args[0]);
+        TestRunner.run(strategy);
     }
 }
