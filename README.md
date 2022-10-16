@@ -1,2 +1,2 @@
 # UBB-INFO
-All CS projects I did at ubb
+All projects from university.
