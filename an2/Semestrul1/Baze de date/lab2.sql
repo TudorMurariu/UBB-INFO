@@ -72,10 +72,12 @@ Id_Adresa INT FOREIGN KEY REFERENCES Adresa(Id_Adresa),
 --Id_Card INT FOREIGN KEY REFERENCES Card_(Id_Card)
 );
 
+--Drop table Card_Actual
+
 CREATE TABLE Card_Actual(
 Id_Client INT FOREIGN KEY REFERENCES Client(Id_Client),
 Id_Card INT FOREIGN KEY REFERENCES Card_(Id_Card),
---CONSTRAINT pk_card_actual PRIMARY KEY (Id_Client, Id_Card)
+CONSTRAINT pk_card_actual PRIMARY KEY (Id_Client, Id_Card)
 );
 
 CREATE TABLE Restaurant(

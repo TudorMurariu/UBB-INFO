@@ -2,9 +2,11 @@ package run;
 
 import container.Strategy;
 import model.MessageTask;
+import model.SortingTask;
 import runner.DelayTaskRunner;
 import runner.PrinterTaskRunner;
 import runner.StrategyTaskRunner;
+import sortStuff.SortingStrategy;
 
 import java.time.LocalDateTime;
 
@@ -24,7 +26,23 @@ public class TestRunner {
         };
     }
 
-    public static void run(Strategy strategy) {
+    public static void run(Strategy strategy, SortingStrategy sortingStrategy) {
+
+        int[] arr = {1,5,7,9,0,3,3,2};
+        SortingTask sortingTask = new SortingTask("12343", "Task1", arr, sortingStrategy);
+
+        System.out.println("Array initial");
+        for(int x : sortingTask.array)
+            System.out.print(x + " ");
+        System.out.println();
+
+        sortingTask.sort();
+
+        System.out.println("Array sortat");
+        for(int x : sortingTask.array)
+            System.out.print(x + " ");
+        System.out.println();
+
         /*StrategyTaskRunner runner = new StrategyTaskRunner(Strategy.LIFO);
         MessageTask[] messages = getMessages();
         runner.addTask(messages[0]);

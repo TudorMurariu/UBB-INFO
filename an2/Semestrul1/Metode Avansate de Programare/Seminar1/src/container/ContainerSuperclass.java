@@ -13,4 +13,22 @@ public abstract class ContainerSuperclass implements Container {
         size = 0;
         tasks = new Task[INITIAL_STACK_SIZE];
     }
+
+    @Override
+    public Task remove() {
+        if(size == 0)
+            return null;
+
+        return tasks[--size];
+    }
+
+    @Override
+    public int size() {
+        return size;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return size == 0;
+    }
 }

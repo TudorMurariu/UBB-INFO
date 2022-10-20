@@ -35,16 +35,16 @@ int main(){
   addr_size = sizeof serverStorage;
   while(1)
   {
-  newSocket = accept(welcomeSocket, (struct sockaddr *) &serverStorage, &addr_size);
-  
-  printf("Waiting for clients...\n");
+    newSocket = accept(welcomeSocket, (struct sockaddr *) &serverStorage, &addr_size);
+    
+    printf("Waiting for clients...\n");
 
-  recv(newSocket, &nr, sizeof(int), 0);						/* Read the message from the server into the buffer */
+    recv(newSocket, &nr, sizeof(int), 0);						/* Read the message from the server into the buffer */
 
-  printf("Data received: %d\n",nr);   					/* Print the received message */
-  rez=2*nr;
-  printf("Trimit %d\n",rez);
-  send(newSocket,&rez,sizeof(int),0);
+    printf("Data received: %d\n",nr);   					/* Print the received message */
+    rez=2*nr;
+    printf("Trimit %d\n",rez);
+    send(newSocket,&rez,sizeof(int),0);
   }
   close(newSocket);
   close(welcomeSocket);
