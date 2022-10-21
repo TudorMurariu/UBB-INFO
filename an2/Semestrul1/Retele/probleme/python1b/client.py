@@ -8,13 +8,17 @@ import socket
 #print "nume: ", socket.gethostname()
 #print "IP: ", socket.gethostbyname(socket.gethostname())
 
-TCP_IP = str(socket.gethostbyname(socket.gethostname()))#"127.0.0.1"
-TCP_PORT = socket.htons(8888)
-MESSAGE = str(input("Dati un numar: "))
+TCP_IP = "192.168.0.73" #str(socket.gethostbyname(socket.gethostname()))#"127.0.0.1"
+TCP_PORT = 8081
+FORMAT = "utf-8"
+
+a = str(raw_input("Dati un numar: "))
+b = str(raw_input("Dati un numar: "))
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((TCP_IP, TCP_PORT))
-s.send(MESSAGE)
+s.send(a)
+s.send(b)
 print "Am trimis la server: ",MESSAGE
 data = s.recv(10)
 s.close()
