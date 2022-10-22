@@ -1,0 +1,35 @@
+
+Exercitii (fisier de date: angajati.txt) 
+-----------------------------------------------------------------------------------------------------
+
+1. Afisati toate liniile care contin sirul 'Tudor'.  X
+
+2. Afisati toti angajatii care au numele 'Tudor'. X
+
+3. Afisati toate liniile care contin sirul '1942'. X
+
+4. Afisati toti angajatii al caror salariul este 1942. X
+
+5. Afisati toti angajatii al caror nume de familie incepe cu litera A. X
+
+6. Afisati toti angajatii al caror numar de telefon incepe cu 0741. X
+
+7. Afisati toti angajatii nascuti in luna martie. X
+
+8. Afisati toti angajatii care locuiesc in Floresti. X
+
+9. Afisati toti angajatii care nu locuiesc in Floresti. X
+
+10. Afisati toti angajatii care nu locuiesc in Floresti sau in Cluj-Napoca. X
+
+11. Afisati toate liniile care contin o majuscula urmata de 4 litere mici, un spatiu si o majuscula. X
+
+12. Afisati toate localitatile de domiciliu care incep cu litera F sau S. X
+
+13. Afisati toate salariile care au 5 cifre. X
+
+14. Afisati doar primul salariu care are 5 cifre. X
+
+15. Afisati toate salariile care au 5 cifre si 2 linii inainte/dupa. -----------------
+
+16. Afisati numarul de angajati care locuiesc in Cluj-Napoca. X
