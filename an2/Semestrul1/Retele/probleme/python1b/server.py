@@ -6,7 +6,7 @@
 import socket
 
 TCP_IP = str(socket.gethostbyname(socket.gethostname()))#"127.0.0.1"
-TCP_PORT = socket.htons(8888)
+TCP_PORT = socket.htons(8082)
 
 #print "nume: ", socket.gethostname()
 #print "IP: ", socket.gethostbyname(socket.gethostname())
