@@ -1,6 +1,6 @@
 /*
 % elimina(l1..ln, poz){ [], n = 0}
-                      { [l1 + elimina(l2..ln,X-1)], poz != 1 }
+                      { l1 + elimina(l2..ln,X-1), poz != 1 }
                       { l2..ln, poz == 1}
 
 
@@ -23,7 +23,7 @@ elimina([1, 2, 3, 4, 5, 6],4,R).
 R = [1, 2, 3, 5, 6]
 */
 
-elimina([], _, R):- R = [].
+elimina([], _, R):- R = [].   %sau elimina([], _, []).
 
 elimina([H|T], N, R):- N \= 1,
                        N1 is N - 1,
