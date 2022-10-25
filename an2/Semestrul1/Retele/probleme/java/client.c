@@ -29,7 +29,7 @@ int main(){
   memset(&serverAddr, 0, sizeof(serverAddr));
   serverAddr.sin_family = AF_INET;					
   serverAddr.sin_port = htons(7072);				
-  serverAddr.sin_addr.s_addr = inet_addr("192.168.0.73");
+  serverAddr.sin_addr.s_addr = inet_addr("172.25.14.227");
    
   if(connect(clientSocket, (struct sockaddr *) &serverAddr, sizeof serverAddr) < 0) {
     printf("Eroare la conectarea la server\n");
@@ -42,15 +42,15 @@ int main(){
   scanf("%d",&b);
   printf("Trimit la server %d %d\n",a, b); 
 
-  a = htons(a);
-  b = htons(b);
+  a = htonl(a);
+  b = htonl(b);
 
   send(clientSocket,&a,sizeof(int),0);
   send(clientSocket,&b,sizeof(int),0);
 
   recv(clientSocket, &rez, sizeof(int), 0);						/* Read the message from the server into the buffer */
 
-  rez = ntohs(rez);
+  rez = ntohl(rez);
   printf("Data received: %d\n",rez);   					/* Print the received message */
 
   close(clientSocket);
