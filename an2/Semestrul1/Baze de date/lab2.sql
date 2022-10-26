@@ -81,8 +81,9 @@ CONSTRAINT pk_card_actual PRIMARY KEY (Id_Client, Id_Card)
 );
 
 CREATE TABLE Restaurant(
-Id_Adresa INT FOREIGN KEY REFERENCES Adresa(Id_Adresa),
 Id_Meniu INT FOREIGN KEY REFERENCES Meniu(Id_Meniu) PRIMARY KEY,
+Nume_Restaurant nvarchar(300) NOT NULL,
+Id_Adresa INT FOREIGN KEY REFERENCES Adresa(Id_Adresa)
 );
 
 CREATE TABLE Comanda(
