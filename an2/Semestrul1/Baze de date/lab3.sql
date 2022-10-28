@@ -163,12 +163,12 @@ values
 (1, 460, 'Cispy Nepicant KFC', 25.0, NULL),
 (2, 460, 'Chimken Nuggets MC', 24.0, 'Chimken Nuggets'),
 (2, 300, 'Salata MC', 19.0, NULL),
-(7, 460, 'Cispy Mic Spartan', 32.0, NULL),
-(7, 500, 'Cispy Mare Spartan', 36.0, NULL),
-(7, 500, 'Falafel Spartan', 32.0, NULL),
+(8, 460, 'Cispy Mic Spartan', 32.0, NULL),
+(8, 500, 'Cispy Mare Spartan', 36.0, NULL),
+(8, 500, 'Falafel Spartan', 32.0, NULL),
 (5, 760, 'Pizza Casei', 36.0, 'Pizza Casei'),
-(9, 400, 'Pizza Fun and Music', 22.0, NULL),
-(10, 500, 'Burgerul Casei', 32.0, NULL),
+(10, 400, 'Pizza Fun and Music', 22.0, NULL),
+(11, 500, 'Burgerul Casei', 32.0, NULL),
 (4, 200, 'Nachos', 17.0, NULL),
 (3, 500, 'Big Belly Pizza', 26.0, NULL);
 

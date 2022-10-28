@@ -1,0 +1,82 @@
+
+--- selectam compania si tipul cardului pentru cardurile distincte care au data expirarii mai tarzie de 2025-09-11
+Select DISTINCT C.Companie, C.Tip
+FROM Card_ C
+where C.Data_De_Expirare > '2025-09-11';
+
+-- selectam adresa, numele clientului si numele restaurantul pentru clientii care au aceeasi adresa cu un restaurant
+SELECT R.Id_Adresa, C.nume_complet, R.Nume_Restaurant
+FROM Client C, Restaurant R
+where C.Id_Adresa_actuala = R.Id_Adresa or C.Id_Adresa = R.Id_Adresa;
+
+
+-- in medie cat de lungi sunt parolele clientilor cu un card de la o anumita companie
+SELECT Card_.Companie, AVG(LEN(Client.parola))
+FROM Card_
+INNER JOIN Card_Actual 
+ON Card_Actual.Id_Card = Card_.Id_Card
+INNER JOIN Client
+ON Client.Id_Client = Card_Actual.Id_Client
+group by Card_.Companie;
+
+
+-- companiile de carduri si numarul de carduri pentru companiile cu mai mult de doua carduri 
+SELECT Card_.Companie, COUNT(*) as Numar_Carduri
+FROM Card_
+INNER JOIN Card_Actual 
+ON Card_Actual.Id_Card = Card_.Id_Card
+INNER JOIN Client
+ON Client.Id_Client = Card_Actual.Id_Client
+group by Card_.Companie
+having COUNT(Client.parola) > 2;
+
+
+-- pentru fiecare vehicul cu greutatea mai mica de o tona numarul de comenzi
+SELECT Tip_Vehicul.Denumire, COUNT(*) as Numar_Comenzi
+FROM Curier
+INNER JOIN Tip_Vehicul
+ON Tip_Vehicul.Denumire = Curier.Vehicul
+INNER JOIN Comanda
+ON Curier.Id_Curier = Comanda.Id_Curier
+where Tip_Vehicul.Tonaj < 1
+group by Tip_Vehicul.Denumire
+having COUNT(*) > 1;
+
+
+-- Pentru fiecare card de tipul 'Credit' toate adresele clientilor distincte ordonate crescator
+SELECT DISTINCT C.Companie, Client.Id_Adresa_actuala
+FROM Card_ C
+INNER JOIN Card_Actual
+on C.Id_Card = Card_Actual.Id_Card
+INNER JOIN Client
+on Card_Actual.Id_Client = Client.Id_Client
+where C.Tip = 'Credit'
+ORDER BY Client.Id_Adresa_actuala;
+
+
+--
+SELECT M.Id_Meniu, M.Url_site, F.Denumire, F.Pret
+FROM Meniu M, Fel_De_Mancare F    /* sau inner join */
+where M.Id_Meniu = F.Id_Meniu
+order by M.Id_Meniu;
+
+
+--
+SELECT M.Id_Meniu, M.Url_site, B.Denumire, B.Pret
+FROM Meniu M, Bauturi B    /* sau inner join */
+where M.Id_Meniu = B.Id_Meniu
+order by M.Id_Meniu;
+
+-- cate comenzi are fiecare restaurant
+SELECT R.Nume_Restaurant, COUNT(*)
+FROM Restaurant R
+INNER JOIN Comanda C
+ON R.Id_Meniu = C.Id_Restaurant
+group by R.Nume_Restaurant;
+
+
+-- clientii care sunt si curieri
+SELECT C.nume_complet, Curier.nume_complet
+FROM Client C
+FULL OUTER JOIN Curier
+ON Curier.nume_complet = C.nume_complet;
