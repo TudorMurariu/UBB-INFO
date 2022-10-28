@@ -1,5 +1,6 @@
 -clientul trimite serverului un cuvant
--serverul generaza random 3 numere( p1 < p2 < p3 < len(cuvant) ) si calculeaza suma codurilor ASCII ale caracterelor de pe poz respective
+-serverul generaza random 3 numere( p1 < p2 < p3 < len(cuvant) ) 
+si calculeaza suma codurilor ASCII ale caracterelor de pe poz respective
 -clientul trimite serverului un numar, incercand sa ghiceasca suma (de maxim 5 ori)
 -daca a ghicit, serverul ii da un mesaj cu numarul de incercari
 -daca nu a ghicit, serverul il intreaba daca mai vrea sa continue
