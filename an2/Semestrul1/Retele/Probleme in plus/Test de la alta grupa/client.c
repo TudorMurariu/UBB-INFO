@@ -27,8 +27,8 @@ int main()
 
     memset(&serverAddr, 0, sizeof(serverAddr));
     serverAddr.sin_family = AF_INET;						/* Address family = Internet */
-    serverAddr.sin_port = htons(7099);							/* Set port number*/
-    serverAddr.sin_addr.s_addr = inet_addr("172.30.113.5");				/* Set IP address to localhost */
+    serverAddr.sin_port = htons(12300);							/* Set port number*/
+    serverAddr.sin_addr.s_addr = inet_addr("192.168.0.73");				/* Set IP address to localhost */
    
     if(connect(clientSocket, (struct sockaddr *) &serverAddr, sizeof serverAddr) < 0) {
         printf("Eroare la conectarea la server\n");
@@ -37,31 +37,60 @@ int main()
 
     printf("Dati un sir de caractere:\n");
     char buffer[1024];
-    scanf("%[^\n]s", buffer);
+    scanf("%s", buffer);
 
     printf("Sirul de caractere este: %s\n", buffer);
 
     int n = strlen(buffer);
+    int nc = htonl(n);
 
-    int n_Server = htonl(n);
-    if(send(clientSocket, &n_Server, sizeof(int), 0) < 0) {
-        printf("Eroare la trimiterea lungimii\n");
-        return 1;
-    }
-
+    send(clientSocket, &nc, sizeof(int), 0);
     if(send(clientSocket, buffer, sizeof(char) * n, 0) < 0) { 
         printf("Eroare la trimiterea sirului\n");
         return 1;
     } 
 
-    int number_of_spaces;
-    if(recv(clientSocket, &number_of_spaces, sizeof(int), 0) < 0) {
-        printf("Eroare la primire\n");
-        return 1;
-    }
 
-    number_of_spaces = ntohl(number_of_spaces);
-    printf("Numarul de space uri: %d\n", number_of_spaces);
+    int guess = -1, raspuns;
+    do
+    {
+        printf("Ghiciti : ");
+        scanf("%d", &guess);
+        guess = htonl(guess);
+        if(send(clientSocket, &guess, sizeof(int), 0) < 0){
+            printf("Eroare la trimiterea numarului ghicit\n");
+            return 1;
+        }
+        if(recv(clientSocket, &raspuns, sizeof(int), 0) < 0){
+            printf("Eroare la primirea raspunsului\n");
+            return 1;
+        }
+        raspuns = ntohl(raspuns);
+        printf("Raspuns: %d\n", raspuns);
+
+        if(raspuns == -2)
+        {
+            printf("Ati gresit de 5 ore mai vreti sa jucati?(1 - da, 0 - nu)\n");
+            scanf("%d", &raspuns);
+            if(raspuns == 0)
+            {
+                raspuns = htonl(raspuns);
+                send(clientSocket, &raspuns, sizeof(int), 0);
+                break;
+            }
+            else
+            {
+                raspuns = htonl(raspuns);
+                send(clientSocket, &raspuns, sizeof(int), 0);
+                raspuns = -1;
+                continue;
+            }
+        }
+
+    }while(raspuns < 0);
+    
+    if(raspuns >= 0)
+        printf("Raspuns corect!\n %d este numarul de incercari.", raspuns+1);
 
     close(clientSocket);
 

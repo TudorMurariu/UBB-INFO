@@ -20,6 +20,20 @@ Tip nvarchar(100) NOT NULL,
 Data_De_Expirare DATE NOT NULL,
 );
 
+CREATE TABLE Adresa(
+Id_Adresa INT PRIMARY KEY IDENTITY,
+Tara nvarchar(100) NOT NULL,
+Cod_Postal varchar(6)  NOT NULL,
+Strada nvarchar(100) NOT NULL,
+Numar int,
+Nr_apartament int,
+-- CONSTRAINT pk_adr PRIMARY KEY (Tara, Cod_Postal, Strada, Numar, Nr_apartament) -- IDKKKKKKK
+);
+
+CREATE TABLE Meniu(
+Id_Meniu INT PRIMARY KEY IDENTITY,
+Url_site nvarchar(100),
+);
 
 CREATE TABLE Bauturi(
 Id_Bautura INT PRIMARY KEY IDENTITY,
@@ -39,27 +53,12 @@ Pret FLOAT DEFAULT 0,
 Descriere nvarchar(1000)
 );
 
-CREATE TABLE Adresa(
-Id_Adresa INT PRIMARY KEY IDENTITY,
-Tara nvarchar(100) NOT NULL,
-Cod_Postal varchar(6)  NOT NULL,
-Strada nvarchar(100) NOT NULL,
-Numar int,
-Nr_apartament int,
--- CONSTRAINT pk_adr PRIMARY KEY (Tara, Cod_Postal, Strada, Numar, Nr_apartament) -- IDKKKKKKK
-);
-
-CREATE TABLE Meniu(
-Id_Meniu INT PRIMARY KEY IDENTITY,
-Url_site nvarchar(100),
-);
-
 CREATE TABLE Curier(
 Id_Curier INT PRIMARY KEY IDENTITY,
 nume_complet nvarchar(100) NOT NULL,
 email nvarchar(100) NOT NULL,
 parola nvarchar(100) NOT NULL,
-Denumire nvarchar(100) FOREIGN KEY REFERENCES Tip_Vehicul(Denumire)
+Vehicul nvarchar(100) FOREIGN KEY REFERENCES Tip_Vehicul(Denumire)
 );
 
 CREATE TABLE Client(
@@ -81,13 +80,13 @@ CONSTRAINT pk_card_actual PRIMARY KEY (Id_Client, Id_Card)
 );
 
 CREATE TABLE Restaurant(
-Id_Meniu INT FOREIGN KEY REFERENCES Meniu(Id_Meniu) PRIMARY KEY,
 Nume_Restaurant nvarchar(300) NOT NULL,
+Id_Meniu INT FOREIGN KEY REFERENCES Meniu(Id_Meniu) PRIMARY KEY,
 Id_Adresa INT FOREIGN KEY REFERENCES Adresa(Id_Adresa)
 );
 
 CREATE TABLE Comanda(
---Id_Comanda INT PRIMARY KEY IDENTITY,
+Id_Comanda INT PRIMARY KEY IDENTITY,
 Id_Client INT FOREIGN KEY REFERENCES Client(Id_Client),
 Id_Restaurant INT FOREIGN KEY REFERENCES Restaurant(Id_Meniu),
 Id_Curier INT FOREIGN KEY REFERENCES Curier(Id_Curier),
@@ -102,3 +101,5 @@ USE master
 GO
 DROP DATABASE Bolt_Food
 */
+
+SELECT * FROM Card_;
