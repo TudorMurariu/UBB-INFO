@@ -18,11 +18,14 @@ public class server {
         
     }  
 
+
     //s.close();
   }
 }
 
 class ServerThread extends Thread {
+
+    
 
     Socket c = null;
     int k;

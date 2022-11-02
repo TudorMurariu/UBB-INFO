@@ -1,17 +1,4 @@
 10 in total              10
-5 where                  6 
-3 group by               4 
-2 distinct               2
-2 having                 2 
-7 macar doua tabele      9     
-2 in relatie n-m         3
-
-
-
-
-
-
-10 in total              10
 7 interogari 3+ tabele   7    
 2 in relatie m-n         3        
 5 where                  5
