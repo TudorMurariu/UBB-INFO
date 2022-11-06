@@ -44,8 +44,7 @@ dubleaza_prim(L, R)
 dubleaza_prim([],[]).
 dubleaza_prim([H|T], R):- not(prim(H)), !,
                          dubleaza_prim(T, R1),
-                         R = [H|R1].
-
+                         R is [H|R1].
 dubleaza_prim([H|T], R):- prim(H), !,
                           dubleaza_prim(T, R1),
-                          R = [H,H|R1].
+                          R is [H,H,R1].
