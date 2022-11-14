@@ -13,11 +13,11 @@ dubleaza_prim_liste(L, R)
 
 dubleaza_prim_liste([], []):- !.
 
-dubleaza_prim_liste([H|T], R):- is_list(H), !,
+dubleaza_prim_liste([H|T], R):- is_list(H), !, %nu_era_necesar
                                 dubleaza_prim(H, R1),
                                 dubleaza_prim_liste(T, R2),
                                 R = [R1|R2].
 
-dubleaza_prim_liste([H|T], R):- number(H), !,
+dubleaza_prim_liste([H|T], R):- number(H), !, %nu_era_necesar
                                 dubleaza_prim_liste(T, R2),
                                 R = [H|R2].

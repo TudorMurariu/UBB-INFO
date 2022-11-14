@@ -49,3 +49,4 @@ dubleaza_prim([H|T], R):- not(prim(H)), !,
 dubleaza_prim([H|T], R):- prim(H), !,
                           dubleaza_prim(T, R1),
                           R = [H,H|R1].
+                          

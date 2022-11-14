@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b03a126c-7a5d-4784-b0f4-f1af4aec6676" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../an1/Semestrul1/Fundamentele Programarii/lab/Lab" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../an1/Semestrul1/Fundamentele Programarii/lab/Lab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Programare logica si functionala/P2/Problema 11/a.pl" beforeDir="false" afterPath="$PROJECT_DIR$/../../Programare logica si functionala/P2/Problema 11/a.pl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Programare logica si functionala/P2/Problema 11/b.pl" beforeDir="false" afterPath="$PROJECT_DIR$/../../Programare logica si functionala/P2/Problema 11/b.pl" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="2HLyDSKLLBxy0r4Leb1qal6uiWE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b03a126c-7a5d-4784-b0f4-f1af4aec6676" name="Changes" comment="" />
+      <created>1668078540163</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668078540163</updated>
+      <workItem from="1668078542190" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
