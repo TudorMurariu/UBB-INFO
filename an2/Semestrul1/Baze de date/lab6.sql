@@ -87,9 +87,11 @@ CREATE PROCEDURE Sterge_Camp_Nou
 AS
 BEGIN
 	Alter Table Person
-	DROP City
+	DROP COLUMN City
 END
 GO
+
+DROP PROCEDURE Sterge_Camp_Nou
 
 Creeaza_O_Tabela;
 EXEC Adauga_Camp_Nou;
@@ -115,6 +117,7 @@ BEGIN
 END
 GO
 
+EXEC Creaza_Cheie_Straina;
 EXEC Strege_Cheie_Straina;
 
 -- Cream tabelul cu versiunea Bazei de date
@@ -146,6 +149,7 @@ Create Table Lista_Opus_Proceduri_VersiuniDB(
 	nume_procedura varchar(100)
 );
 
+
 INSERT INTO Lista_Opus_Proceduri_VersiuniDB
 values
 (1, 'ChangeClient_nume_complet_to_nvarchar'),
@@ -154,7 +158,8 @@ values
 (4, 'Sterge_Camp_Nou'),
 (5, 'Strege_Cheie_Straina');
 
-DROP Lista_Opus_Proceduri_VersiuniDB;
+
+SELECT * FROM Lista_Proceduri_VersiuniDB;
 
 GO
 
@@ -186,28 +191,20 @@ BEGIN
 
 	 DECLARE @Functie AS varchar(100);
 
-	 PRINT 1;
 
 	 IF @Versiune>@Versiune_actuala
 	 BEGIN
 		WHILE @Versiune!=@Versiune_actuala
 		BEGIN
-			
-			PRINT 'a';
 
 			SELECT @Functie = nume_procedura
 			FROM Lista_Proceduri_VersiuniDB
 			where @Versiune_actuala=ID;
 
-			PRINT 'b';
-
 			EXECUTE @Functie;
-
-			PRINT 'c';
 
 			SET @Versiune_actuala=@Versiune_actuala+1;
 
-			PRINT 'd';
 		END
 
 		UPDATE VersiuneDB
@@ -216,34 +213,29 @@ BEGIN
 		RETURN;
 	 END
 	 
-	 PRINT 3;
 	 -- altfel daca  @Versiune < @Versiune_actuala
 
 	 WHILE @Versiune!=@Versiune_actuala
 		BEGIN
 
-			PRINT 'a';
+			set @Versiune_actuala=@Versiune_actuala-1;
 
 			SELECT @Functie = nume_procedura
 			FROM Lista_Opus_Proceduri_VersiuniDB
 			where @Versiune_actuala=ID;
 
-			PRINT 'b';
-
 			EXECUTE @Functie;
-
-			PRINT 'c';
-
-			set @Versiune_actuala=@Versiune_actuala-1;
-
-			PRINT 'd';
 		END
 	 
 	 UPDATE VersiuneDB
 	 SET Numar_Versiune = @Versiune;
+	 RETURN;
 END
 
 go
-EXEC main 4;
+EXEC main 0;
 
 DROP PROCEDURE main
+
+UPDATE VersiuneDB
+SET Numar_Versiune = 0;
