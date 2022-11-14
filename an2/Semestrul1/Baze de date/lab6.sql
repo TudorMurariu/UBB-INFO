@@ -170,7 +170,7 @@ AS
 BEGIN
 	 IF @Versiune>5
 	 BEGIN
-		PRINT 'nu exista decat 6 veriuni ale DB-ul (de la 0 la 5 inclusiv)';
+		 RAISERROR('nu exista decat 6 veriuni ale DB-ul (de la 0 la 5 inclusiv)', 16, 1);
 		RETURN;
 	 END
 
