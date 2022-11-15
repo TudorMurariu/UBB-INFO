@@ -234,7 +234,7 @@ END
 
 go
 EXEC main 0;
-
+ 
 DROP PROCEDURE main
 
 UPDATE VersiuneDB

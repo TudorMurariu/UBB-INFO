@@ -51,8 +51,23 @@ afisare_descompunere_prime(A, B, N) =      { afiseaza(A, B) si
 
 afisare_descompunere_prime(N):- N > 3, !,
                                 N1 is N - 2,
-                                afisare_descompunere_prime(2, N1,N).
+                                toate(N, 2, N1).
+                                
+                                
 
+
+toate(N, A, B):- A < N,
+           A > 1,
+           B > 1,
+           B < N,
+           prim(A),
+           prim(B),
+           write(A),write(" "),write(B),nl,
+           fail.
+
+/*
+N1 is N - 2,
+%afisare_descompunere_prime(2, N1,N).
 
 afisare_descompunere_prime(A, B, N):- A < N,
                                       B > 1,
@@ -63,7 +78,8 @@ afisare_descompunere_prime(A, B, N):- A < N,
                                       A1 is A + 1,
                                       B1 is B - 1,
                                       afisare_descompunere_prime(A1, B, N),
-                                      afisare_descompunere_prime(A, B1, N).
+                                      afisare_descompunere_prime(A, B1, N),
+                                      fail.
 
 
 afisare_descompunere_prime(A, B, N):- A < N,
@@ -71,4 +87,6 @@ afisare_descompunere_prime(A, B, N):- A < N,
                                       A1 is A + 1,
                                       B1 is B - 1,
                                       afisare_descompunere_prime(A1, B, N),
-                                      afisare_descompunere_prime(A, B1, N).
+                                      afisare_descompunere_prime(A, B1, N),
+                                      fail.
+*/

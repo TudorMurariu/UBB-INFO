@@ -1,0 +1,60 @@
+   
+/x => 2^(32-x) ip-uri in retea
+
+/28 => 2^4=16 ip-uri
+/30 => 2^2=4 ip-uri in retea (1 ip pt retea, 1 ip pt broadcast si 2 ip-uri pt device-uri)
+/31 => 2^1=2 ip-uri Nu ma ajuta!
+/32 => 2^0 ip-uri Fals!
+
+192.168.0.0/24
+- netmask (masca de retea) /24 => 2^(32-24) = 2 ^ 8 = 256 adrese ip
+- adresa de retea (AND intre adresa ip data si netmask):
+192.168.0.0 = 11000000.10101000.00000000.00000000b
+192=128+64=2^7+2^6=11000000b
+168=128+32+8=2^7+2^5+2^3=10101000b
+/24 = 11111111.11111111.11111111.00000000b
+/24 = 255.255.255.0
+11000000.10101000.00000000.00000000b AND
+11111111.11111111.11111111.00000000b
+-----------------------------------------
+11000000.10101000.00000000.00000000b => adresa IP de retea: 192.168.0.0
+11000000.10101000.00000000.00000000b OR
+00000000.00000000.00000000.11111111b
+-----------------------------------------
+11000000.10101000.00000000.11111111b => adresa IP de broadcast: 192.168.0.255
+device-urile din retea pot avea urmatoarele ip-uri:
+192.168.0.1/24
+192.168.0.2/24
+...
+192.168.0.254/24
+
+2 switch-uri si 3 calculatoare
+TODO:
+C1-S1-S2-C3
+   |
+   C2
+ping de pe C1 pe C3
+ping de pe C2 pe C3
+analizati tabela de mac-uri de pe ambele switch-uri S1 si S2
+​
+    
+1) doua calculatoare IP+NM
+- cand doua IP-uri sunt in aceeasi retea?
+- adresa de retea
+- adresa de bcast
+- nr de ipuri din retea
+
+2) trei calculatoare legate prin HUB
+- comunica?
+- 2 pinguri
+- transmitere de pachete in Simulation Mode
+- hub-ul trimite tot timpul la toate calculatoarele din retea
+3) trei calculatoare legate prin SWITCH
+- comunica?
+- 2 pinguri
+- tabela de mac-uri
+- in CLI
+> enable
+# ?
+# show ?
+# show mac-address-table
