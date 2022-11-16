@@ -33,15 +33,15 @@ class server
 			  int lungime = Integer.parseInt(lungimeS.trim());				
 			  System.out.println("Am primit lungimea: " + lungime);
 			  
-			  for(int i=0;i<lungime;i++){
-				  receiveData = new byte[1024];
-			  receivePacket = new DatagramPacket(receiveData, receiveData.length);
-			  serverSocket.receive(receivePacket);
+			  for(int i=0;i<lungime;i++) {
+				receiveData = new byte[1024];
+			  	receivePacket = new DatagramPacket(receiveData, receiveData.length);
+			  	serverSocket.receive(receivePacket);
 			  
-			  String numarS2 = new String( receivePacket.getData());
-			  int numar2 = Integer.parseInt(numarS2.trim());				
-			  System.out.println("Am primit: " + numar2);
-			  rez=rez+numar2;
+			  	String numarS2 = new String( receivePacket.getData());
+			  	int numar2 = Integer.parseInt(numarS2.trim());				
+			  	System.out.println("Am primit: " + numar2);
+			  	rez=rez+numar2;
 			  }
 			
  			  InetAddress IPAddress = receivePacket.getAddress();

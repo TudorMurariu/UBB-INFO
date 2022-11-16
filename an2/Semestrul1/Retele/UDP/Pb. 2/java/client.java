@@ -27,7 +27,7 @@ class client
       sendData = numar1.getBytes();
 	  System.out.println("Am trimis: " + numar1);
 	  
-      DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 1234);
+      DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 8763);
       clientSocket.send(sendPacket);
 	  
 	  System.out.println("Dati al doilea numar:");
@@ -35,7 +35,7 @@ class client
       sendData = numar2.getBytes();
 	  System.out.println("Am trimis: " + numar2);
 	  
-      sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 1234);
+      sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 8763);
       clientSocket.send(sendPacket);
 	  
       DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);

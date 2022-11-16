@@ -16,7 +16,7 @@ class server
 {
    public static void main(String args[]) throws Exception
       {
-        DatagramSocket serverSocket = new DatagramSocket(1234);
+        DatagramSocket serverSocket = new DatagramSocket(8763);
 		byte[] receiveData = new byte[1024];
 		byte[] sendData = new byte[1024];
 		System.out.println("Astept conexiuni: ");
