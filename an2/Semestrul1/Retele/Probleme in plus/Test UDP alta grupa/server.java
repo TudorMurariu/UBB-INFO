@@ -18,7 +18,7 @@ class server
 {
    public static void main(String args[]) throws Exception
       {
-        DatagramSocket serverSocket = new DatagramSocket(8801);
+        DatagramSocket serverSocket = new DatagramSocket(8802);
         byte[] receiveData = new byte[1024];
 		System.out.println("Astept conexiuni: ");
 		while(true)
@@ -51,7 +51,7 @@ class ServerThred extends Thread {
             System.out.println("Am inceput clientul cu numarul: " + iterationLevel);
 		    byte[] sendData = new byte[1024];
 
-            String sir = new String(receiveData);
+            String sir = new String(recivePacket.getData());
             System.out.println("Am primit: " + sir + "\nde la " + iterationLevel);
 
             sir = sir.trim();

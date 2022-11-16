@@ -27,26 +27,26 @@ class client
     sendData = sir.getBytes();
 	System.out.println("Am trimis: " + sir);
 
-    DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 8801);
+    DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 8802);
     clientSocket.send(sendPacket);
 
 
     DatagramPacket recivePacket = new DatagramPacket(receiveData, receiveData.length);
     clientSocket.receive(recivePacket);
 
-    String port = new String(receiveData);
+    String port = new String(recivePacket.getData());
     System.out.println("Am primit: " + port);
 
     recivePacket = new DatagramPacket(receiveData, receiveData.length);
     clientSocket.receive(recivePacket);
 
-    String litere = new String(receiveData);
+    String litere = new String(recivePacket.getData());
     System.out.println(litere);
 
     recivePacket = new DatagramPacket(receiveData, receiveData.length);
     clientSocket.receive(recivePacket);
 
-    String ip_rez = new String(receiveData);
+    String ip_rez = new String(recivePacket.getData());
     System.out.println("Am primit: " + ip_rez);
 	  
 	clientSocket.close();
