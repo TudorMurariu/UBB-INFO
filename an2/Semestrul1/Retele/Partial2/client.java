@@ -18,7 +18,7 @@ class client
    public static void main(String args[]) throws Exception
    {
       if(args.length < 2) {
-			System.out.println("Trebuie sa dati un port");
+			System.out.println("Trebuie sa dati un port si o adresa");
 			return;
 		}
       
@@ -46,9 +46,15 @@ class client
          stb.append(s + " ");
       }
 
-      sendData = stb.toString().getBytes();
+      sendData = nS.getBytes();
 
       DatagramPacket sendPacket = 
+         new DatagramPacket(sendData, sendData.length, IPAddress, port_srv);
+      clientSocket.send(sendPacket);
+
+      sendData = stb.toString().getBytes();
+
+      sendPacket = 
             new DatagramPacket(sendData, sendData.length, IPAddress, port_srv);
       clientSocket.send(sendPacket);
 

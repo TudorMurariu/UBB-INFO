@@ -17,7 +17,7 @@ class server
    public static void main(String args[]) throws Exception
       {
 		if(args.length < 2) {
-			System.out.println("Trebuie sa dati un port");
+			System.out.println("Trebuie sa dati un port si o adresa");
 			return;
 		}
 
@@ -33,8 +33,17 @@ class server
 
 		System.out.println("Astept conexiuni: ");
 		while(true)
-		   {			   
+		   {			
 			  DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
+			  serverSocket.receive(receivePacket);
+
+			  String nS = new String( receivePacket.getData() );
+			  nS = nS.trim();
+			  int n = Integer.parseInt(nS);
+
+			  System.out.println("Am ptrimit lungimea : " + nS);
+			
+			  receivePacket = new DatagramPacket(receiveData, receiveData.length);
 			  serverSocket.receive(receivePacket);
 			  
 			  String sir = new String( receivePacket.getData() );
@@ -44,8 +53,9 @@ class server
 			  String[] numere = sir.split(" ");
 
 			  int sum = 0;
-			  for(String x : numere)
+			  for(int i = 0;i < n;++i)
 			  {
+					String x  = numere[i];
 					if(x.equals(" ") || x.equals(""))
 						break;
 
