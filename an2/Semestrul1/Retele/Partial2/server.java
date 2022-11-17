@@ -22,6 +22,7 @@ class server
 		}
 
 		int port_actual = Integer.parseInt(args[0]);
+		int portX = port_actual;
 		InetAddress ourIPAddress = InetAddress.getByName(args[1]);
 
         DatagramSocket serverSocket = new DatagramSocket(port_actual, ourIPAddress);
@@ -36,9 +37,17 @@ class server
 		   {			
 			  DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
 			  serverSocket.receive(receivePacket);
-
 			  String nS = new String( receivePacket.getData() );
 			  nS = nS.trim();
+
+			  if(nS.length() > 1)
+				while(!Character.isDigit(nS.charAt(1))) {
+					receivePacket = new DatagramPacket(receiveData, receiveData.length);
+					serverSocket.receive(receivePacket);
+					nS = new String( receivePacket.getData() );
+					nS = nS.trim();
+				}
+
 			  int n = Integer.parseInt(nS);
 
 			  System.out.println("Am ptrimit lungimea : " + nS);
@@ -71,7 +80,7 @@ class server
 
 			  System.out.println("SUM : " + sum);
 
-			  port_actual = port_actual + sum;
+			  port_actual = portX + sum;
 			  if(port_actual > max)
 			  	max = port_actual;
 
@@ -96,6 +105,7 @@ class server
 			  System.out.println("Acum portul maxim este: " + max);
 
 			  countClienti++;
+			  serverSocket.close();
 			  serverSocket = new DatagramSocket(port_actual);
 			  System.out.println("Am schimbat portul in : " + port_actual);
 		   }
