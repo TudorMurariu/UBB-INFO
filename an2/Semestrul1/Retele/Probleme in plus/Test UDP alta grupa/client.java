@@ -27,7 +27,7 @@ class client
     sendData = sir.getBytes();
 	System.out.println("Am trimis: " + sir);
 
-    DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 8802);
+    DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 8803);
     clientSocket.send(sendPacket);
 
 
