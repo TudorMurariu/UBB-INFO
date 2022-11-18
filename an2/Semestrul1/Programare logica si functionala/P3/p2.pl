@@ -31,62 +31,62 @@ prim(N):- not(divisible(N, 2)).
 
 /*
 
-afisare_descompunere_prime(N) = afisare_descompunere_prime(2, N-2,N) 
+primList(n) = { [], n <= 1 }
+              { primList(n-1), not(prim(n)) }
+              { n + primList(n-1), prim(n) }
 
-afisare_descompunere_prime(A, B, N) =      { afiseaza(A, B) si 
-                                           afisare_descompunere_prime(A+1, B, N) si 
-                                           afisare_descompunere_prime(A, B-1, N)
-                                           , daca A+B=N si prim(A) si prim(B)
+ primList(N, R)
+ N - un numar intreg dupa care formam lista de nr prime
+ R - lista raspuns formata din toate nr prime mai mici decat N
 
-                                        { afisare_descompunere_prime(A+1, B, N) si 
-                                           afisare_descompunere_prime(A, B-1, N)
-                                           , altfel
-    
-    afisare_descompunere_prime(N).
-    N - numar interg
-    
-    Modele de flux : (i) 
+ Modele de flux : (i,o) (i,i)
 
 */
 
-afisare_descompunere_prime(N):- N > 3, !,
-                                N1 is N - 2,
-                                toate(N, 2, N1).
-                                
-                                
+primList(N, []):- N =< 1, !.
+
+primList(N, R):- not(prim(N)), !,
+                 N1 is N - 1,
+                 primList(N1, R).
 
 
-toate(N, A, B):- A < N,
-           A > 1,
-           B > 1,
-           B < N,
-           prim(A),
-           prim(B),
-           write(A),write(" "),write(B),nl,
-           fail.
+primList(N, R):- prim(N), !,
+                 N1 is N - 1,
+                 primList(N1, R1),
+                 R = [N|R1].
+
 
 /*
-N1 is N - 2,
-%afisare_descompunere_prime(2, N1,N).
 
-afisare_descompunere_prime(A, B, N):- A < N,
-                                      B > 1,
-                                      N is A + B,
-                                      prim(A),
-                                      prim(B), !,
-                                      write(A, B),
-                                      A1 is A + 1,
-                                      B1 is B - 1,
-                                      afisare_descompunere_prime(A1, B, N),
-                                      afisare_descompunere_prime(A, B1, N),
-                                      fail.
+candidat(l1...ln) = 
+          1) l1, n>=1
+          2) candidat(l2..ln) , n>=2
 
+  candidat(L, E)
+  L - lista din care luam un candidat
+  E candidatul returnat
 
-afisare_descompunere_prime(A, B, N):- A < N,
-                                      B > 1, !,
-                                      A1 is A + 1,
-                                      B1 is B - 1,
-                                      afisare_descompunere_prime(A1, B, N),
-                                      afisare_descompunere_prime(A, B1, N),
-                                      fail.
+  Modele de flux : (i,o) (i,i)
+
 */
+
+candidat([H|_], H).
+
+candidat([_|T], E):- candidat(T, E).
+
+
+/*
+solutii(N) =  
+    1) {A, B} ,  A,B din primList(N) si A+B = N
+
+ solutii(N, A, B)
+ N - numar dat
+ A - nr prim
+ B - nr prim
+ 
+*/
+
+solutii(N, A, B):- primList(N, R),
+                   candidat(R, A),
+                   candidat(R, B),
+                   N is A + B.
