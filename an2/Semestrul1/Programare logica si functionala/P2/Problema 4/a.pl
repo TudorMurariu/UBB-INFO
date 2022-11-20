@@ -7,6 +7,7 @@
 
     Modele de flux : (i,i,o) (i,i,i)
 
+    ;true.
 */
 
 interclasare([], [], []):- !.
