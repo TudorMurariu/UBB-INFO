@@ -1,6 +1,6 @@
 /*
-  divisible(X, Y)  =  { true , X%Y = 0
-                      { divisible(X, Y+1), X%Y != 0 si X > Y+1
+  divisible(X, Y)  =  { true , X mod Y = 0
+                      { divisible(X, Y+1), X mod Y != 0 si X > Y+1
                       { false, altfel
 
   X - numar natural a caruia ii verificam divizibilitatea
