@@ -9,4 +9,4 @@ Exemple of Teoretical Exam x2: https://github.com/TudorMurariu/Exemplu-Examen-Te
 Big Project(took all semester): https://github.com/TudorMurariu/QT-Agentie-de-turism <br>
 X and 0: https://github.com/TudorMurariu/X-si-0-idk <br>
 Exemple of Practical Exam: https://github.com/TudorMurariu/Melodii <br>
-Practical Exam(final): https://github.com/TudorMurariu/Tasks 
+Practical Exam(final): https://github.com/TudorMurariu/Tasks **
