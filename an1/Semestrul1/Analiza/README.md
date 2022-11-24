@@ -1,1 +1,2 @@
-# Analiza cu berimde(mortii lui)
+# Analiza cu berimde
+L
