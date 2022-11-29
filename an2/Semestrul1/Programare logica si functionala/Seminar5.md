@@ -17,6 +17,13 @@ interclasare(l1..ln, h1..hm) = { h1..hm , n = 0 } <br>
 
 ---lisp
 (defun interclasare (l,k)
-    () )
+    (cond
+        ( (AND (null l) (not (null k)) k) )
+        ( (null k) l )
+        ( (< (car l) (car k)) (cons(car l) (interclasare(cdr l) k) ) )
+        ( (< (car l) (car k)) (cons(car k) (interclasare l (cdr k)) ) )
+        ( t (cons(car l) (interclasare (cdr l) (cdr k)) ) )
+    ) 
+)
 
 ---
