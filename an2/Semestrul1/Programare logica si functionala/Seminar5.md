@@ -76,7 +76,13 @@ atom
 
 ## **P3** Sa se determine lista pozitiilo elementului numeric minim dintr-o lista data.
 
-! **Ex:** <br>
+**Ex:** <br>
 ```
+(A B 3 5 6 C 3)  =>  (3 7)
+```
+! a
+
+**Model Matematic**
+```python
 
 ```
