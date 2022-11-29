@@ -15,7 +15,7 @@ interclasare(l1..ln, h1..hm) = { h1..hm , n = 0 } <br>
 
 **Implementare**
 
----ruby
+'''ruby
 (defun interclasare (l,k)
     (cond
         ( (AND (null l) (not (null k)) k) )
@@ -26,4 +26,4 @@ interclasare(l1..ln, h1..hm) = { h1..hm , n = 0 } <br>
     ) 
 )
 
----
+'''
