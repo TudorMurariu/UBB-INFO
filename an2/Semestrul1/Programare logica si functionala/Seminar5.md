@@ -82,7 +82,7 @@ atom
 ```
 
 **Model Matematic**
-```ruby
+```python
 list_poz(l1..ln, p1..pk, m, poz) = { p1..pk , n = 0 }
                                    { list_poz(l2..ln, poz + p1..pk, m, poz+1) , l1 = m si n > 0 }
                                    { list_poz(l2..ln, p1..pk, m, poz+1) , l1 > m si n > 0 si (l1 e numar sau l1 atom) }
@@ -98,4 +98,8 @@ list_poz(l1..ln, p1..pk, m, poz) = { p1..pk , n = 0 }
         ( t (list_poz (cdr l) p m (+ poz 1)) )
     )
 )
+```
+
+**Model Matematic**
+```python
 ```
