@@ -89,6 +89,7 @@ list_poz(l1..ln, p1..pk, m, poz) = { p1..pk , n = 0 }
                                    { list_poz(l2..ln, (poz), l1, poz+1) , n > 0 si l1 numar si l1 < m}
 ```
 
+**Implementare**
 ```lisp
 (defun list_poz(l, p, m, poz)
     (cond
@@ -102,4 +103,12 @@ list_poz(l1..ln, p1..pk, m, poz) = { p1..pk , n = 0 }
 
 **Model Matematic**
 ```python
+main(l) = { list_poz(l, [], -inf, 1) }
+```
+
+**Implementare**
+```lisp
+(defun main(l)
+    (list_poz( l nil 99999 1))
+)
 ```
