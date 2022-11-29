@@ -44,7 +44,7 @@ interclasare(l1..ln, h1..hm) = { h1..hm , n = 0 }
 
 **Ex:** <br>
 ```
-(2 (A (1 3 (1)) 4 1) 5 D 1) 1 => (2 (A (3 ()) 4) 5 D)
+'(2 (A (1 3 (1)) 4 1) 5 D 1) 1 => (2 (A (3 ()) 4) 5 D)
 ```
 
 **Model Matematic**
@@ -53,9 +53,30 @@ elimina(l1..ln, e) { [], n = 0 }
                    { elimina(l2..ln, e) , l1 = e }
                    { l1 + elimina(l2..ln, e) , l1 != e si l1 atom }
                    { elimina(l1, e) + elimina(l2..ln, e) , altfel}
+
+eq 
+equal
+number
+listp
+oddp
+atom
 ``` 
 
 **Implementare**
 ```lisp
+(defun elimina(l e)
+    (cond 
+        ( (null l) nil )
+        ( (equal (car l) e) (elimina (cdr l) e) )
+        ( (atom (car l)) (cons (car l) (elimina (crd l) e)) )
+        ( t (cons (elimina (car l) e)) (elimina (cdr l) e) )
+    )
+)
+```
+
+## **P3** 
+
+**Ex:** <br>
+```
 
 ```
