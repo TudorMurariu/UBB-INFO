@@ -78,9 +78,8 @@ atom
 
 **Ex:** <br>
 ```
-(A B 3 5 6 C 3)  =>  (3 7)
+! (A B 3 5 6 C 3)  =>  (3 7)
 ```
-! a
 
 **Model Matematic**
 ```python
