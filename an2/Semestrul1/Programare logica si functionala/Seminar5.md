@@ -49,10 +49,10 @@ interclasare(l1..ln, h1..hm) = { h1..hm , n = 0 }
 
 **Model Matematic**
 ```python
-elimina(l1..ln, e) { [], n = 0 }
-                   { elimina(l2..ln, e) , l1 = e }
-                   { l1 + elimina(l2..ln, e) , l1 != e si l1 atom }
-                   { elimina(l1, e) + elimina(l2..ln, e) , altfel}
+elimina(l1..ln, e) = { [], n = 0 }
+                     { elimina(l2..ln, e) , l1 = e }
+                     { l1 + elimina(l2..ln, e) , l1 != e si l1 atom }
+                     { elimina(l1, e) + elimina(l2..ln, e) , altfel}
 
 eq 
 equal
@@ -82,6 +82,20 @@ atom
 ```
 
 **Model Matematic**
-```python
+```ruby
+list_poz(l1..ln, p1..pk, m, poz) = { p1..pk , n = 0 }
+                                   { list_poz(l2..ln, poz + p1..pk, m, poz+1) , l1 = m si n > 0 }
+                                   { list_poz(l2..ln, p1..pk, m, poz+1) , l1 > m si n > 0 si (l1 e numar sau l1 atom) }
+                                   { list_poz(l2..ln, (poz), l1, poz+1) , n > 0 si l1 numar si l1 < m}
+```
 
+```lisp
+(defun list_poz(l, p, m, poz)
+    (cond
+        ((null l) p )
+        ((eq (car l) m) (list_poz (cdr l) (cons poz p) m (+ poz 1)) )
+        ((AND (numberp (car l)) (< (car l) m)) (list_poz (cdr l) (list poz) (car l) (+ poz 1)) )
+        ( t (list_poz (cdr l) p m (+ poz 1)) )
+    )
+)
 ```
