@@ -3,14 +3,14 @@
 ## **P1** Se dau doua liste liniare, numerice, formate din elemente distincte sortate crescator. Se cere sa se interclaseze listele date.
 **Ex:** <br>
 ```
-L1 = [1,3,5,9]    } <br>
-L2 = [2,3,4,6,8]  }   => [1,2,3,4,5,6,8,9] <br>
+L1 = [1,3,5,9]    }
+L2 = [2,3,4,6,8]  }   => [1,2,3,4,5,6,8,9]
 ```
 
 **Model Matematic**
 ```python
-interclasare(l1..ln, h1..hm) = { h1..hm , n = 0 } <br>
-                               { l1..ln , m = 0 si n != 0 } <br>
+interclasare(l1..ln, h1..hm) = { h1..hm , n = 0 } 
+                               { l1..ln , m = 0 si n != 0 } 
                                { l1 + interclasare(l2..ln,h1..hm) ,l1 < h1 si n != 0 si m != 0 }
                                { l1 + interclasare(l2..ln,h2..hm) ,l1 == h1 si n != 0 si m != 0 }
                                { h1 + interclasare(l1..ln,h2..hm) ,l1 > h1 si n != 0 si m != 0 }
@@ -39,3 +39,5 @@ interclasare(l1..ln, h1..hm) = { h1..hm , n = 0 } <br>
 | '(A B) '(C D)  | ((A B) C D)  | ((A B) (C D)) | (A B C D) |
 | 'A 'B 'C       | Eroare       | (A B C)       | Eroare    |
 | '(A) '(B) 'C   | Eroare       | (A B C)       | (A B.C)   |
+
+## **P2** Sa se elimine toate aparitiile unui aton dintr-o lista.
