@@ -74,9 +74,9 @@ atom
 )
 ```
 
-## **P3** 
+## **P3** Sa se determine lista pozitiilo elementului numeric minim dintr-o lista data.
 
-**Ex:** <br>
+! **Ex:** <br>
 ```
 
 ```
