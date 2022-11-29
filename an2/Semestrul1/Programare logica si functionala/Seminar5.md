@@ -1,6 +1,6 @@
-# Seminarul 5 - Recursivitate in Lisp
+# **Seminarul 5** - Recursivitate in Lisp
 
-## - P1 Se dau doua liste liniare, numerice, formate din elemente distincte sortate crescator. Se cere sa se interclaseze listele date.
+## **P1** Se dau doua liste liniare, numerice, formate din elemente distincte sortate crescator. Se cere sa se interclaseze listele date.
 **Ex:** <br>
 L1 = [1,3,5,9]    } <br>
 L2 = [2,3,4,6,8]  }   => [1,2,3,4,5,6,8,9] <br>
@@ -29,3 +29,11 @@ interclasare(l1..ln, h1..hm) = { h1..hm , n = 0 } <br>
     ) 
 )
 ```
+
+| defun          | cons              | list          | append    |
+|----------------|-------------------|---------------|-----------|
+| 'A 'B          | cons('A 'B) (A.B) | (A B)         | Eroare    |
+| 'A '(B C)      | (A B C)           | (A (B C))     | Eroare    |
+| '(A B)         | ((AB).C)          | ((A B).C)     | (A B.C)   |
+| '(A B) '(C D)  | ((A B) C D)       | ((A B) (C D)) | (A B C D) |
+|   |   |   |   |
