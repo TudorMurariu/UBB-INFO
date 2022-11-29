@@ -31,10 +31,10 @@ interclasare(l1..ln, h1..hm) = { h1..hm , n = 0 } <br>
 ```
 
 | defun          | cons         | list          | append    |
-|----------------|--------------|---------------|-----------|
+|----------------|:------------:|---------------|-----------|
 | 'A 'B          | cons('A 'B)  | (A B)         | Eroare    |
 | 'A '(B C)      | (A B C)      | (A (B C))     | Eroare    |
 | '(A B)         | ((AB).C)     | (A B).C)      | (A B.C)   |
 | '(A B) '(C D)  | ((A B) C D)  | ((A B) (C D)) | (A B C D) |
 | 'A 'B 'C       | Eroare       | (A B C)       | Eroare    |
-| '(A) '(B) 'C   | Eroare       | (A B C)       | (A B.C)  |
+| '(A) '(B) 'C   | Eroare       | (A B C)       | (A B.C)   |
