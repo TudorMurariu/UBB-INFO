@@ -41,3 +41,21 @@ interclasare(l1..ln, h1..hm) = { h1..hm , n = 0 }
 | '(A) '(B) 'C   | Eroare       | (A B C)       | (A B.C)   |
 
 ## **P2** Sa se elimine toate aparitiile unui aton dintr-o lista.
+
+**Ex:** <br>
+```
+(2 (A (1 3 (1)) 4 1) 5 D 1) 1 => (2 (A (3 ()) 4) 5 D)
+```
+
+**Model Matematic**
+```python
+elimina(l1..ln, e) { [], n = 0 }
+                   { elimina(l2..ln, e) , l1 = e }
+                   { l1 + elimina(l2..ln, e) , l1 != e si l1 atom }
+                   { elimina(l1, e) + elimina(l2..ln, e) , altfel}
+``` 
+
+**Implementare**
+```lisp
+
+```
