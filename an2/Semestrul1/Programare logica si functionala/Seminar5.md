@@ -69,7 +69,7 @@ atom
         ( (null l) nil )
         ( (equal (car l) e) (elimina (cdr l) e) )
         ( (atom (car l)) (cons (car l) (elimina (crd l) e)) )
-        ( t (cons (elimina (car l) e)) (elimina (cdr l) e) )
+        ( t (cons (elimina (car l) e) (elimina (cdr l) e)) )
     )
 )
 ```
