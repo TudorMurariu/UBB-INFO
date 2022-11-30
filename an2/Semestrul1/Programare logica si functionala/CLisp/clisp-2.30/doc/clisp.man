@@ -1,0 +1,388 @@
+CLISP(1)                                                 CLISP(1)
+
+
+
+NNAAMMEE
+       clisp - Common Lisp language interpreter and compiler
+
+
+
+SSYYNNOOPPSSIISS
+       cclliisspp  [  --hh  |  ----hheellpp ] [ ----vveerrssiioonn ] [ ----lliicceennssee ] [ --BB
+       _l_i_s_p_l_i_b_d_i_r ] [ --MM _m_e_m_f_i_l_e ] [ --mm _m_e_m_s_i_z_e ] [ --LL _l_a_n_g_u_a_g_e ]
+       [  --NN  _l_o_c_a_l_e_d_i_r  ] [ --EE_d_o_m_a_i_n _e_n_c_o_d_i_n_g ] [ --qq | ----qquuiieett |
+       ----ssiilleenntt ] [ --iinntteerraaccttiivvee--ddeebbuugg ] [ --ww ] [ --II ] [ --aannssii  ]
+       [  --ttrraaddiittiioonnaall ] [ --pp _p_a_c_k_a_g_e_n_a_m_e ] [ --CC ] [ --nnoorrcc ] [ --ii
+       _i_n_i_t_f_i_l_e ...  ] [ --cc [ --ll ] _l_i_s_p_f_i_l_e [ --oo _o_u_t_p_u_t_f_i_l_e ] ...
+       ] [ --xx _e_x_p_r_e_s_s_i_o_n ] [ _l_i_s_p_f_i_l_e [ _a_r_g_u_m_e_n_t ] ]
+
+
+
+DDEESSCCRRIIPPTTIIOONN
+       Invokes the common lisp interpreter and compiler.  Invoked
+       without arguments, executes  a  read-eval-print  loop,  in
+       which  expressions  are  in turn read from standard input,
+       evaluated by the lisp interpreter, and their results  out-
+       put  to  standard  output.  Invoked with --cc, the specified
+       lisp files are compiled to a bytecode that can be executed
+       more efficiently.
+
+
+
+OOPPTTIIOONNSS
+       --hh, ----hheellpp
+              Displays a help message on how to use cclliisspp.
+
+
+       ----vveerrssiioonn
+              Displays  the cclliisspp version number, as given by the
+              function call _(_l_i_s_p_-_i_m_p_l_e_m_e_n_t_a_t_i_o_n_-_v_e_r_s_i_o_n_).
+
+
+       ----lliicceennssee
+              Displays a summary of  the  licensing  information,
+              the GNU GPL.
+
+
+       --BB _l_i_s_p_l_i_b_d_i_r
+              Specifies  the  installation directory. This is the
+              directory containing the  linking  sets  and  other
+              data files.  Directory lisplibdir can be changed at
+              run-time using the symbol-macro **lliibb--ddiirreeccttoorryy**..
+
+
+
+       --MM _m_e_m_f_i_l_e
+              Specifies the initial memory image.  This must be a
+              memory dump produced by the _s_a_v_e_i_n_i_t_m_e_m function.
+
+
+       --mm _m_e_m_s_i_z_e
+              Sets  the  amount  of memory cclliisspp tries to grab on
+              startup.  The amount may be given as _n_n_n_n_n_n_n  (mea-
+              sured in bytes), _n_n_n_nKK or _n_n_n_nKKBB (measured in kilo-
+              bytes)  or  _nMM  or  _nMMBB  (measured  in  megabytes).
+              Default  is  2  megabytes.   The  argument  is con-
+              strained above 100 KB.  -- This  version  of  cclliisspp
+              eventually uses the entire _m_e_m_s_i_z_e.
+
+
+
+
+       --LL _l_a_n_g_u_a_g_e
+              Specifies  the  language  cclliisspp uses to communicate
+              with the user. This may be eenngglliisshh.   The  language
+              may  be  changed at run-time using the symbol macro
+              **ccuurrrreenntt--llaanngguuaaggee**..
+
+
+       --NN _l_o_c_a_l_e_d_i_r
+              Specifies  the  base  directory  of  locale  files.
+              cclliisspp   will   search   its   message  catalogs  in
+              _l_o_c_a_l_e_d_i_r/_l_a_n_g_u_a_g_e/LC_MESSAGES/clisp.mo.        The
+              localedir may be changed at run-time using the sym-
+              bol macro **ccuurrrreenntt--llaanngguuaaggee**..
+
+
+       --EE_d_o_m_a_i_n _e_n_c_o_d_i_n_g
+              Specifies the encoding used  for  a  given  domain,
+              overriding  the  default which depends on the envi-
+              ronment variables LLCC__AALLLL, LLCC__CCTTYYPPEE,  LLAANNGG.   _d_o_m_a_i_n
+              can  be ffiillee, affecting **ddeeffaauulltt--ffiillee--eennccooddiinngg**, or
+              ppaatthhnnaammee, affecting **ppaatthhnnaammee--eennccooddiinngg**, or  tteerrmmii--
+              nnaall,  affecting  **tteerrmmiinnaall--eennccooddiinngg**,  or  ffoorreeiiggnn,
+              affecting **ffoorreeiiggnn--eennccooddiinngg**,  or  mmiisscc,  affecting
+              **mmiisscc--eennccooddiinngg**.   or  _b_l_a_n_k_,  affecting all of the
+              above.  Note that these values cannot be saved in a
+              memory image.  You have to use the init file to set
+              them on startup.
+
+
+       --qq, ----qquuiieett, ----ssiilleenntt
+              Quiet: cclliisspp displays no banner at startup  and  no
+              good-bye message when quitting.
+
+
+       --iinntteerraaccttiivvee--ddeebbuugg
+              Override  the  batch  mode  imposed  by --cc, --xx, and
+              lliissppffiillee and allow interactive handling  of  _A_S_S_E_R_T
+              and friends.
+
+
+       --ww     Wait for keypress after program termination.
+
+
+       --II     Be  ILISP  friendly.  ILISP is an alternative Emacs
+              interface to Common Lisp systems. With this option,
+              cclliisspp  interacts in a way that ILISP can deal with.
+              Currently the only effect of this is that  unneces-
+              sary prompts are not suppressed.
+
+
+       --aannssii  ANSI CL compliant: comply with the ANSI CL specifi-
+              cation even where CLISP has been traditionally dif-
+              ferent.  It sets the symbol macro _*_a_n_s_i_* to tt.  See
+              impnotes.html, section  "Maximum  ANSI  CL  compli-
+              ance", for details.
+
+
+       --ttrraaddiittiioonnaall
+              Traditional: reverses the residual effects of --aannssii
+              in the saved image.
+
+
+       --pp _p_a_c_k_a_g_e_n_a_m_e
+              At startup the value of the variable _*_p_a_c_k_a_g_e_* will
+              be  set  to  the  package  named  _p_a_c_k_a_g_e_n_a_m_e.  The
+              default is the package which was  active  when  the
+              image was saved, normally UUSSEERR, or CCOOMMMMOONN--LLIISSPP--UUSSEERR
+              if the option --aa was specified.
+
+
+       --CC     Compile when load: At  startup  the  value  of  the
+              variable  _*_l_o_a_d_-_c_o_m_p_i_l_i_n_g_*  will be set to tt.  Code
+              being _l_o_a_ded will then be compiled on the fly. This
+              results in slower loading, but faster execution.
+
+
+       --nnoorrcc  Normally  cclliisspp  loads a user run control (RC) file
+              on startup (this happens after  the  --CC  option  is
+              processed).   The  file  loaded is __cclliisspprrcc..lliisspp or
+              __cclliisspprrcc..ffaass in the home  directory  _(_u_s_e_r_-_h_o_m_e_d_i_r_-
+              _p_a_t_h_n_a_m_e_), whichever is newest. This option, --nnoorrcc,,
+              prevents loading of the RC file.
+
+
+       --ii _i_n_i_t_f_i_l_e _._._.
+              Specifies initialization  files  to  be  _l_o_a_ded  at
+              startup. These should be lisp files (source or com-
+              piled). Several --ii options can be  given;  all  the
+              specified files will be loaded in order.
+
+
+       --cc _l_i_s_p_f_i_l_e _._._.
+              Compiles   the   specified  _l_i_s_p_f_i_l_es  to  bytecode
+              (*.fas). The compiled  files  can  then  be  _l_o_a_ded
+              instead of the sources to gain efficiency.
+
+
+       --oo _o_u_t_p_u_t_f_i_l_e
+              Specifies the output file or directory for the com-
+              pilation of the last specified _l_i_s_p_f_i_l_e.
+
+
+       --ll     A bytecode listing (*.lis) of the files being  com-
+              piled  will be produced.  Useful only for debugging
+              purposes. See the documentation of _c_o_m_p_i_l_e_-_f_i_l_e for
+              details.
+
+
+       --xx _e_x_p_r_e_s_s_i_o_n_s
+              Executes  a series of arbitrary expressions instead
+              of a  read-eval-print  loop.   The  values  of  the
+              expressions will be output to standard output.  Due
+              to the argument processing done by the  shell,  the
+              _e_x_p_r_e_s_s_i_o_n_s  must be enclosed in double quotes, and
+              double quotes and backslashes must be  preceded  by
+              backslashes.
+
+
+       _l_i_s_p_f_i_l_e [_a_r_g_u_m_e_n_t _._._.]
+              Loads  and  executes  a _l_i_s_p_f_i_l_e.  There will be no
+              read-eval-print loop. Before  _l_i_s_p_f_i_l_e  is  loaded,
+              the  variable  _*_a_r_g_s_*  will  be  bound to a list of
+              strings, representing the _a_r_g_u_m_e_n_ts.   If  _l_i_s_p_f_i_l_e
+              is --, the standard input is used instead of a file.
+              If _l_i_s_p_f_i_l_e is an empty string  ,, the rest  of  the
+              arguments  is still available in _*_a_r_g_s_* _, for pars-
+              ing by the  iinniitt--ffuunnccttiioonn  of  the  current  image.
+              This  option  must be the last one. No RC file will
+              be executed.
+
+
+
+
+
+RREEFFEERREENNCCEE
+       The language implemented mostly conforms to
+              ANSI Common Lisp standard X3.226-1994
+              http://www.x3.org/tc_home/j13sd4.htm
+       available online as the
+              Common Lisp HyperSpec
+              http://www.lisp.org/HyperSpec/
+              ("CLHS" for short)
+       which supersedes the earlier specifications
+              Guy L. Steele Jr.: Common Lisp - The Language.
+              Digital Press. 2nd edition 1990, 1032 pages.
+              http://www.cs.cmu.edu/afs/cs.cmu.edu/project/ai-
+        repository/ai/html/cltl/cltl2.html
+              ("CLtL2" for short)
+       and
+              Guy L. Steele Jr.: Common Lisp - The Language.
+              Digital Press. 1st edition 1984, 465 pages.
+              ("CLtL1" for short)
+
+
+
+UUSSEE
+       hheellpp   to get some on-line help.
+
+
+       ((aapprrooppooss _n_a_m_e))
+              lists the symbols relating to _n_a_m_e.
+
+
+       ((eexxiitt)) or ((qquuiitt)) or ((bbyyee))
+              to quit cclliisspp.
+
+
+
+
+
+FFIILLEESS
+       main executable
+
+
+       _l_i_s_p_i_n_i_t_._m_e_m
+              initial memory image
+
+
+       _c_o_n_f_i_g_._l_i_s_p
+              site-dependent configuration
+
+
+       _*_._l_i_s_p lisp source
+
+
+       _*_._f_a_s  lisp code, compiled by cclliisspp
+
+
+       _*_._l_i_b  lisp source library information, generated and used
+              by the cclliisspp compiler when compiling rreeqquuiirree forms
+
+
+       _*_._c    C code, compiled from lisp source by cclliisspp for  the
+              FFI
+
+
+
+EENNVVIIRROONNMMEENNTT
+       CCLLIISSPP__LLAANNGGUUAAGGEE
+              specifies  the  language  cclliisspp uses to communicate
+              with the user. The value may  be  eenngglliisshh,  ggeerrmmaann,
+              ffrreenncchh,  ssppaanniisshh,  dduuttcchh,  rruussssiiaann  and defaults to
+              eenngglliisshh.  The --LL option can  be  used  to  override
+              this environment variable.
+
+
+
+       LLCC__CCTTYYPPEE
+              specifies the locale which determines the character
+              set in use.  The value can be of the form  _l_a_n_g_u_a_g_e
+              or  _l_a_n_g_u_a_g_e___c_o_u_n_t_r_y  or  _l_a_n_g_u_a_g_e___c_o_u_n_t_r_y_._c_h_a_r_s_e_t,
+              where _l_a_n_g_u_a_g_e is a  two-letter  ISO  639  language
+              code  (lower case), and _c_o_u_n_t_r_y is a two-letter ISO
+              3166 country code  (upper  case).   _c_h_a_r_s_e_t  is  an
+              optional  character  set  specification,  and needs
+              normally not be given because the character set can
+              be inferred from the language and country.
+
+
+       LLAANNGG   specifies  the  language  cclliisspp uses to communicate
+              with the  user,  unless  it  is  already  specified
+              through  the environment variable CCLLIISSPP__LLAANNGGUUAAGGEE or
+              the --LL option.  It also specifies the locale deter-
+              mining  the  character  set  in use, unless already
+              specified   through   the   environment    variable
+              LLCC__CCTTYYPPEE.   The  value  may begin with a two-letter
+              ISO 639 language code, for example eenn, ddee, ffrr.
+
+
+
+
+
+
+
+
+SSEEEE AALLSSOO
+       impnotes.html, _c_m_u_c_l(1), _e_m_a_c_s(1), _x_e_m_a_c_s(1).
+
+
+BBUUGGSS
+       When you encounter a bug in cclliisspp , please  report  it  to
+       the              mailing             list             (see
+       _h_t_t_p_:_/_/_l_i_s_t_s_._s_f_._n_e_t_/_l_i_s_t_s_/_l_i_s_t_i_n_f_o_/_c_l_i_s_p_-_l_i_s_t  )  or   the
+       SourceForge           bug           tracker           (see
+       _h_t_t_p_:_/_/_s_f_._n_e_t_/_t_r_a_c_k_e_r_/_?_f_u_n_c_=_a_d_d_&_g_r_o_u_p___i_d_=_1_3_5_5_&_a_t_i_d_=_1_0_1_3_5_5
+       ).
+
+
+       When submitting a bug report, please specify the following
+       information:
+
+
+       1. What is your platform? ( ''uunnaammee --aa'' on a  Unix  system)
+       compiler version?  libc (on Linux)?
+
+
+       2.  Where did you get the sources?  When?  (Absolute dates
+       are preferred over the relative ones)
+
+
+       3. How did you build cclliisspp ? (What command, options  etc.)
+       Please  do  a clean build (remove your build directory and
+       build with ''..//ccoonnffiigguurree ----bbuuiilldd bbuuiilldd'' or at  least  do  a
+       ''mmaakkee  ddiissttcclleeaann''  before ''mmaakkee'' ). If you are reporting a
+       crash (segmentation fault,  bus  error,  core  dump  etc),
+       please  do  ''..//ccoonnffiigguurree ----wwiitthh--ddeebbuugg ----bbuuiilldd bbuuiilldd--gg'' and
+       report the backtrace.
+
+
+       4. If you are using pre-built  binaries,  the  problem  is
+       likely to be in the incompatibilities between the platform
+       on which the binary was built and yours; please  try  com-
+       piling the sources.
+
+
+       5. What is the output of ''cclliisspp ----vveerrssiioonn'' ?
+
+
+       6.  Please  supply the full output (copy and paste) of all
+       the error messages, as well as  detailed  instructions  on
+       how to reproduce them.
+
+
+       Known  bugs,  some  of  which  may  be platform-dependent,
+       include
+
+
+
+       Not all extensions from CLtL2 are supported.
+
+
+       No on-line documentation beyond _a_p_r_o_p_o_s  and  _d_e_s_c_r_i_b_e  is
+       available.
+
+
+
+
+
+PPRROOJJEECCTTSS
+       Writing on-line documentation.
+
+
+       Enhance  the  compiler  so  that it can inline local func-
+       tions.
+
+
+       Specify a portable set of window and graphics  operations.
+
+
+
+AAUUTTHHOORRSS
+       Bruno  Haible  and  Michael Stoll.  See file CCOOPPYYRRIIGGHHTT for
+       the list of the other contributors and the license.
+
+
+
+                           31 May 2001                   CLISP(1)

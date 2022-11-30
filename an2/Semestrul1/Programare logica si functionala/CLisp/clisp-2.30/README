@@ -1,0 +1,190 @@
+This is GNU CLISP, an ANSI Common Lisp implementation.
+
+
+What is LISP?
+-------------
+
+LISP is a general purpose programming language.
+It was invented by J. McCarthy in 1959.
+There have been many dialects of it, but nowadays LISP has been standardized
+and wide-spread due to the industrial standard ANSI COMMON LISP. There are
+applications in the domains of symbolic knowledge processing (AI), numerical
+mathematics (MACLISP yielded numerical code as good as FORTRAN), and
+widely used programs like editors (EMACS) and CAD (AUTOCAD).
+There are introductions to the language:
+
+  Sheila Hughes: Lisp. Pitman Publishing Limited, London 1986.
+  Paul Graham: "ANSI Common Lisp", Prentice Hall, 1995, ISBN 0133708756.
+  <http://paulgraham.com/acl.html>
+  and "On Lisp", Prentice Hall, 1993. ISBN 0130305529.
+  <http://paulgraham.com/onlisp.html>
+
+After a while wou will need the standard text containing the language
+definition:
+
+  Guy L. Steele Jr.: Common Lisp - The Language. Digital Press.
+  1st edition, 1984, 465 pages.
+  2nd edition, 1990, 1032 pages.
+
+This book is available in HTML form via FTP from
+  ftp://ftp.cs.cmu.edu/user/ai/lang/lisp/doc/cltl/cltl_ht.tgz
+and can be viewed through WWW under
+  http://www.cs.cmu.edu:8001/Web/Groups/AI/html/cltl/cltl2.html or
+  http://www.cs.cmu.edu:8001/afs/cs/project/ai-repository/ai/html/cltl/cltl2.html .
+
+For experts: This standard text has emerged into an ANSI standard, which
+you can get free of charge from
+
+  http://www.lisp.org/HyperSpec/FrontMatter/
+
+LISP is run in an interactive environment. You input forms, and they will be
+evaluated at once. Thus you can inspect variables, call functions with given
+arguments or define your own functions.
+
+
+Contents:
+---------
+
+It consists of the following files:
+
+   lisp.exe               main program
+   lispinit.mem           memory image needed for startup
+   doc/clisp.1            manual page in Unix man format
+   doc/clisp.man          manual page
+   doc/clisp.html         manual page in HTML format
+   doc/impnotes.html,
+   doc/impnotes.css,
+   doc/clisp.png          implementation notes
+   doc/LISP-tutorial.txt  LISP tutorial for beginners
+   doc/CLOS-guide.txt     brief guide to CLOS
+   doc/editors.txt        survey of editors with Lisp support
+   README                 this text
+   SUMMARY                short description of CLISP
+   ANNOUNCE               announcement
+   NEWS                   list of modifications since the last version
+   COPYRIGHT              copyright notice
+   GNU-GPL                free software license
+   emacs/*.el             Emacs customization, see doc/editors.txt
+   src/clisp.c            source of the driver program
+   src/config.lisp        site-dependent configuration
+   data/clhs.txt          keyword-to-HyperSpec mapper
+   data/UnicodeData.txt   unicode mapper
+   install.bat,
+   src/install.lisp       user-friendly installer
+
+
+and - to your convenience, if you like reading source -
+
+   src/*.lisp             the source of lispinit.mem
+   src/*.fas              the same files, already compiled
+
+
+Installation:
+-------------
+
+Change the strings in src/config.lisp, using a text editor.
+Then start
+
+         lisp.exe -M lispinit.mem
+
+When the LISP prompt
+
+      > _
+
+appears, type
+
+      (without-package-lock ()
+        (compile-file "src/config.lisp")
+        (load "src/config.fas"))
+
+and then
+
+        (saveinitmem)
+
+to overwrite the file lispinit.mem with your configuration. Then
+
+        (exit)
+
+If you want a minimal install, then create a directory, and put the
+executable and the memory image there.
+Assuming D:\LIB\LISP :
+
+   mkdir d:\lib\lisp
+   copy lisp.exe d:\lib\lisp
+   copy lispinit.mem d:\lib\lisp
+
+And create a batch file that starts lisp:
+
+   copy con c:\bat\clisp.bat
+   d:\lib\lisp\lisp.exe -M d:\lib\lisp\lispinit.mem -B d:\lib\lisp\ %1 %2 %3 %4 %5 %6 %7 %8 %9
+   [Ctrl-Z]
+
+You can also use file install.bat which creates the driver file
+on your desktop and sets up the registry.
+
+
+
+When you encounter problems:
+----------------------------
+
+After errors, you are in the debugger:
+
+     1. Break> _
+
+You can evaluate forms, as usual. Furthermore:
+
+     Help
+               prints help
+     Abort     or
+     Unwind
+               climbs up to the next higher input loop
+     Backtrace
+               shows the contents of the stack, helpful for debugging
+
+And you can look at the values of the variables of the functions where the
+error occurred.
+
+and how to produce it reliably to the authors or the maintainer.
+Please accompany it with the CLISP version, which you get by calling
+(lisp-implementation-version), as well as the OS name and version.
+
+
+Sources:
+--------
+
+The sources of CLISP are available from
+     ftp://cvs2.cons.org/pub/lisp/clisp/source/
+     ftp://ftp.gnu.org/pub/gnu/clisp/
+     http://clisp.cons.org/
+     http://www.gnu.org/software/clisp/
+     http://www.clisp.org/
+     http://clisp.sf.net/
+
+Mailing Lists:
+--------------
+
+There are three mailing lists for users of CLISP. You find subscription
+information and archives on the homepage http://clisp.cons.org/.
+
+
+Acknowledgement:
+----------------
+
+We are indebted to
+  * Guy L. Steele and many others for the Common Lisp specification.
+
+
+Authors:
+--------
+
+        Bruno Haible
+        Michael Stoll
+
+Email: clisp-list@lists.sourceforge.net
+
+Maintainer:
+-----------
+
+        Sam Steingold
+
+Email: clisp-list@lists.sourceforge.net

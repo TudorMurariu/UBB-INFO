@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0048)http://www.cs.missouri.edu/~skubic/375/clisp.htm -->
+<HTML><HEAD><TITLE>Using and Installing CLISP</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.2900.3020" name=GENERATOR></HEAD>
+<BODY text=#000000 bgColor=#ffffff>
+<H1>Using and Installing CLISP </H1>
+<H2>Linux</H2>CLISP is installed on the Linux machines in the EBW lab. You can 
+SSH into ew1.sites.iats.missouri.edu (through ew39) and use 'clisp' to invoke 
+the program. 
+<H2>Windows</H2>
+<P>If you wish to install CLISP on your windows machine, download it from:<BR><A 
+href="http://sourceforge.net/project/showfiles.php?group_id=1355">CLISP 
+download</A><BR>download clisp-2.30-win32.zip<BR>unzip it(the paths I give after 
+this assume you install to c:\ and keep the zip file's directory 
+structure/folder names)<BR>execute c:\clisp-2.30\install.bat<BR>answer options 
+however you want<BR>The desktop shortcut is fine if you are going to be working 
+without accessing files. When working with files, it is convenient to set your 
+working directory before starting CLISP. When starting CLISP from the command 
+line, you have to specify two parameters. I use a batch file (c:\clisp.bat) with 
+the following two lines. <BR><BR><FONT face="Courier New, Courier, mono">cd 
+c:\lisp\workingdir<BR>c:\clisp-2.30\lisp -B "C:/clisp-2.30/" -M 
+"C:\clisp-2.30\lispinit.mem" </FONT><BR><BR>Either click the shortcut or enter 
+command line to start CLISP. This should bring up the CLISP intro screen and 
+give you a lisp command line. </P>
+<H2>Starting CLISP</H2>Starting CLISP should bring up an ascii CLISP intro 
+graphic followed by copyright information and then the command line: 
+<P>(CLISP intro ascii graphic)</P>
+<P><FONT face="Courier New, Courier, mono">Copyright (c) Bruno Haible, Michael 
+Stoll 1992, 1993<BR>Copyright (c) Bruno Haible, Marcus Daniels 
+1994-1997<BR>Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 
+1998<BR>Copyright (c) Bruno Haible, Sam Steingold 1999-2002</FONT></P>
+<P><FONT face="Courier New, Courier, mono">[1]&gt; </FONT><BR><BR>to make sure 
+it works, try some simple things:<BR><BR><FONT 
+face="Courier New, Courier, mono">[1]&gt; (+ 2 3) 5 <BR>[2]&gt; (print "hello 
+world")<BR>"hello world"<BR>"hello world"</FONT><BR><BR>define a 
+function:<BR><BR><FONT face="Courier New, Courier, mono">[3]&gt; (defun 
+hello-name (name) (format nil "Hello ~A" name))<BR>HELLO-NAME<BR>[4]&gt; 
+(hello-name 'matt)<BR>"Hello MATT"</FONT><BR><BR>Hypothetically, you can do 
+everything from the command line. But as your programs get bigger, it will make 
+more sense to use files.<BR><BR>Enter the following in a text file and save it 
+as "power.lisp" in your working directory. <BR><BR><FONT 
+face="Courier New, Courier, mono">(defun power (x y) (if (= y 0) 1 (* x (power x 
+(1- y))))) </FONT><BR><BR>then load it in CLISP:<BR><BR><FONT 
+face="Courier New, Courier, mono">[5]&gt; (load "power.lisp") <BR>;; Loading 
+file power.lisp <BR>;; Loaded file power.lisp<BR>T<BR>[6]&gt; (power 3 4) 
+<BR>81</FONT><BR><BR>use <FONT face="Courier New, Courier, mono">(quit)</FONT> 
+to exit the CLISP program. </P>
+<H2>Useful Links</H2>
+<P><A href="http://clisp.cons.org/">CLISP homepage</A></P>
+<P><A 
+href="http://www.cs.berkeley.edu/~russell/classes/cs188/f02/assignments/a0/lisp-notes.html">Good 
+lisp introduction</A></P>
+<P><A href="http://www.apl.jhu.edu/~hall/lisp.html">Lisp links</A></P>
+<P><A href="http://grimpeur.tamu.edu/~colin/lp/">in depth Lisp primer</A></P>
+<P><A href="http://www.supelec.fr/docs/cltl/clm/node1.html">CLISP 
+reference</A></P>
+<P><A href="http://www.psg.com/~dlamkins/sl/chapter30.html">Good debugging 
+suggestions 1</A></P>
+<P><A href="http://www.psg.com/~dlamkins/sl/chapter16.html">Good debugging 
+suggestions 2</A></P></BODY></HTML>

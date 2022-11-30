@@ -1,0 +1,494 @@
+<!-- xml version="1.0" encoding="UTF-8" -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ <meta http-equiv="keywords" content="CLISP, ANSI CL, Common Lisp"/>
+ <link rev="made" href="mailto:clisp-list@lists.sourceforge.net"/>
+ <link rel="stylesheet" href="clisp.css" type="text/css"/>
+ <link rel="top" href="index.html" type="text/html" title="CLISP home"/>
+ <title>CLISP manual page</title>
+</head>
+<body>
+<h1>CLISP manual page</h1>
+
+<ul>
+<li><a href="#name">Name</a></li>
+<li><a href="#synopsis">Synopsis</a></li>
+<li><a href="#description">Description</a></li>
+<li><a href="#options">Options</a></li>
+<li><a href="#reference">Reference</a></li>
+<li><a href="#use">Use</a></li>
+<li><a href="#files">Files</a></li>
+<li><a href="#environment">Environment</a></li>
+<li><a href="#see-also">See also</a></li>
+<li><a href="#bugs">Bugs</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#authors">Authors</a></li>
+</ul>
+
+<hr/>
+
+<h2 id="name">Name</h2>
+
+<p><code>CLISP</code> -
+   ANSI Common Lisp compiler, debugger and interpreter.</p>
+
+<h2 id="synopsis">Synopsis</h2>
+
+<p><code>clisp</code>
+  [ <a href="#opt-help"><code>-h</code></a> |
+    <a href="#opt-help"><code>--help</code></a> ]
+  [ <a href="#opt-version"><code>--version</code></a> ]
+  [ <a href="#opt-license"><code>--license</code></a> ]
+  [ <a href="#opt-libdir"><code>-B</code> <var>lisplibdir</var></a> ]
+  [ <a href="#opt-memfile"><code>-M</code> <var>memfile</var></a> ]
+  [ <a href="#opt-memsize"><code>-m</code> <var>memsize</var></a> ]
+  [ <a href="#opt-lang"><code>-L</code> <var>language</var></a> ]
+  [ <a href="#opt-locale"><code>-N</code> <var>localedir</var></a> ]
+  [ <a href="#opt-enc"><code>-E</code><var>domain</var>
+       <var>encoding</var></a> ]
+  [ <a href="#opt-quiet"><code>-q</code></a> |
+    <a href="#opt-quiet"><code>--quiet</code></a> |
+    <a href="#opt-quiet"><code>--silent</code></a> ]
+  [ <a href="#opt-interactive-debug"><code>-interactive-debug</code></a> ]
+  [ <a href="#opt-wait"><code>-w</code></a> ]
+  [ <a href="#opt-ilisp"><code>-I</code></a> ]
+  [ <a href="#opt-ansi"><code>-ansi</code></a> ]
+  [ <a href="#opt-traditional"><code>-traditional</code></a> ]
+  [ <a href="#opt-pack"><code>-p</code> <var>packagename</var></a> ]
+  [ <a href="#opt-load-comp"><code>-C</code></a> ]
+  [ <a href="#opt-norc"><code>-norc</code></a> ]
+  [ <a href="#opt-init"><code>-i</code> <var>initfile</var> ...</a> ]
+  [ <a href="#opt-compile"><code>-c</code></a>
+    [ <a href="#opt-list"><code>-l</code></a> ]
+    <var>lispfile</var>
+    [ <a href="#opt-out"><code>-o</code></a> <var>outputfile</var> ] ... ]
+  [ <a href="#opt-exec-expr"><code>-x</code> <var>expression</var></a> ]
+  [ <a href="#opt-exec-file"><var>lispfile</var></a>
+    [ <a href="#opt-exec-file"><var>argument</var> ...</a> ] ]</p>
+
+<h2 id="description">Description</h2>
+
+<p>Invokes the Common Lisp interpreter and compiler.
+Invoked without arguments, executes the read-eval-print loop, in which
+expressions are in turn read from standard input, evaluated by the lisp
+interpreter, and their results output to standard output.
+Invoked with <a href="#opt-compile"><code>-c</code></a>, compiles
+the specified lisp files to a bytecode that can be executed
+more efficiently.</p>
+
+<h2 id="options">Options</h2>
+
+<dl>
+<dt id="opt-help"><strong><code>-h</code></strong>,
+    <strong><code>--help</code></strong></dt>
+<dd>Displays a help message on how to use <code>clisp</code>.<p/></dd>
+
+<dt id="opt-version"><strong><code>--version</code></strong></dt>
+<dd>Displays the <code>clisp</code> version number, as given by the
+ function call <code>(<a href="http://www.lisp.org/HyperSpec/Body/fun_lisp-impl_tion-version.html">lisp-implementation-version</a>)</code>.<p/></dd>
+
+<dt id="opt-license"><strong><code>--license</code></strong></dt>
+<dd>Displays a summary of the licensing information, the
+ <a href="http://www.gnu.org/copyleft/gpl.html">GNU GPL</a>.<p/></dd>
+
+<dt id="opt-libdir"><strong><code>-B</code>
+    <var>lisplibdir</var></strong></dt>
+<dd>Specifies the installation directory.
+ This is the directory containing the linking sets and other data files.
+Directory <var>lisplibdir</var> can be changed dynamically using the
+symbol-macro <code>*lib-directory*</code>.
+<p/></dd>
+
+
+<dt id="opt-memfile"><strong><code>-M</code>
+    <var>memfile</var></strong></dt>
+<dd>Specifies the initial memory image.
+ This must be a memory dump produced by the
+ <code><a href="impnotes.html#image">saveinitmem</a></code> function.
+<p/></dd>
+
+<dt id="opt-memsize"><strong><code>-m</code>
+    <var>memsize</var></strong></dt>
+<dd>Sets the amount of memory <code>clisp</code> tries to grab on startup.
+ The amount may be given as
+ <ul>
+  <li><var>nnnnnnn</var> (measured in bytes),</li>
+  <li><var>nnnn</var> <code>K</code> or
+      <var>nnnn</var> <code>KB</code> (measured in kilobytes) or</li>
+  <li><var>n</var> <code>M</code> or
+      <var>n</var> <code>MB</code> (measured in megabytes).</li>
+ </ul>
+ Default is 2 megabytes.
+ The argument is constrained above 100 KB.
+This version of <code>clisp</code>
+eventually uses the entire <var>memsize</var>.
+<p/></dd>
+
+
+
+<dt id="opt-lang"><strong><code>-L</code>
+    <var>language</var></strong></dt>
+<dd>Specifies the language <code>clisp</code>
+uses to communicate with the user.
+This may be
+<code>english</code>.
+The language may be changed dynamically using the symbol macro
+<a href="impnotes.html#language"><code>*current-language*</code></a>,
+<p/></dd>
+
+<dt id="opt-locale"><strong><code>-N</code>
+    <var>localedir</var></strong></dt>
+<dd>Specifies the base directory of locale files. <code>clisp</code>
+will search its message catalogs in
+<var>localedir</var><code>/</code><var>language</var><code>/LC_MESSAGES/clisp.mo</code>.
+This directory may be changed dynamically using the symbol macro
+<a href="impnotes.html#language"><code>*current-language*</code></a>,
+<p/></dd>
+
+<dt id="opt-enc"><strong><code>-E</code><var>domain</var>
+    <var>encoding</var></strong></dt>
+<dd>Specifies the encoding used for a given domain, overriding the default
+which depends on the environment variables <code>LC_ALL</code>,
+<code>LC_CTYPE</code>, <code>LANG</code>. <var>domain</var> can be
+<dl><dt><code>file</code>,</dt>
+  <dd>affecting <a href="impnotes.html#def-file-enc"
+     ><code>*default-file-encoding*</code></a>, or</dd>
+ <dt><code>pathname</code>,</dt>
+  <dd>affecting <a href="impnotes.html#path-enc"
+     ><code>*pathname-encoding*</code></a>, or</dd>
+ <dt><code>terminal</code>,</dt>
+  <dd>affecting <a href="impnotes.html#term-enc"
+     ><code>*terminal-encoding*</code></a>, or</dd>
+ <dt><code>foreign</code>,</dt>
+  <dd>affecting <a href="impnotes.html#foreign-enc"
+     ><code>*foreign-encoding*</code></a>, or</dd>
+ <dt><code>misc</code>,</dt>
+  <dd>affecting <a href="impnotes.html#misc-enc"
+     ><code>*misc-encoding*</code></a>.</dd>
+  <dt><var>blank</var>,</dt>
+   <dd>affecting all of the above.</dd></dl>
+ <strong>Note</strong> that these values cannot be saved in a
+ <a href="impnotes.html#image">memory image</a>.
+ You have to use the <a href="#opt-norc">init file</a>
+ to set them on startup.<p/></dd>
+
+<dt id="opt-quiet"><strong><code>-q</code></strong>,
+    <strong><code>--quiet</code></strong>,
+    <strong><code>--silent</code></strong></dt>
+<dd>Quiet: <code>clisp</code> displays no banner at startup and no
+ good-bye message when quitting.<p/></dd>
+
+<dt id="opt-interactive-debug"><code>-interactive-debug</code></dt>
+<dd>Override the batch mode imposed by
+  <a href="#opt-compile"><code>-c</code></a>,
+  <a href="#opt-exec-expr"><code>-x</code></a>, and
+  <a href="#opt-exec-file"><var>lispfile</var></a>
+and allow interactive handling of <code>ASSERT</code> and friends.</dd>
+
+<dt id="opt-wait"><strong><code>-w</code></strong></dt>
+<dd>Wait for a keypress after program termination.<p/></dd>
+
+<dt id="opt-ilisp"><strong><code>-I</code></strong></dt>
+<dd>Be <a href="http://ilisp.cons.org/">ILISP</a> friendly.
+ ILISP is an alternative
+ <a href="http://www.gnu.org/software/emacs/">Emacs</a>
+ interface to Common Lisp systems.
+ With this option, <code>clisp</code>
+ interacts in a way that ILISP can deal with.
+ Currently the only effect of this is that unnecessary prompts are not
+ suppressed.
+<p/></dd>
+
+<dt id="opt-ansi"><strong><code>-ansi</code></strong></dt>
+<dd>ANSI CL compliant: comply with the ANSI CL specification
+even where <code>clisp</code> has been traditionally different.
+It sets the symbol macro <code>*ansi*</code> to <code>t</code>.
+See <a href="impnotes.html#ansi">"Maximum ANSI CL compliance"</a>,
+for details.<p/></dd>
+
+<dt id="opt-traditional"><strong><code>-traditional</code></strong></dt>
+<dd>Traditional: reverses the residual effects of
+    <a href="#opt-ansi"><code>-ansi</code></a>
+    in the saved image.<p/></dd>
+
+<dt id="opt-pack"><strong><code>-p</code>
+    <var>packagename</var></strong></dt>
+<dd>At startup the value of the variable <code>*package*</code> will
+be set to the package named <var>packagename</var>.
+The default is the package which was active when the image was
+ <a href="impnotes.html#image">saved</a>, normally
+ <a href="impnotes.html#imppack"><code>USER</code></a>.<p/></dd>
+
+<dt id="opt-load-comp"><strong><code>-C</code></strong></dt>
+<dd>Compile when loading: At startup the value of the variable
+<code><a href="impnotes.html#loadfile">*load-compiling*</a></code>
+will be set to <code>t</code>.
+Code being <code>load</code>ed will then be compiled on the fly.
+This results in slower loading, but faster execution.<p/></dd>
+
+<dt id="opt-norc"><strong><code>-norc</code></strong></dt>
+<dd>Normally <code>clisp</code> loads a user run control (RC) file on
+startup (this happens after the <a href="#opt-load-comp"><code>-C</code></a>
+option is processed).
+The file loaded is
+<code>_clisprc.lisp</code> or <code>_clisprc.fas</code> in the home directory
+<code>(user-homedir-pathname)</code>,
+whichever is newest.  This option, <code>-norc</code>, prevents loading of
+the RC file.<p/></dd>
+
+<dt id="opt-init"><strong><code>-i</code>
+    <var>initfile</var> ...</strong></dt>
+<dd>Specifies initialization files to be <code>load</code>ed
+at startup.  These should be lisp files (source or compiled).
+Several <code>-i</code> options can be given; all the specified
+files will be loaded in order.<p/></dd>
+
+<dt id="opt-compile"> <strong><code>-c</code>
+    <var>lispfile</var> ...</strong></dt>
+<dd>Compiles the specified <var>lispfile</var>s to bytecode (*.fas). The
+compiled files can then be <code>load</code>ed instead of the sources to
+gain efficiency.<p/></dd>
+
+<dt id="opt-out"><strong><code>-o</code>
+    <var>outputfile</var></strong></dt>
+<dd>Specifies the output file or directory for the compilation of the
+last specified <var>lispfile</var>.<p/></dd>
+
+<dt id="opt-list"><strong><code>-l</code></strong></dt>
+<dd>A bytecode listing (*.lis) of the files being compiled will be produced.
+Useful only for debugging purposes. See the documentation of
+<a href="impnotes.html#compilefile"><code>compile-file</code></a>
+for details.<p/></dd>
+
+<dt id="opt-exec-expr"> <strong><code>-x</code>
+    <var>expressions</var></strong></dt>
+<dd>Executes a series of arbitrary expressions instead of a
+read-eval-print loop.
+The values of the expressions will be output to standard output.
+Due to the argument processing done by the shell, the <var>expressions</var>
+must be enclosed in double quotes, and double quotes and backslashes must
+be preceded by backslashes.<p/></dd>
+
+<dt id="opt-exec-file"><strong><var>lispfile</var>
+    [ <var>argument</var> ... ]</strong></dt>
+<dd>Loads and executes a <var>lispfile</var>.
+There will be no read-eval-print loop.
+Before <var>lispfile</var> is loaded, the variable <code>*args*</code>
+will be bound to a list of strings, representing the <var>argument</var>s.
+If <var>lispfile</var> is <code>-</code>,
+the standard input is used instead of a file.
+If <var>lispfile</var> is an empty string <code>""</code>,
+the rest of the arguments is still available in <code>*args*</code>,
+for parsing by the <code><a href="impnotes.html#image">init-function</a></code>
+of the current image.
+This option must be the last one.
+No <a href="#opt-norc">RC file</a> will be executed.<p/></dd>
+
+</dl>
+
+
+<h2 id="reference">Reference</h2>
+
+<p>The language implemented mostly conforms to</p>
+<blockquote title="ANSI-CL" cite="http://www.ncits.org/tc_home/j13sd4.htm">
+ <p>ANSI Common Lisp standard
+    <a href="http://www.ncits.org/tc_home/j13sd4.htm">X3.226-1994</a></p>
+</blockquote>
+
+<p>available online as the</p>
+<blockquote title="CLHS" cite="http://www.lisp.org/HyperSpec/FrontMatter/">
+ <p>Common Lisp HyperSpec
+ (<a href="http://www.lisp.org/HyperSpec/FrontMatter/">"CLHS"</a> for short)</p>
+</blockquote>
+
+<p>which supersedes the earlier specifications</p>
+<blockquote title="CLtL2" cite="http://www.cs.cmu.edu/afs/cs.cmu.edu/project/ai-repository/ai/html/cltl/cltl2.html">
+ <p>Guy L. Steele Jr.: Common Lisp - The Language.
+    Digital Press. 2nd edition 1990, 1032 pages.
+    (<a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/project/ai-repository/ai/html/cltl/cltl2.html">"CLtL2"</a> for short)</p>
+</blockquote>
+<p>and</p>
+<blockquote title="CLtL1">
+ <p>Guy L. Steele Jr.: Common Lisp - The Language.
+    Digital Press. 1st edition 1984, 465 pages. ("CLtL1" for short)</p>
+</blockquote>
+
+<h2 id="use">Use</h2>
+
+<dl>
+<dt><code>help</code></dt>
+<dd>to get some on-line help.<p/></dd>
+
+<dt><code>(apropos <var>name</var>)</code></dt>
+<dd><a href="impnotes.html#apropos">lists the symbols</a> related
+ to <var>name</var>.<p/></dd>
+
+<dt><code>(exit)</code> or <code>(quit)</code> or <code>(bye)</code></dt>
+<dd>to <a href="quit">quit</a> <code>clisp</code>.<p/></dd>
+
+
+</dl>
+
+<h2 id="files">Files</h2>
+
+<dl>
+
+<dt>
+</dt><dd>main executable (runtime)<p/></dd>
+
+<dt><code>lispinit.mem</code></dt>
+<dd>initial <a href="impnotes.html#image">memory image</a><p/></dd>
+
+<dt><code>config.lisp</code></dt>
+<dd>site-dependent configuration<p/></dd>
+
+<dt><code>*.lisp</code></dt>
+<dd>lisp source<p/></dd>
+
+<dt><code>*.fas</code></dt>
+<dd>lisp code, compiled by <code>clisp</code><p/></dd>
+
+<dt><code>*.lib</code></dt>
+<dd>lisp source library information, generated and used by the
+<code>clisp</code> compiler<p/></dd>
+
+<dt><code>*.c</code></dt>
+<dd>C code, compiled from lisp source by <code>clisp</code>
+ (for the <a href="impnotes.html#dffi">FFI</a>)<p/></dd>
+</dl>
+
+
+<h2 id="environment">Environment</h2>
+
+<dl>
+ <dt><code>CLISP_LANGUAGE</code></dt>
+  <dd>specifies the language <code>clisp</code>
+   uses to communicate with the user.
+   The value may be <code>english</code>, <code>german</code>,
+   <code>french</code>, <code>spanish</code>, <code>dutch</code>,
+   <code>russian</code>, and defaults to <code>english</code>.
+   The <a href="#opt-lang"><code>-L</code></a> option can be used to
+   override this environment variable.<p/></dd>
+
+ <dt><code>LC_CTYPE</code></dt>
+  <dd>specifies the locale which determines the character set in use.
+   The value can be of the form <code><var>language</var></code> or
+   <code><var>language</var>_<var>country</var></code> or
+   <code><var>language</var>_<var>country</var>.<var>charset</var></code>,
+   where <var>language</var> is a two-letter ISO 639 language code
+   (lower case), <var>country</var> is a two-letter ISO 3166 country
+   code (upper case).  <var>charset</var> is an optional character set
+   specification, and needs normally not be given because the character
+   set can be inferred from the language and country.<p/></dd>
+
+ <dt><code>LANG</code></dt>
+  <dd>specifies the language <code>clisp</code>
+   uses to communicate with the user, unless it is already specified
+   through the environment variable <code>CLISP_LANGUAGE</code> or the
+   <a href="#opt-lang"><code>-L</code></a> option.
+   It also specifies the locale determining the character set in use, unless
+   already specified through the environment variable <code>LC_CTYPE</code>.
+   The value may begin with a two-letter ISO 639 language code, for example
+   <code>en</code>, <code>de</code>, <code>fr</code>.<p/></dd>
+
+
+
+
+
+</dl>
+
+
+<h2 id="see-also">See also</h2>
+
+<p><a href="impnotes.html">impnotes.html</a>,
+<a href="http://www.cons.org/cmucl/"><code>cmucl</code></a>(1),
+<a href="http://www.gnu.org/software/emacs/"><code>emacs</code></a>(1),
+<a href="http://www.xemacs.org"><code>xemacs</code></a>(1).</p>
+
+<h2 id="bugs">Bugs</h2>
+
+<p>When you encounter a bug in <code>clisp</code>, please report it to the
+  <a href="http://lists.sourceforge.net/lists/listinfo/clisp-list">CLISP
+  mailing list</a> or the
+  <a href="http://sourceforge.net/tracker/?func=add&amp;group_id=1355&amp;atid=101355">SourceForge bug tracker</a>.</p>
+
+<p>When submitting a bug report, please specify the
+following information:</p>
+
+<ol>
+ <li>What is your platform (<code>"uname -a"</code> on a Unix system)?
+  Compiler version?  LIBC version (on Linux)?</li>
+ <li>Where did you get the sources?  When?
+  (Absolute dates are preferred over the relative ones).</li>
+ <li>How did you build <code>clisp</code>? (What command, options &amp;c.)
+  Please do a clean build (remove your build directory and build
+  <code>clisp</code> with <code>"./configure --build build"</code> or at
+  least do a <code>"make distclean"</code> before <code>"make"</code>).
+  If you are reporting a crash (segmentation fault, bus error, core
+  dump etc), please do
+  <code>"./configure --with-debug --build build-g"</code>
+   and report the backtrace.</li>
+ <li>If you are using pre-built binaries, the problem is likely
+  to be in the incompatibilities between the platform on which
+  the binary was built and yours;
+  please try compiling the sources.</li>
+ <li>What is the output of
+  <a href="#opt-version"><code>"clisp --version"</code></a>?</li>
+ <li>Please supply the full output (copy and paste) of all the error
+  messages, as well as detailed instructions on how to reproduce them.</li>
+</ol>
+
+<p>Known bugs, some of which may be platform-dependent, include</p>
+<ul>
+<li>Not all extensions from ANSI CL are supported.</li>
+<li>No on-line documentation beyond <code>apropos</code>
+ and <code>describe</code> is available.</li>
+</ul>
+
+<h2 id="projects">Projects</h2>
+
+<ul>
+<li>Write on-line documentation.</li>
+<li>Enhance the compiler so that it can inline local functions.</li>
+<li>Specify a portable set of window and graphics operations.</li>
+<li>Add Multi-Threading capabilities, via OS threads.</li>
+</ul>
+
+<h2 id="authors">Authors</h2>
+
+<p>Bruno Haible and Michael Stoll.</p>
+
+<p>See <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/clisp/clisp/COPYRIGHT?rev=HEAD&amp;content-type=text/plain">COPYRIGHT</a>
+for the list of other contributors.</p>
+
+
+<hr/>
+
+<address>CLISP manual page<br/>
+Bruno Haible &lt;clisp-list@lists.sourceforge.net&gt;
+</address>
+
+<hr/>
+
+<table width="100%"><tr><td align="left">
+ <a href="http://clisp.cons.org"><img src="clisp.png" width="48"
+    height="48" alt="[CLISP home]"/></a></td>
+ <td align="right"><a href="http://sourceforge.net"><img
+     src="http://sourceforge.net/sflogo.php?group_id=1355&amp;type=2"
+     width="125" height="37" alt="SourceForge Logo"/></a></td>
+ <td align="right"><a href="http://validator.w3.org/check/referer"><img
+     src="http://www.w3.org/Icons/valid-xhtml10"
+     alt="Valid XHTML" height="31" width="88"/></a>
+ <a href="http://www.w3.org/Style/CSS/Buttons/"><img
+    src="http://www.w3.org/Style/CSS/Buttons/mwcts"
+    alt="Use CSS" height="31" width="88"/></a>
+ <a href="http://jigsaw.w3.org/css-validator/check/referer"><img
+    src="http://jigsaw.w3.org/css-validator/images/vcss"
+    alt="Valid CSS" height="31" width="88"/></a></td>
+</tr></table>
+</body>
+</html>

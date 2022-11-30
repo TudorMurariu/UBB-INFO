@@ -31,16 +31,16 @@ interclasare(l1..ln, h1..hm) = { h1..hm , n = 0 }
 )
 ```
 
-| defun          | cons         | list          | append    |
-|:--------------:|:------------:|:-------------:|:---------:|
-| 'A 'B          | cons('A 'B)  | (A B)         | Eroare    |
-| 'A '(B C)      | (A B C)      | (A (B C))     | Eroare    |
-| '(A B)         | ((AB).C)     | (A B).C)      | (A B.C)   |
-| '(A B) '(C D)  | ((A B) C D)  | ((A B) (C D)) | (A B C D) |
-| 'A 'B 'C       | Eroare       | (A B C)       | Eroare    |
-| '(A) '(B) 'C   | Eroare       | (A B C)       | (A B.C)   |
+|     defun     |    cons     |     list      |  append   |
+| :-----------: | :---------: | :-----------: | :-------: |
+|     'A 'B     | cons('A 'B) |     (A B)     |  Eroare   |
+|   'A '(B C)   |   (A B C)   |   (A (B C))   |  Eroare   |
+|    '(A B)     |  ((AB).C)   |   (A B).C)    |  (A B.C)  |
+| '(A B) '(C D) | ((A B) C D) | ((A B) (C D)) | (A B C D) |
+|   'A 'B 'C    |   Eroare    |    (A B C)    |  Eroare   |
+| '(A) '(B) 'C  |   Eroare    |    (A B C)    |  (A B.C)  |
 
-## **P2** Sa se elimine toate aparitiile unui aton dintr-o lista.
+## **P2** Sa se elimine toate aparitiile unui atom dintr-o lista.
 
 **Ex:** <br>
 ```
@@ -74,7 +74,7 @@ atom
 )
 ```
 
-## **P3** Sa se determine lista pozitiilo elementului numeric minim dintr-o lista data.
+## **P3** Sa se determine lista pozitiilor elementului numeric minim dintr-o lista data.
 
 **Ex:** <br>
 ```

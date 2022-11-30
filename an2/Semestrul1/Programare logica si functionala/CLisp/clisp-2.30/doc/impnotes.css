@@ -1,0 +1,16 @@
+/*      -*- C -*-
+ * CLISP implementation notes stylesheets
+ * Copyright (C) 2001-2002 by Sam Steingold <sds@gnu.org>
+ * Covered by the GNU GPL <http://www.gnu.org/copyleft/gpl.html>
+ */
+
+/* reduce the whitespace (see also clisp.css) */
+li p { margin: 0pt; }
+td p { margin: 0pt; }
+dd p { margin: 0pt; }
+
+/* mark sexps with color */
+.sexp { background-color: lightgray; color: darkblue; }
+
+/* no border for images */
+img { border-width: 0; }
