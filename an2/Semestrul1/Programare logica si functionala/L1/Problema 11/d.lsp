@@ -21,3 +21,4 @@
 )
 
 (write (main_produs (list 1 2 3 5 "ana" (list 0 1))))
+(terpri) ; endline

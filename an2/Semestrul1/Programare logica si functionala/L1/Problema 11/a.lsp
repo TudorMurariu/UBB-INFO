@@ -45,4 +45,10 @@
 ;   )
 ; )
 
-(write (cmmmc_list (list 2 2 (list 1 4 5) "ana" "pufi" 5) 1))
+(defun main (l) 
+  (cmmmc_list l 1)
+)
+
+(write (main (list 2 2 (list 1 4 5) " " "pufi" 5)))
+(terpri) ; endline
+(write (main (list 1 2 0)))

@@ -1,2 +1,0 @@
-cd "C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Programare logica si functionala\CLisp"
-C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Programare logica si functionala\CLisp\lisp -B "C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Programare logica si functionala\CLisp" -M "C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Programare logica si functionala\CLisp\lispinit.mem"

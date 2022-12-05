@@ -32,4 +32,6 @@
     )
 )
 
+(write (munte_main (list 1 2 1 0 -1)))
+(terpri) ; endline
 (write (munte_main (list 2 1)))
