@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<inbox>
+    <messageTask taskid="123">
+        <description>Feedback lab3</description>
+        <message>Ai obtinut 10</message>
+        <from>aaa@email.com</from>
+        <to>bbb@email.ro</to>
+        <date>2018-09-27 11:10</date>
+    </messageTask>
+    <messageTask taskid="3203">
+        <description>feedback lab 2</description>
+        <message>Te-ai descurcat bine</message>
+        <from>teacher</from>
+        <to>student</to>
+        <date>2018-11-03 22:25</date>
+    </messageTask>
+    <messageTask taskid="103203">
+        <description>feedback lab 2</description>
+        <message>Te-ai descurcat bine</message>
+        <from>teacher</from>
+        <to>student</to>
+        <date>2018-11-03 21:43</date>
+    </messageTask>
+    <messageTask taskid="9999">
+        <description>feedback lab 2</description>
+        <message>bine</message>
+        <from>teacher</from>
+        <to>student</to>
+        <date>2018-11-07 09:51</date>
+    </messageTask>
+</inbox>

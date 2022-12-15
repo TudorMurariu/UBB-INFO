@@ -1,0 +1,15 @@
+id=3555555|description=descriere|message=mesaj|from=to|to=from|date=2022-11-21 17:42
+id=68689|description=mihai|message=nu i ok|from=mihai|to=razvan|date=2022-11-21 17:29
+id=3434343|description=descriere|message=mesaj|from=from|to=to|date=2022-11-21 17:41
+id=1|description=Feedback lab1|message=Ai obtinut 9.60|from=Gigi|to=Dana|date=2018-11-20 22:03
+id=2|description=Feedback lab1|message=Ai obtinut 5.60|from=Gigidffdf|to=Ana|date=2019-11-12 10:13
+id=123|description=feedback lab 2|message=Te-ai descurcat bine|from=AAAAA|to=student|date=2018-11-18 22:56
+id=3|description=Feedback lab3|message=Ai obtinut 10|from=Gigiiiiiii|to=Ana|date=2019-11-13 20:02
+id=454|description=454|message=Salutari|from=544|to=54|date=2018-11-19 11:12
+id=433|description=43|message=Toate cele buna|from=43|to=43|date=2019-11-13 20:02
+id=1003|description=rugaminte|message=te rog ...|from=teacher|to=admin|date=2018-11-20 22:20
+id=5|description=sds|message=sdsds|from=2|to=34|date=2020-11-16 08:47
+id=1002|description=feedback lab 2|message=Te-ai descurcat bine|from=teacher|to=student|date=2018-10-31 09:26
+id=1001|description=feedback lab 2|message=Te-ai descurcat bine|from=teacher|to=student|date=2018-10-31 09:26
+id=6868|description=mihai|message=nu i ok|from=mihai|to=razvan|date=2022-11-21 17:28
+id=344444|description=stefan|message=seminar map|from=stefan|to=andrei|date=2022-11-21 17:31

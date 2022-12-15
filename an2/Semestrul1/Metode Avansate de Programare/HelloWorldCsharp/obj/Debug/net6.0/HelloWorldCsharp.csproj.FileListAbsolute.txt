@@ -1,0 +1,15 @@
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\HelloWorldCsharp\bin\Debug\net6.0\HelloWorldCsharp.exe
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\HelloWorldCsharp\bin\Debug\net6.0\HelloWorldCsharp.deps.json
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\HelloWorldCsharp\bin\Debug\net6.0\HelloWorldCsharp.runtimeconfig.json
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\HelloWorldCsharp\bin\Debug\net6.0\HelloWorldCsharp.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\HelloWorldCsharp\bin\Debug\net6.0\HelloWorldCsharp.pdb
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\HelloWorldCsharp\obj\Debug\net6.0\HelloWorldCsharp.csproj.AssemblyReference.cache
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\HelloWorldCsharp\obj\Debug\net6.0\HelloWorldCsharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\HelloWorldCsharp\obj\Debug\net6.0\HelloWorldCsharp.AssemblyInfoInputs.cache
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\HelloWorldCsharp\obj\Debug\net6.0\HelloWorldCsharp.AssemblyInfo.cs
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\HelloWorldCsharp\obj\Debug\net6.0\HelloWorldCsharp.csproj.CoreCompileInputs.cache
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\HelloWorldCsharp\obj\Debug\net6.0\HelloWorldCsharp.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\HelloWorldCsharp\obj\Debug\net6.0\refint\HelloWorldCsharp.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\HelloWorldCsharp\obj\Debug\net6.0\HelloWorldCsharp.pdb
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\HelloWorldCsharp\obj\Debug\net6.0\HelloWorldCsharp.genruntimeconfig.cache
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\HelloWorldCsharp\obj\Debug\net6.0\ref\HelloWorldCsharp.dll
