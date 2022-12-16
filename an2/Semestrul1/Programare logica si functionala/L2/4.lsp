@@ -1,5 +1,7 @@
-;; transform(l1..ln) = { [] , n = 0 }
-
+;; transform(l1..ln) = { [] , n == 0 }
+;;                     { [l1, 0] , n == 1 }
+;;                     { [l1, 1] + transform(l2), n == 2 }
+;;                     { [l1, 2] + transform(l2) + transform(l3) , altfel (n == 3)}
 
 (defun transform(l)
     (cond 
@@ -11,4 +13,5 @@
 )
 
 (print (transform '(A (B) (C (D) (E)))))
-(print (transform '(A(B(D)(E(F(G)(H))))(C(I(J(K)))))))
+(print (transform '(A(B(D)(E(F(G)(H))))(C(I(J(K))))))) 
+(print ((lambda (x) (* x x)) 2))
