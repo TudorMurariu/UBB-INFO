@@ -3,6 +3,7 @@
 ;;                     { [l1, 1] + transform(l2), n == 2 }
 ;;                     { [l1, 2] + transform(l2) + transform(l3) , altfel (n == 3)}
 
+;; parcurgem in preordine
 (defun transform(l)
     (cond 
         ((null l) nil)
@@ -13,5 +14,6 @@
 )
 
 (print (transform '(A (B) (C (D) (E)))))
-(print (transform '(A(B(D)(E(F(G)(H))))(C(I(J(K))))))) 
+(print (transform '(A (B (D) (E (F (G) (H)))) (C (I (J (K))))))) 
+(print (transform '(A (B (H (I (J) (K)))) (C (D (G)) (E)))))
 (print ((lambda (x) (* x x)) 2))
