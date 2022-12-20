@@ -1,0 +1,94 @@
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.exe
+D:\__MAP\workspace_C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.csprojAssemblyReference.cache
+D:\__MAP\workspace_C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.AssemblyInfoInputs.cache
+D:\__MAP\workspace_C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.AssemblyInfo.cs
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.deps.json
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.runtimeconfig.json
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.runtimeconfig.dev.json
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.pdb
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\System.Configuration.ConfigurationManager.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\System.Drawing.Common.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\System.Security.AccessControl.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\System.Security.Cryptography.ProtectedData.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\System.Security.Permissions.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\System.Security.Principal.Windows.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\System.Windows.Extensions.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\__MAP\workspace_C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.csproj.CopyComplete
+D:\__MAP\workspace_C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.dll
+D:\__MAP\workspace_C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.pdb
+D:\__MAP\workspace_C#\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.dll.config
+d:\__MAP\WORKSPACE_C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.csproj.CoreCompileInputs.cache
+d:\__MAP\WORKSPACE_C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.genruntimeconfig.cache
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.exe
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.dll.config
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.deps.json
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.runtimeconfig.json
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.runtimeconfig.dev.json
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.pdb
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\System.Configuration.ConfigurationManager.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\System.Drawing.Common.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\System.Security.AccessControl.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\System.Security.Cryptography.ProtectedData.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\System.Security.Permissions.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\System.Security.Principal.Windows.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\System.Windows.Extensions.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+d:\02 MAP\workspace-C#\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+d:\02 MAP\workspace-C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.csprojAssemblyReference.cache
+d:\02 MAP\workspace-C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.csproj.CoreCompileInputs.cache
+d:\02 MAP\workspace-C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.AssemblyInfoInputs.cache
+d:\02 MAP\workspace-C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.AssemblyInfo.cs
+d:\02 MAP\workspace-C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.csproj.CopyComplete
+d:\02 MAP\workspace-C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.dll
+d:\02 MAP\workspace-C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.pdb
+d:\02 MAP\workspace-C#\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.genruntimeconfig.cache
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.exe
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.dll.config
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.deps.json
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.runtimeconfig.json
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.runtimeconfig.dev.json
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\sem11_12.pdb
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\System.Configuration.ConfigurationManager.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\System.Security.AccessControl.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\System.Security.Permissions.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\System.Security.Principal.Windows.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.csproj.AssemblyReference.cache
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.AssemblyInfoInputs.cache
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.AssemblyInfo.cs
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.csproj.CoreCompileInputs.cache
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.csproj.CopyComplete
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.dll
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.pdb
+C:\Users\tudor\OneDrive\Desktop\UBB INFO\an2\Semestrul1\Metode Avansate de Programare\sem11_12\obj\Debug\netcoreapp3.0\sem11_12.genruntimeconfig.cache

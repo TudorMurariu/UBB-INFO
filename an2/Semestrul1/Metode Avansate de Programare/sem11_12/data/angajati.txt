@@ -1,0 +1,6 @@
+﻿a2,Ana,10,Junior
+a4,Cristina,14,Medium
+a6,Aprogramatoarei,20,Senior
+a1,Ane,8,Junior
+a5,Cristi,18,Medium
+a3,Ani,12,Junior

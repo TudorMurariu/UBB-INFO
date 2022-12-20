@@ -1,0 +1,16 @@
+﻿s1,Grea,2
+s2,Grea,2
+s3,Grea,4
+s4,Medie,2
+s5,Medie,2
+s6,Medie,3
+s7,Medie,3
+s8,Medie,4
+s9,Usoara,1
+s10,Usoara,2
+s11,Usoara,8
+s12,Usoara,4
+s13,Usoara,5
+s14,Usoara,6
+s15,Grea,5
+s16,Medie,4
