@@ -56,7 +56,7 @@ elimina(l1..ln, e) = { [], n = 0 }
 
 eq 
 equal
-number
+numberp
 listp
 oddp
 atom
