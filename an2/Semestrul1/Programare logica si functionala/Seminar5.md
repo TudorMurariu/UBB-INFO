@@ -35,7 +35,7 @@ interclasare(l1..ln, h1..hm) = { h1..hm , n = 0 }
 | :-----------: | :---------: | :-----------: | :-------: |
 |     'A 'B     | cons('A 'B) |     (A B)     |  Eroare   |
 |   'A '(B C)   |   (A B C)   |   (A (B C))   |  Eroare   |
-|    '(A B)     |  ((AB)ss)   |   (A B).C)    |  (A B.C)  |
+|    '(A B) 'C  |  ((AB) C)   |   (A B).C)    |  (A B.C)  |
 | '(A B) '(C D) | ((A B) C D) | ((A B) (C D)) | (A B C D) |
 |   'A 'B 'C    |   Eroare    |    (A B C)    |  Eroare   |
 | '(A) '(B) 'C  |   Eroare    |    (A B C)    |  (A B.C)  |
