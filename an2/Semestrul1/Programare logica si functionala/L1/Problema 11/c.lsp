@@ -40,3 +40,4 @@
 ;(write (elimina (list 1 69 "ana" (list 5 5 3) 1 -2 -9999 5 6 7 5 8) 5))
 
 (write (main (list 1 33 "ana" (list 5 5 3) 1 -2 -9999 5 6 7 33 5 8 33)))
+(terpri) ; endline
