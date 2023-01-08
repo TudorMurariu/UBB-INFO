@@ -87,7 +87,7 @@ end
 &nbsp;Elixir is a powerful, functional programming language that runs on the efficient Erlang VM. Its support for concurrency and fault tolerance make it ideal for building scalable, distributed systems. Its simple syntax and expressive power make it a joy to use.
 
 # References
-https://hexdocs.pm/elixir/Code.html
-https://www.tutorialspoint.com/elixir/index.htm
-https://en.wikipedia.org/wiki/Functional_programming
-https://en.wikipedia.org/wiki/Object-oriented_programming
+https://hexdocs.pm/elixir/Code.html<br>
+https://www.tutorialspoint.com/elixir/index.htm<br>
+https://en.wikipedia.org/wiki/Functional_programming<br>
+https://en.wikipedia.org/wiki/Object-oriented_programming<br>
