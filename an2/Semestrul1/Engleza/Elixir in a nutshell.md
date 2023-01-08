@@ -88,6 +88,6 @@ end
 
 # References
 https://hexdocs.pm/elixir/Code.html<br>
-https://www.tutorialspoint.com/elixir/index.htm<br>
+https://www.tutorialspoint.com/elixir/elixir_overview.htm<br>
 https://en.wikipedia.org/wiki/Functional_programming<br>
 https://en.wikipedia.org/wiki/Object-oriented_programming<br>
