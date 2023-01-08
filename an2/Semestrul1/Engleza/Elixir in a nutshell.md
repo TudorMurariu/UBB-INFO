@@ -10,7 +10,7 @@
 * Conclusion.
 
 # What is Elixir?
-&nbsp;Elixir is a programming language that was created in 2011 by José Valim. It is a functional, dynamic language that is built on top of the Erlang virtual machine (VM). Just like Java, a language that is also built on top of a virtual machine, it is portable and it can run on any operating system. Elixir is known for its simplicity, concurrency, and scalability.
+&nbsp;Elixir is a programming language that was created in 2011 by José Valim. It is a functional, dynamic language that is built on top of the Erlang virtual machine (EVM). Just like Java, a language that is also built on top of a virtual machine (JVM), it is portable and it can run on any operating system. Elixir is known for its simplicity, concurrency, and scalability.
 
 # Hello world in Elixir.
 ```elixir
