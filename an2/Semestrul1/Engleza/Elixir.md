@@ -16,7 +16,7 @@
 ```elixir
 # the basic syntax
 IO.puts("Hello, World!")
-# the ruby inspierd syntax
+# the ruby inspired syntax
 IO.puts "Hello, World!"
 ```
 
@@ -24,7 +24,7 @@ IO.puts "Hello, World!"
 &nbsp;Functional programming is a programming paradigm in which functions are the primary unit of computation. In functional programming, functions are first-class citizens, which means that they can be passed around and used just like any other value. This allows for concise, elegant code that is easy to reason about and test.
 
 # Functional programming vs Object-oriented programming
-We have already talked about what a functional programming is but what is Object-oriented programming?
+We have already talked about what functional programming is but what is Object-oriented programming?
 
 Object-oriented programming (OOP) is a way of organizing and designing computer programs. In OOP, you write "objects" that represent real-world things and ideas. These objects contain data and can perform actions. OOP makes it easier to create and maintain complex programs.
 
@@ -70,8 +70,8 @@ def factorial(n) do
 end
 ```
 ```elixir
-# This modules contains two function, one public and one private
-defmodule Math do
+# This module called Math_stuff contains two function, one public and one private
+defmodule Math_stuff do
   def sum(a, b) do
     do_sum(a, b)
   end
