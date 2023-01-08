@@ -8,6 +8,7 @@
 * Why use Elixir?
 * Code examples. 
 * Conclusion.
+* References.
 
 # What is Elixir?
 &nbsp;Elixir is a programming language that was created in 2011 by José Valim. It is a functional, dynamic language that is built on top of the Erlang virtual machine (EVM). Just like Java, a language that is also built on top of a virtual machine (JVM), it is portable and it can run on any operating system. Elixir is known for its simplicity, concurrency, and scalability.
@@ -84,3 +85,9 @@ end
 
 # Conclusion
 &nbsp;Elixir is a powerful, functional programming language that runs on the efficient Erlang VM. Its support for concurrency and fault tolerance make it ideal for building scalable, distributed systems. Its simple syntax and expressive power make it a joy to use.
+
+# References
+https://hexdocs.pm/elixir/Code.html
+https://www.tutorialspoint.com/elixir/index.htm
+https://en.wikipedia.org/wiki/Functional_programming
+https://en.wikipedia.org/wiki/Object-oriented_programming
