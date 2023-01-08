@@ -12,9 +12,8 @@
 
 ## [^1]: What is Elixir?
 
-**Elixir is a dynamic, functional language for building scalable and maintainable applications.**  <br>
-&nbsp;Elixir runs on the [Erlang VM](https://www.erlang.org/), so just like Java it is compatible with any operating system.
-It is known for creating low-latency, distributed, and fault-tolerant systems. These capabilities and Elixir tooling allow developers to be productive in several domains, such as web development, embedded software, data pipelines, and multimedia processing, across a wide range of industries.
+&nbsp;**Elixir is a dynamic, functional language for building scalable and maintainable applications.**  <br>
+&nbsp;Elixir runs on the [Erlang VM](https://www.erlang.org/), so just like Java it is compatible with any operating system. It is known for creating low-latency, distributed, and fault-tolerant systems. These capabilities and Elixir tooling allow developers to be productive in several domains, such as web development, embedded software, data pipelines, and multimedia processing, across a wide range of industries.
 
 &nbsp;Here is a peek:
 ```elixir
