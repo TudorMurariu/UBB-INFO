@@ -13,7 +13,7 @@
 ## [^1]: What is Elixir?
 
 &nbsp;**Elixir is a dynamic, functional language for building scalable and maintainable applications.**  <br>
-&nbsp;Elixir runs on the [Erlang VM](https://www.erlang.org/), so just like Java it is compatible with any operating system. It is known for creating low-latency, distributed, and fault-tolerant systems. These capabilities and Elixir tooling allow developers to be productive in several domains, such as web development, embedded software, data pipelines, and multimedia processing, across a wide range of industries.
+Elixir runs on the [Erlang VM](https://www.erlang.org/), so just like Java it is compatible with any operating system. It is known for creating low-latency, distributed, and fault-tolerant systems. These capabilities and Elixir tooling allow developers to be productive in several domains, such as web development, embedded software, data pipelines, and multimedia processing, across a wide range of industries.
 
 &nbsp;Here is a peek:
 ```elixir
@@ -27,11 +27,11 @@ end
 
 ## [^2]: What is a functional language?
 &nbsp; Functional programming languages are designed on the concept of **mathematical functions** that use **conditional expressions** and **recursion** to perform computation.
-* For example, let's take this problem: <br>
+*Let's take this exemple: <br>
 
 &nbsp; Given an integer n (bigger than 0 and smaller than 100) find it's factorial. (the factorial of a number is each positive integer smaller than it multiplied by it, 4! = 1\*2\*3\*4 = 24) <br>
-&nbsp; In an *Object Oriented Language* you'd use a loop, but in functional languages we use *recursion*. <br>
-&nbsp;  Frist let's make the mathematical function and than we will write the code.
+In an *Object Oriented Language* you'd use a loop, but in functional languages we use *recursion*. <br>
+Frist let's make the mathematical function and than we will write the code.
 
 ![factorial math](factorial.PNG) <br>
 
