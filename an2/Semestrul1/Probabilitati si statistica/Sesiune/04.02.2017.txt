@@ -1,0 +1,6 @@
+Dintr-o urnă cu 2 bile albe și i bile negre se extrag fără revenire 2 bile dintre care cel puțin una e albă. Care e probabilitatea ca și cealaltă bilă să fie albă?
+Se aruncă 2 zaruri corecte de 100 de ori. Care e probabilitatea să obținem exact i duble?
+Fie X ~ N(m, sigma^2) cu m = 3 și sigma^2 = i. Aflați P(X < 1).
+Fie x1 = 1, x2 = 2, x3 = 3, x4 = i + 3. Dacă datele provin dintr-o populație X ~ N(m, sigma^2) cu sigma^2 = 3, aflați intervalul de încredere 99% pentru m.
+Dacă datele de mai sus provin dintr-o populație X ~ N(m, sigma^2), aflați intervalul de 95% încredere pentru sigma^2 cu ambele margini finite.
+Dacă yk = k, k = {1, 2, 3, 4} și E(Y) = B0 + B1x + B2 x^2, aflați estimările prin metoda celor mai mici pătrate pentru B0, B1, B2.

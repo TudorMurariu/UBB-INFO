@@ -1,0 +1,11 @@
+1. f([],0).
+   f([H|T],S):-!, H mod 2 =:= 0, f(T,S1), S is S1*H.
+   f([_|T],S):-f(T,S1), S is S1.
+
+   Care este rezultatul apelului f([1,2,3,4,5],S) ? Modificati functia astefel incat sa returneze numarul de numere pare.
+
+ 2. Produsul primelor n numere pare. (2 implementari)
+ 3. Combinari de k elemente de suma para.
+ 4. Arbore n-ar. Sa se inlocuisaca atomii de pe nivel impar cu un element dat (nivelul radacinii = 0)
+ 5. Nr de subliste pentru care atomul numeric maxim de pe orice nivel este par.
+ 

@@ -1,0 +1,13 @@
+sub 15 
+
+1) era o functie prolog care calcula max unei liste si avea 2 predicate care apelau recursiv functia, 
+trebuia modificat astfel incat sa fie un singur apel recursiv 
+
+2) Prolog: elimina primele k el pare dintr-o lista 
+
+3) Prolog: permutarile uneil liste care au proprietatea ca 
+valoare absoluta a diferentei dintre oricare 2 termeni consecutivi <= 3 
+
+4) Lisp: arbore n-ar, functie care cauta un nod 
+
+5) Lisp: MAP, functie care returneaza nr de subliste care au un numar par de nivele

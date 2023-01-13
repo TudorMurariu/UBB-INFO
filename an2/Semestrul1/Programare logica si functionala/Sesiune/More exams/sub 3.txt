@@ -1,0 +1,29 @@
+R3 - EXAMEN PLF
+1. Fie urmatoarea definitie de functii in LISP:
+
+(defun f(l)
+(cond
+((atom l) -1)
+((>(f(car l))0)(+(car l)(f(car l))(f(car l))))
+(t(f(cdr l)))
+)
+)
+Sa se evite apelul repetat (f(car l)).
+2. Se da o lista formata din numere intregi. 
+Sa se scrie un program prolog care adauga in lista dupa al 3-lea, al 5-lea, al 9-lea, al 15-lea... un element dat e. 
+Explicati algoritmul. ex: L=[1,2,3,4,5,6,7,8,9,10] si e = 11 => [1,2,11,3,4,5,11,6,7,8,9,11,10]
+
+3.Pentru o valoare N data sa se genereze lista permutarilor cu elementele N, N+1,..., 2*N-1 
+avand proprietatea ca valoarea absoluta a diferentei dintre 2 valori consecutive din permutare este <=2. Explicati algoritmul.
+
+4. Se considera o lista neliniara. Sa se scrie o functie LISP care sa aiba ca rezultat lista initiala, 
+in care atomii de pe nivelul k sa fie inlocuiti cu 0(nivelul superficial se considera 1).
+ex: lista (a(1(2b))(c(d)))
+a). k=2 => (a(0(2b))(0(d)))
+b). k=1 => (0(1(2b))(c(d)))
+c). k=3 => lista nu se modifica
+
+5.Se da o lista neliniara. Sa se scrie un program LISP pentru determinarea numarului de subliste de la orice nivel, 
+pentru care atomul numeric minim de pe nivelurile impare este par - nivelul superficial se considera 1. 
+Prelucrarea se va face cu functii MAP. De ex: lista (A(B 2)(2 C 4) (1(3 F))(((G) 4)2)) are 3 astfel de subliste:
+(B 2) , (2 C 4) si (((G)4)2).

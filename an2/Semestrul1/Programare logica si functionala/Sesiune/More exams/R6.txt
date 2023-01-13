@@ -1,0 +1,11 @@
+1. (defun G(L)
+		(* (car l) (cadr l))
+	)
+Pentru redenumirea functiei se utilizeaza (SETQ CAR 'G). Ce se va obtine in urma apelului
+ (CAR '(2 3 5 6)) ? 
+
+ 2. Dati doua implementari pentru calculul lui X^N.
+ 3. Aranjamente de k elemente avand suma data.
+ 4. Arbore n-ar. Se cere: numarul de noduri de pe nivelul k.
+ 5. Lista neliniara. Numarul de subliste de la orice nivel pentru care primul atom numeric (de la orice nivel) este impar. 
+  

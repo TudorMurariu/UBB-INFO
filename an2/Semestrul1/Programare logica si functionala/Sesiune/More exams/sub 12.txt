@@ -1,0 +1,12 @@
+Sub 12
+
+1. (defun inc(x) (+ 1 x))
+(setq A 1) ce se intampla la apelul (inc a)? si sa se scrie modificarile?
+
+2. Prolog: 2 metode. Suma primelor n numere divizibile cu 3. Explicatii.
+
+3. Prolog: Aranjamente de k care sa aiba suma s data
+
+4. Lisp:Sa se dubleze elementele din n in n. ex: (1 2 3 4) n=2 => (1 2 2 3 4 4)
+
+5.Lisp: Numarul sublistelor cu probrietatea ca primul atom de la orice nivel sa fie numar (cred).
