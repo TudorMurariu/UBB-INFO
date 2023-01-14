@@ -1,4 +1,5 @@
 #2) Se dă un întreg pozitiv, găsiți toate descompunerile în sumă de numere prime
+# *se putea optimiza daca foloseam eratostene
 def prim(n):
     for i in range(2,n//2+1):
         if n % i == 0:
