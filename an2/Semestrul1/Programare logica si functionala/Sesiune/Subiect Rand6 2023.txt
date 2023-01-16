@@ -1,0 +1,17 @@
+S1.
+	1. Sa inlocui intr-o functie apelul (F car L) , se folosea o lambda
+	2. Un predicat in prolog care trebuia schimbat astfel in cat sa se apeleze recursiv doar o data
+			Se folosea o functie auxiliara
+	3. Ceva cu FUNCALL in lisp
+	4.  Se dau predicatele :
+		p(1)	q(1)	r(1)
+		p(2)    q(2)	r(2)
+
+	s:- p(X), !, q(Y), r(Z), write(X Y Z), nl.
+
+	ce afiseaza s.
+
+S2. Aranjamentele de k din lista L care au produsul numerelor egal cu un numar V dat.
+S3. Folosind functii MAP, sa se inlocuiasca de pe orice nivel din list L data numerele pare cu succesorul(numar + 1) lor.
+
+	
