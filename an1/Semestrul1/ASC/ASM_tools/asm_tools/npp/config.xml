@@ -8,7 +8,6 @@
         <Replace name="    " />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\tudor\OneDrive\Desktop\Assembly\Exercitii\Probleme in plus\lab 8 - 8.asm" />
         <File filename="C:\Users\tudor\OneDrive\Desktop\Assembly\Exercitii\Probleme in plus\lab 5\1.asm" />
         <File filename="C:\Users\tudor\OneDrive\Desktop\Assembly\Exercitii\lab 8\2_fisieretext.asm" />
         <File filename="C:\Users\tudor\OneDrive\Desktop\Assembly\Exercitii\Probleme in plus\lab 4\5.asm" />
@@ -17,6 +16,8 @@
         <File filename="C:\Users\tudor\OneDrive\Desktop\Assembly\Exercitii\Probleme in plus\lab 11\func.asm" />
         <File filename="C:\Users\tudor\OneDrive\Desktop\Assembly\Exercitii\Probleme in plus\lab 11\17\main2.asm" />
         <File filename="C:\Users\tudor\OneDrive\Desktop\Assembly\Exercitii\lab5.asm" />
+        <File filename="C:\Users\tudor\OneDrive\Desktop\UBB INFO\an1\Semestrul1\ASC\Exercitii\lab 4\2.asm" />
+        <File filename="C:\Users\tudor\OneDrive\Desktop\UBB INFO\an1\Semestrul1\ASC\Exercitii\Lab3\2ADUNARI.asm" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -25,7 +26,7 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="yes" size="4" />
-        <GUIConfig name="AppPosition" x="1059" y="0" width="870" height="703" isMaximized="yes" />
+        <GUIConfig name="AppPosition" x="794" y="108" width="870" height="703" isMaximized="yes" />
         <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20080426">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
@@ -51,7 +52,7 @@
         <GUIConfig name="ScintillaGlobalSettings" enableMultiSelection="no" />
         <GUIConfig name="openSaveDir" value="0" defaultDirPath="" />
         <GUIConfig name="titleBar" short="no" />
-        <GUIConfig name="stylerTheme" path="C:\Users\tudor\OneDrive\Desktop\Assembly\ASM_tools\asm_tools\npp\stylers.xml" />
+        <GUIConfig name="stylerTheme" path="C:\Users\tudor\OneDrive\Desktop\UBB INFO\an1\Semestrul1\ASC\ASM_tools\asm_tools\npp\stylers.xml" />
         <GUIConfig name="wordCharList" useDefault="yes" charsAdded="" />
         <GUIConfig name="delimiterSelection" leftmostDelimiter="40" rightmostDelimiter="41" delimiterSelectionOnEntireDocument="no" />
         <GUIConfig name="multiInst" setting="0" />
@@ -65,8 +66,7 @@
             <ActiveTabs cont="0" activeTab="-1" />
             <ActiveTabs cont="1" activeTab="-1" />
             <ActiveTabs cont="2" activeTab="-1" />
-            <ActiveTabs cont="3" activeTab="0" />
-            <ActiveTabs cont="4" activeTab="-1" />
+            <ActiveTabs cont="3" activeTab="-1" />
         </GUIConfig>
     </GUIConfigs>
     <ProjectPanels>
