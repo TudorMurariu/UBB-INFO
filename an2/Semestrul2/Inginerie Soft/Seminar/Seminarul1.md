@@ -6,4 +6,15 @@
 ### Diagrama UML a cazurilor de utilizare
 
 1. Caz de utilizare
-   - Scenariu
+   - Scenariu (ex: coz de cumparaturi)
+      **DEF:** O secventa de pasi sau de evenimente care descrie o interactiune uzuala a unui utilizator cu sistemul.
+2. Actor
+    **DEF:** - un rol, o entitate externa care interactioneaza cu sistemul.
+    - Catogorii 
+        a. principal vs secundar
+        b. activ vs pasiv
+3. Frontiera sistemului (system boundary/subject)
+4. Relatii
+    - Asociere (intre actor si caz de utilizare) (comunicare)
+    - Generalizare intre Actori
+    
