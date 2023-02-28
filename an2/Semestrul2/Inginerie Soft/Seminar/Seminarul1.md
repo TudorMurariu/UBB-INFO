@@ -4,3 +4,6 @@
 
 ## Modelul functional al unui sistem
 ### Diagrama UML a cazurilor de utilizare
+
+1. Caz de utilizare
+   - Scenariu
