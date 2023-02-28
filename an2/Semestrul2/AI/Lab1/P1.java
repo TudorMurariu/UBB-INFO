@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class P1{
     /*
      * Să se determine ultimul (din punct de vedere alfabetic) 
@@ -13,7 +15,7 @@ public class P1{
     // where s is the longest word in the phrase
     // Space complexity: O(n)
     // we use an array
-    private static String getLast(String inputString) {
+    private static String getLastFast(String inputString) {
         String[] words = inputString.split(" ");
         String last = words[0];
         for(String s : words) 
@@ -22,15 +24,25 @@ public class P1{
         return last;
     }
 
+    // Time complexity:  O(n * strcmp(s))
+    // where s is the longest word in the phrase
+    // Space complexity: O(n)
+    // we use an array
+    private static String getLastSlow(String inputString) {
+        String[] words = inputString.split(" ");
+        Arrays.sort(words);  
+        return words[words.length];
+    }
+
     private static void test() {
         String inputString1 = "Ana are mere rosii si galbene";
         String inputString2 = "A B C D E 1 2 3 4";
         String inputString3 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
         String inputString4 = "Phasellus rhoncus erat sapien, et sodales urna mollis nec.";
         
-        assert(getLast(inputString1).equals("si"));
-        assert(getLast(inputString2).equals("E"));
-        assert(getLast(inputString3).equals("sit"));
-        assert(getLast(inputString4).equals("urna"));
+        assert(getLastFast(inputString1).equals("si"));
+        assert(getLastFast(inputString2).equals("E"));
+        assert(getLastFast(inputString3).equals("sit"));
+        assert(getLastFast(inputString4).equals("urna"));
     }
 }
