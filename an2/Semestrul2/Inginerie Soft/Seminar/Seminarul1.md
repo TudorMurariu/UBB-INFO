@@ -11,10 +11,15 @@
 2. Actor
     **DEF:** - un rol, o entitate externa care interactioneaza cu sistemul.
     - Catogorii 
-        a. principal vs secundar
-        b. activ vs pasiv
+        A. principal vs secundar
+        B. activ vs pasiv
 3. Frontiera sistemului (system boundary/subject)
 4. Relatii
     - Asociere (intre actor si caz de utilizare) (comunicare)
     - Generalizare intre Actori
+    - Intre cazuri de utilizare
+        A. Relatia de incluziune - relatia de dependenta
+
+
+
     
