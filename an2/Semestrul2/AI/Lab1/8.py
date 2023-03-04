@@ -4,19 +4,19 @@
     De ex. dacă n = 4, numerele sunt: 1, 10, 11, 100.
 '''
 
-# Time complexity: O(n)
-# Space complexity: O(1)
+# Time complexity: O(n log n)
+# Space complexity: O(n * x) , unde x este numarul de biti ale celui mai mare numar din vector
 def genereaza_binare(n):
     arr = []
-    actual = "1"
-    for i in range(1, n):
-        arr.append(actual)
+    for i in range(1, n+1):
+        arr.append(bin(i)[2:])
+    return arr
         
     
 def test():
-    assert(genereaza_binare([2,8,7,2,2,5,2,3,1,2,2]) == 2)
-    assert(genereaza_binare([1,2,1,9,9,3,1]) == 1)
-    assert(genereaza_binare([1,1,5,4,3,5,5,7]) == 5)
+    assert(genereaza_binare(4) == ['1', '10', '11', '100'])
+    assert(genereaza_binare(1) == ['1'])
+    assert(genereaza_binare(5) == ['1', '10', '11', '100', '101'])
 
 
 if __name__ == '__main__':
