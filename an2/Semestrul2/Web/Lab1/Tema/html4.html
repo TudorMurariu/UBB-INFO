@@ -4,7 +4,7 @@
 
 <head>
     <title>html4</title>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
 <body style="background-color:#99d6ff">
@@ -16,62 +16,57 @@
             </textarea>
         </div>
         <table border="1">
-            <tr>
-                <th "></th>
-                <th>Pachet</th>
-                <th></th>
-                <th></th>
+            <tr style="border: 1px solid black; background-color: blanchedalmond;">
+                <th style="border: 1px solid black;" colspan="4">Pachet</th>
+            </tr>
+            <tr style="border: 1px solid black;">
+                <th style="border: 1px solid black; background-color:darksalmon" colspan="2">Nume</th>
+                <td style="border: 1px solid black;" colspan="2"> <input type="text"> </td>
+            </tr>
+            <tr style="border: 1px solid black;">
+                <th style="border: 1px solid black; background-color:darksalmon">Email</th>
+                <td style="border: 1px solid black;"> <input type="text"> </td>
+                <th style="border: 1px solid black; background-color:darksalmon">Varsta</th>
+                <td style="border: 1px solid black;"> <input type="text"> </td>
+            </tr>
+            <tr style="border: 1px solid black;">
+                <th style="border: 1px solid black; background-color:darksalmon">Oras Plecare</th>
+                <td style="border: 1px solid black;"> <input type="text"> </td>
+                <th style="border: 1px solid black; background-color:darksalmon">Ora Plecare</th>
+                <td style="border: 1px solid black;"> <input type="text"> </td>
+            </tr>
+            <tr style="border: 1px solid black;">
+                <th style="border: 1px solid black; background-color:darksalmon">Oras Destinatie</th>
+                <td style="border: 1px solid black;"> <input type="text"> </td>
+                <th style="border: 1px solid black; background-color:darksalmon">Ora Aterizare</th>
+                <td style="border: 1px solid black;"> <input type="text"> </td>
             </tr>
             <tr>
-                <th>Nume</th>
-                <td> </td>
-                <th>Data</th>
-                <td> <input type="date "> </td>
-            </tr>
-            <tr style="border: 1px solid black; ">
-                <th style="border: 1px solid black; background-color:darksalmon ">Email</th>
-                <td style="border: 1px solid black; "> <input type="email "> </td>
-                <th style="border: 1px solid black; background-color:darksalmon ">Varsta</th>
-                <td style="border: 1px solid black; "> <input type="number "> </td>
-            </tr>
-            <tr style="border: 1px solid black; ">
-                <th style="border: 1px solid black; background-color:darksalmon ">Oras Plecare</th>
-                <td style="border: 1px solid black; "> <input type="text "> </td>
-                <th style="border: 1px solid black; background-color:darksalmon ">Ora Plecare</th>
-                <td style="border: 1px solid black; "> <input type="time "> </td>
-            </tr>
-            <tr style="border: 1px solid black; ">
-                <th style="border: 1px solid black; background-color:darksalmon ">Oras Destinatie</th>
-                <td style="border: 1px solid black; "> <input type="text "> </td>
-                <th style="border: 1px solid black; background-color:darksalmon ">Ora Aterizare</th>
-                <td style="border: 1px solid black; "> <input type="time "> </td>
-            </tr>
-            <tr style="border: 1px solid black; ">
-                <th style="border: 1px solid black; background-color:darksalmon ">Ce fel de rezervare</th>
-                <td style="border: 1px solid black; ">
+                <th style="border: 1px solid black; background-color:darksalmon">Ce fel de rezervare</th>
+                <td>
                     <select>
                         <option>Default</option>
                         <option>Cu mic dejun</option>
                         <option>All inclusive</option>
                     </select>
                 </td>
-                <th style="border: 1px solid black; background-color:darksalmon ">Tabel</th>
-                <td style="border: 1px solid black; ">
-                    <table style="width:100%; border: 1px solid black; ">
-                        <tr style="border: 1px solid black; background-color: blanchedalmond; ">
-                            <th style="border: 1px solid black; ">short</th>
-                            <th style="border: 1px solid black; ">int</th>
-                            <th style="border: 1px solid black; ">long</th>
+                <th style="border: 1px solid black; background-color:darksalmon">Tabel</th>
+                <td>
+                    <table border="1" style="width:100%; border: 1px solid black;">
+                        <tr style="border: 1px solid black; background-color: blanchedalmond;">
+                            <th>short</th>
+                            <th>int</th>
+                            <th>long</th>
                         </tr>
-                        <tr style="border: 1px solid black; background-color: blanchedalmond; ">
-                            <th style="border: 1px solid black; ">double</th>
-                            <th style="border: 1px solid black; ">flout</th>
-                            <th style="border: 1px solid black; ">_</th>
+                        <tr style="border: 1px solid black; background-color: blanchedalmond;">
+                            <th>double</th>
+                            <th>flout</th>
+                            <th>_</th>
                         </tr>
-                        <tr style="border: 1px solid black; background-color: blanchedalmond; ">
-                            <th style="border: 1px solid black; ">char</th>
-                            <th style="border: 1px solid black; ">bool</th>
-                            <th style="border: 1px solid black; ">_</th>
+                        <tr style="border: 1px solid black; background-color: blanchedalmond;">
+                            <th>char</th>
+                            <th>bool</th>
+                            <th>_</th>
                         </tr>
                     </table>
                 </td>
@@ -79,84 +74,85 @@
         </table>
     </div>
 
-    <br>
-    <hr color="red ">
-    <br>
+    <div>
+        <br>
+        <hr>
+        <br>
+    </div>
 
-    <table style="width:100%; border: 1px solid black; ">
-        <tr style="border: 1px solid black; background-color:aquamarine; ">
-            <th style="border: 1px solid black; background-color:cadetblue; "></th>
-            <th style="border: 1px solid black; background-color:cadetblue; "></th>
-            <th style="border: 1px solid black; background-color:cadetblue; ">Limbaje de programare</th>
-            <th style="border: 1px solid black; background-color:cadetblue; "></th>
+    <table border="1">
+        <tr style="border: 1px solid black; background-color: aquamarine;">
+            <th style="border: 1px solid black; background-color:cadetblue;" colspan="4">Limbaje de programare</th>
         </tr>
-        <tr style="border: 1px solid black; background-color:aquamarine; ">
-            <th style="border: 1px solid black; background-color:cadetblue; ">Orientate pe obiect</th>
-            <th style="border: 1px solid black; ">Java</th>
-            <th style="border: 1px solid black; ">C++</th>
-            <th style="border: 1px solid black; ">C#</th>
+        <tr style="border: 1px solid black; background-color: aquamarine;">
+            <th style="border: 1px solid black; background-color:cadetblue;">Orientate pe obiect</th>
+            <th>Java</th>
+            <th>C++</th>
+            <th>C#</th>
         </tr>
-        <tr style="border: 1px solid black; background-color: aquamarine; ">
-            <th style="border: 1px solid black; background-color:cadetblue; ">Functionale</th>
-            <th style="border: 1px solid black; ">Prolog</th>
-            <th style="border: 1px solid black; ">Elixir</th>
-            <th style="border: 1px solid black; ">Haskell</th>
+        <tr style="border: 1px solid black; background-color: aquamarine;">
+            <th style="border: 1px solid black; background-color:cadetblue;">Functionale</th>
+            <th>Prolog</th>
+            <th>Elixir</th>
+            <th>Haskell</th>
         </tr>
-        <tr style="border: 1px solid black; background-color: aquamarine; ">
-            <th style="border: 1px solid black; background-color:cadetblue; ">Low level</th>
-            <th style="border: 1px solid black; ">Machine code</th>
-            <th style="border: 1px solid black; ">Assembly</th>
-            <th style="border: 1px solid black; ">Ada </th>
+        <tr style="border: 1px solid black; background-color: aquamarine;">
+            <th style="border: 1px solid black; background-color:cadetblue;">Low level</th>
+            <th>Machine code</th>
+            <th>Assembly</th>
+            <th>Ada </th>
         </tr>
     </table>
 
     <h2 style="margin-left: 150px; "> Create an account </h2>
     <div style="display:flex; ">
         <div style="width: 1000px; ">
-            <form>
-                <label>Email :</label>
-                <input type="email "> <br>
+            <form action="/action_page.php" method="get">
+                <div>
+                    <label>Email :</label>
+                    <input type="text"> <br>
 
-                <label>Parol&#259; :</label>
-                <input type="password "> <br>
+                    <label>Parol&#259; :</label>
+                    <input type="password"> <br>
 
-                <p>Sex :</p>
-                <input type="radio " name="sex " id="b&#259;rbat ">
-                <label for="b&#259;rbat ">b&#259;rbat</label>
-                <input type="radio " name="sex " id="femeie ">
-                <label for="femeie ">femeie</label> <br>
+                    <p>Sex :</p>
+                    <input type="radio" name="sex " id="barbat">
+                    <label for="barbat">b&#259;rbat</label>
+                    <input type="radio" name="sex " id="femeie">
+                    <label for="femeie">femeie</label> <br>
 
-                <p>Animalul preferat:</p>
-                <input type="checkbox " name="animal " id="pisic&#259; ">
-                <label for="pisic&#259; ">pisic&#259;</label>
-                <input type="checkbox " name="animal " id="c&#xE2;ine ">
-                <label for="c&#xE2;ine ">c&#xE2;ine</label>
-                <input type="checkbox " name="animal " id="&#351;oarece ">
-                <label for="&#351;oareceine ">&#351;oareceine</label>
-                <br>
+                    <p>Animalul preferat:</p>
+                    <input type="checkbox" name="animal" id="pisica">
+                    <label for="pisica">pisic&#259;</label>
+                    <input type="checkbox" name="animal" id="caine">
+                    <label for="caine">c&#xE2;ine</label>
+                    <input type="checkbox" name="animal" id="soarece">
+                    <label for="soarece"> &#351;oarece</label>
+                    <br>
 
-                <select>
-                    <option>Cat1</option>
-                    <option>Cat2</option>
-                    <option>Cat3</option>
-                    <option>Cat4</option>
-                </select>
+                    <select>
+                        <option>Cat1</option>
+                        <option>Cat2</option>
+                        <option>Cat3</option>
+                        <option>Cat4</option>
+                    </select>
 
-                <br>
-                <input type="image " src="https://i.pinimg.com/736x/63/18/67/631867625f402e8711e40e9c24d30a6e.jpg ">
-                <br>
-                <input type="submit " value="Conectare ">
-                <input type="reset ">
+                    <br>
+                    <input type="image " src="https://i.pinimg.com/736x/63/18/67/631867625f402e8711e40e9c24d30a6e.jpg ">
+                    <br>
+                    <input type="submit " value="Conectare ">
+                    <input type="reset ">
+                </div>
             </form>
         </div>
         <div>
             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         </div>
-        <div style="width: 500px; ">
-            <img src="https://services.meteored.com/img/article/-por-que-el-mar-es-azul--9441-2.jpg " alt=" text pentru imagine " weight=500 height=500>
+        <div style="width: 500px;">
+            <img src="https://services.meteored.com/img/article/-por-que-el-mar-es-azul--9441-2.jpg " alt=" text pentru imagine " width=500 height=500>
             <p>&nbsp &#354;ap &#258;sta &#351;i &icirc;nalt </p>
             <h3>Liste</h3>
-            <ol type="I ">
+            <ol>
                 <li>
                     Fruits
                     <ul style="list-style-type:disc ">
@@ -176,15 +172,15 @@
             </ol>
         </div>
         <div style="width: 40% ">
-            <img src="https://media.istockphoto.com/id/1322123064/photo/portrait-of-an-adorable-white-cat-in-sunglasses-and-an-shirt-lies-on-a-fabric-hammock.jpg?s=612x612&w=0&k=20&c=-G6l2c4jNI0y4cenh-t3qxvIQzVCOqOYZNvrRA7ZU5o=" alt=" Cat picture ">
-            <ol type="a ">
+            <img src="https://cdn.britannica.com/39/7139-050-A88818BB/Himalayan-chocolate-point.jpg" alt=" Cat picture ">
+            <ol>
                 <li>Cat0</li>
                 <li>Cat1</li>
                 <li>Cat2</li>
                 <li>Cat3</li>
             </ol>
 
-            <ol type="A ">
+            <ol>
                 <li>Dog0</li>
                 <li>Dog1</li>
                 <li>Dog2</li>
@@ -192,7 +188,6 @@
             </ol>
         </div>
     </div>
-
 </body>
 
 </html>
