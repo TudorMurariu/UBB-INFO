@@ -1,3 +1,3 @@
 # SGBD
 
-**pentru Labul 1 proiectul facut de mine il gasiti aici :** https://github.com/TudorMurariu/Seminarul-1-SGBD
+**Seminarul 1(Conectare la Baza de date din console App C#): ** https://github.com/TudorMurariu/Seminarul-1-SGBD
