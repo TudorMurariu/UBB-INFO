@@ -1,0 +1,14 @@
+The file cond-mat.gml contains the collaboration network of scientists
+posting preprints on the condensed matter archive at www.arxiv.org,
+1995-1999, as compiled by M. Newman.  The network is weighted, with weights
+assigned as described in the original papers.  Please cite, as appropriate,
+one or more of:
+
+  M. E. J. Newman, The structure of scientific collaboration networks,
+  Proc. Natl. Acad. Sci. USA 98, 404-409 (2001).
+
+  M. E. J. Newman, Scientific collaboration networks: I. Network
+  construction and fundamental results, Phys. Rev. E 64, 016131 (2001).
+
+  M. E. J. Newman, Scientific collaboration networks: II. Shortest paths,
+  weighted networks, and centrality, Phys. Rev. E 64, 016132 (2001).
