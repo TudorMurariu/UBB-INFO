@@ -70,6 +70,27 @@ def test_lesmis():
     G_copy = Graph.copy()
     plotNetwork(G_copy, greedyCommunitiesDetectionByTool(Graph, 3))  
 
+def test_star():
+    crtDir =  os.getcwd()
+    filePath = os.path.join(crtDir,  'real', 'star', 'star.gml')
+    Graph = nx.read_gml(filePath, label='id')
+    G_copy = Graph.copy()
+    plotNetwork(G_copy, greedyCommunitiesDetectionByTool(Graph, 2))  
+
+def test_lobster():
+    crtDir =  os.getcwd()
+    filePath = os.path.join(crtDir,  'real', 'lobster', 'lobster.gml')
+    Graph = nx.read_gml(filePath, label='id')
+    G_copy = Graph.copy()
+    plotNetwork(G_copy, greedyCommunitiesDetectionByTool(Graph, 4))  
+
+def test_shell():
+    crtDir =  os.getcwd()
+    filePath = os.path.join(crtDir,  'real', 'shell', 'shell.gml')
+    Graph = nx.read_gml(filePath, label='id')
+    G_copy = Graph.copy()
+    plotNetwork(G_copy, greedyCommunitiesDetectionByTool(Graph, 2))  
+
 def test_all():
     # testele de la profa
     # test_dolphins()
@@ -78,12 +99,24 @@ def test_all():
     # test_krebs()
 
     # teste in plus
-    # test_lesmis()
-    # test_polbooks()
-    # test_adjnoun()
-    test_netscience()
-    # test_cond_mat()
-    # test_cond_mat_2003()
+    test_lesmis()
+    test_polbooks()
+    test_adjnoun()
+    test_star()
+    test_lobster()
+    test_shell()
 
 if __name__ == '__main__':
     test_all()
+    # stest_all()
+    # constructor = [(10, 20, 0.8), (20, 40, 0.8)]
+    # G = nx.random_shell_graph(constructor)
+    # pos = nx.spring_layout(G) 
+    
+    # nx.draw_networkx_nodes(G, pos, node_size=600, cmap=plt.cm.RdYlBu)
+    # nx.draw_networkx_edges(G, pos, alpha=0.3)
+    # nx.draw_networkx_labels(G, pos)
+    # plt.show()
+
+    # nx.write_gml(G, 'real\shell\shell.gml')
+
