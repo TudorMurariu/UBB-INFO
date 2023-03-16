@@ -1,3 +1,5 @@
+MIT Datastructure and algorithm course: https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY
+
 First project: https://github.com/TudorMurariu/TAD-Matrice  <br/>
 Second project: https://github.com/TudorMurariu/TAD-Dictionary <br/>
 Third project: https://github.com/TudorMurariu/TAD-MultiDictionar-Ordonat <br/>
