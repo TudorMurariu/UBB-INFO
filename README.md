@@ -9,7 +9,7 @@
   * [🗿Computational Logic](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1/Semestrul1/Logica%20Computationala)
 * 📂 Second Semester
   * [📐Geometry](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1/Semestrul2/Geometrie)
-  * [![graph emoji ](https://cdn.iconscout.com/icon/premium/png-256-thumb/graph-theory-1807124-1534162.png)Graph Theory](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1/Semestrul2/Graph-Theory)
+  * [![graph emoji ](https://static.thenounproject.com/png/374734-200.png)Graph Theory](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1/Semestrul2/Graph-Theory)
 
 ![Poza cu berimde](https://github.com/TudorMurariu/UBB-INFO/blob/main/an1/Semestrul1/Analiza/Partial/SUbiectPartialA.jpg)<br>
 Berimde
