@@ -1,0 +1,9 @@
+12:ABC:Ascending:BubbleSort
+34:QWER:Descending:QuickSort
+3:CDE:Descending:SelectionSort
+1222:ABC:Ascending:BubbleSort
+3422:QWER:Descending:QuickSort
+322:CDE:Descending:SelectionSort
+121:ABC:Ascending:BubbleSort
+341:QWER:Descending:QuickSort
+31:CDE:Descending:SelectionSort

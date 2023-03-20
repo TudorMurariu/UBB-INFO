@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "Tasks\Tasks.csproj", "{530D3D99-2364-4219-9A0F-9F6A2BE3D3EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionUtils", "DbUtils\ConnectionUtils.csproj", "{7C990497-CEF7-4811-912C-8C9D630F3668}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{530D3D99-2364-4219-9A0F-9F6A2BE3D3EE}.Debug|x86.ActiveCfg = Debug|x86
+		{530D3D99-2364-4219-9A0F-9F6A2BE3D3EE}.Debug|x86.Build.0 = Debug|x86
+		{530D3D99-2364-4219-9A0F-9F6A2BE3D3EE}.Release|x86.ActiveCfg = Release|x86
+		{530D3D99-2364-4219-9A0F-9F6A2BE3D3EE}.Release|x86.Build.0 = Release|x86
+		{7C990497-CEF7-4811-912C-8C9D630F3668}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7C990497-CEF7-4811-912C-8C9D630F3668}.Debug|x86.Build.0 = Debug|Any CPU
+		{7C990497-CEF7-4811-912C-8C9D630F3668}.Release|x86.ActiveCfg = Release|Any CPU
+		{7C990497-CEF7-4811-912C-8C9D630F3668}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

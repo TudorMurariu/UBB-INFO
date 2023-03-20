@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{530D3D99-2364-4219-9A0F-9F6A2BE3D3EE}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Tasks/model/HasId.cs">
+    <Files>
+      <File FileName="Tasks/TaskProgram.cs" Line="49" Column="45" />
+      <File FileName="Tasks/model/HasId.cs" Line="1" Column="1" />
+      <File FileName="Tasks/model/IValidator.cs" Line="1" Column="1" />
+      <File FileName="Tasks/repository/AbstractRepository.cs" Line="48" Column="1" />
+      <File FileName="Tasks/repository/FileRepository.cs" Line="43" Column="18" />
+      <File FileName="Tasks/model/PiesaTeatru.cs" Line="36" Column="4" />
+      <File FileName="Tasks/model/Task.cs" Line="1" Column="1" />
+      <File FileName="../../../../../../2016-2017/engleza/Sem10/Sem10/repository/BookFileRepository.cs" Line="59" Column="4" />
+      <File FileName="Tasks/piese.txt" Line="2" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Tasks PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

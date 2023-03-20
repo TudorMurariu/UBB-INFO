@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfSortingTask xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SortingTask Id="121" Order="Ascending">
+    <Description>ABC</Description>
+    <Algorithm>BubbleSort</Algorithm>
+  </SortingTask>
+  <SortingTask Id="341" Order="Descending">
+    <Description>QWER</Description>
+    <Algorithm>QuickSort</Algorithm>
+  </SortingTask>
+  <SortingTask Id="31" Order="Descending">
+    <Description>CDE</Description>
+    <Algorithm>SelectionSort</Algorithm>
+  </SortingTask>
+</ArrayOfSortingTask>
