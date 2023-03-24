@@ -16,7 +16,7 @@ namespace Sem10
 		public static void Main (string[] args)
 		{
 			//configurare jurnalizare folosind log4net
-			XmlConfigurator.Configure(new System.IO.FileInfo(args[0]));
+			//XmlConfigurator.Configure(new System.IO.FileInfo(args[0]));
 			Console.WriteLine("Configuration Settings for tasksDB {0}",GetConnectionStringByName("tasksDB"));
 			IDictionary<String, string> props = new SortedList<String, String>();
 			props.Add("ConnectionString", GetConnectionStringByName("tasksDB"));
