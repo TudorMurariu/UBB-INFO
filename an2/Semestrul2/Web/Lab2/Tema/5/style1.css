@@ -1,0 +1,34 @@
+* {
+    padding: 3px;
+}
+
+div {
+    display: flex;
+    width: 600px;
+    border: 1px solid;
+}
+
+p {
+    position: absolute;
+    margin: 0 50px;
+}
+
+img {
+    border: 25px solid;
+    border-color: #00ffff;
+    height: 200px;
+    width: 200px;
+}
+
+li {
+    float: left;
+    display: flex;
+    margin: 10px;
+    align-items: flex-end;
+}
+
+#imaginea1,
+#imaginea2 {
+    display: flex;
+    width: 200px;
+}

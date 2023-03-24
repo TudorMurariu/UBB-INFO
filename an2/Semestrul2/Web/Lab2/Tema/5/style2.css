@@ -1,0 +1,29 @@
+div {
+    background-color: yellow;
+    display: flex;
+    width: 500px;
+    border: 1px solid;
+    padding: 2px;
+}
+
+p {
+    text-indent: 20px;
+    display: flex;
+    align-items: center;
+}
+
+li {
+    margin: 12px;
+    display: flex;
+}
+
+#imaginea1,
+#imaginea2 {
+    display: flex;
+    width: 200px;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}

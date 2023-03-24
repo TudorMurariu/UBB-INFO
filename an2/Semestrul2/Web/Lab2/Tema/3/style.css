@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#parinte {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#header {
+    min-height: 100px;
+    background-color: red;
+    text-align: center;
+}
+
+#menu {
+    padding-left: 32%;
+    min-height: 25px;
+    background-color: yellow;
+}
+
+#content {
+    min-height: calc(100vh - 185px);
+    max-height: calc(100vh - 185px);
+    background-color: green;
+}
+
+#footer {
+    min-height: 60px;
+    background-color: pink;
+    text-align: center;
+    bottom: 0
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+ul#meniu li {
+    width: 18%;
+    border-left: 2px solid;
+    display: inline;
+}
+
+p {
+    text-indent: 25px;
+}

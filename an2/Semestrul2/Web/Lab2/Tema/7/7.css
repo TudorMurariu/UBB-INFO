@@ -1,0 +1,80 @@
+ul {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+}
+
+li {
+    margin-left: 120px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    padding: 4px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.alice {
+    width: 20%;
+    position: relative;
+    background: darkorange;
+    border-radius: .4em;
+}
+
+.bob {
+    width: 20%;
+    position: relative;
+    background: aqua;
+    border-radius: .4em;
+    /* rotunjirea colturilor*/
+}
+
+.alice:before {
+    background-image: url('kids.jpg');
+    background-position: 60px 0px;
+    background-size: 120px 50px;
+    display: inline-block;
+    width: 80px;
+    height: 50px;
+    content: '';
+    margin-left: -80px;
+    margin-right: 20px;
+}
+
+.bob:before {
+    background-image: url('kids.jpg');
+    background-position: 0px 0px;
+    background-size: 120px 50px;
+    display: inline-block;
+    width: 270px;
+    height: 50px;
+    content: '';
+    margin-left: -80px;
+    margin-right: 20px;
+}
+
+.bob:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border: 9px solid transparent;
+    border-right-color: aqua;
+    border-left: 0;
+    border-top: 0;
+    margin-top: -4.5px;
+    margin-left: -9px;
+}
+
+.alice:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border: 9px solid transparent;
+    border-right-color: darkorange;
+    border-left: 0;
+    border-top: 0;
+    margin-top: -4.5px;
+    margin-left: -9px;
+}
