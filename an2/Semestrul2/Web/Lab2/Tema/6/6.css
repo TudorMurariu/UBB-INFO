@@ -1,15 +1,14 @@
 input {
     background-image: url("http://3.bp.blogspot.com/-4oAWWCcNNz4/Tjr3nKNyVUI/AAAAAAAAPLU/Pouua-pNsEY/s1600/sq.gif");
-    width: 516px;
+    width: 514px;
     height: 25px;
     background-size: 26px;
     border: none;
     font-family: "Courier New", monospace;
     padding-left: 5px;
     letter-spacing: 2.3ch;
-    white-space: pre;
 }
 
 #cnp {
-    width: 360px;
+    width: 358px;
 }
