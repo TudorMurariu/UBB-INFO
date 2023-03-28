@@ -1,5 +1,5 @@
 # UBB-INFO
-**🎰 All projects from university + useful resources.**
+**🏡 All projects from university + useful resources.**
 ## First Year
 * 📂 **First Semester**
   * [⚙️Computer Architecture](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1/Semestrul1/ASC)
