@@ -7,6 +7,6 @@ Fourth project: https://github.com/TudorMurariu/TAD-Colectie <br/>
 Fifth project: https://github.com/TudorMurariu/TAD-Arbore-binar <br/> <br/>
 
 
-Useful sites: https://leetcode.com/ <br/>
+Problem solving sites: https://leetcode.com/ <br/>
 https://codesignal.com/ <br/>
 Simulate interviews : https://www.pramp.com/#/sign-in <br/>
