@@ -1,6 +1,6 @@
 # UBB-INFO
 **🏡 All projects from university + useful resources.**
-## <a href="https://github.com/TudorMurariu/UBB-INFO/tree/main/an1" style="color: black; text-decoration: underline;text-decoration-style: dotted;">First Year</a>
+## <a href="https://github.com/TudorMurariu/UBB-INFO/tree/main/an1" style="color: black;">First Year</a>
 * 📂 **[First Semester](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1/Semestrul1)**
   * [⚙️Computer Architecture](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1/Semestrul1/ASC)
   * [➗Algebra](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1/Semestrul1/Algebra)
