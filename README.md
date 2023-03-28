@@ -1,6 +1,6 @@
 # UBB-INFO
 **🏡 All projects from university + useful resources.**
-## First Year
+## [First Year](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1)
 * 📂 **[First Semester](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1/Semestrul1)**
   * [⚙️Computer Architecture](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1/Semestrul1/ASC)
   * [➗Algebra](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1/Semestrul1/Algebra)
@@ -14,7 +14,7 @@
   * [💻Operating Systems](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1/Semestrul2/Operating-Systems)
   * [📚Data Structures and Algorithms](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1/Semestrul2/SDA)
   * [📊Dynamic Systems](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1/Semestrul2/Sisteme%20Dinamice)
-## Second Year
+## [Second Year](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2)
 * 📂 **[First Semester](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1)**
    * [🗂️Databases](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1)
    * [💂‍♂️English](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1/Engleza)
