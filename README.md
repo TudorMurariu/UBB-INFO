@@ -16,7 +16,7 @@
   * [📊Dynamic Systems](https://github.com/TudorMurariu/UBB-INFO/tree/main/an1/Semestrul2/Sisteme%20Dinamice)
 ## Second Year
 * 📂 **First Semester**
-   * [🗂️Databases](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1)
+   * [🗂️Databases](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1/Baze%20de%20date)
    * [💂‍♂️English](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1/Engleza)
    * [🎨Advanced Methods of Programming](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1/Metode%20Avansate%20de%20Programare)
    * [📉Probability and Statistics](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1/Probabilitati%20si%20statistica)
