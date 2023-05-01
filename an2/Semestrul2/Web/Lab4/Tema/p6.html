@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Problema 6</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        
+        table,
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        
+        td {
+            height: 50px;
+            min-width: 50px;
+        }
+    </style>
+</head>
+
+<body onload="generateTable()">
+    <table id="myTable" style="width: 180px; margin-top: 1em;">
+    </table>
+</body>
+<script>
+    var empty, dim = 6;
+
+    function generateTable() {
+        var elem;
+        var numbers = generateNumbers(dim * dim);
+        var output = "";
+        for (let i = 0; i < dim; i++) {
+            output += '<tr>'
+            for (let j = 0; j < dim; j++) {
+                output += `<td id='${i*dim+j}' >`;
+                elem = numbers.pop();
+                if (elem != dim * dim)
+                    output += elem;
+                else {
+                    empty = i * dim + j;
+                }
+                output += '</td>';
+            }
+            output += '</tr>'
+        }
+        document.getElementById("myTable").innerHTML = output;
+    }
+
+    function swap(id1, id2) {
+        let aux = document.getElementById(id1).innerHTML;
+        document.getElementById(id1).innerHTML = document.getElementById(id2).innerHTML;
+        document.getElementById(id2).innerHTML = aux;
+        empty = id2;
+    }
+
+    document.onkeydown = checkKey;
+
+    function checkKey(e) {
+
+        e = e || window.event;
+
+        if (e.keyCode == '38') {
+            if (empty - dim >= 0)
+                swap(empty, empty - dim);
+            else
+                alert('I cant move up');
+        } else if (e.keyCode == '40') {
+            if (empty + dim <= dim * dim)
+                swap(empty, empty + dim);
+            else
+                alert('I cant move down');
+        } else if (e.keyCode == '37') {
+            if (empty % dim != 0)
+                swap(empty, empty - 1);
+            else
+                alert('I cant move left');
+        } else if (e.keyCode == '39') {
+            if (empty % dim != dim - 1)
+                swap(empty, empty + 1);
+            else
+                alert('I cant move right');
+        }
+
+    }
+
+    function move(x) {
+
+    }
+
+    function shuffle(a) {
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    }
+
+    function generateNumbers(n) {
+        array = [];
+        for (let i = 1; i <= n; i++) {
+            array.push(i);
+        }
+        shuffle(array);
+        return array;
+    }
+</script>
+
+</html>
