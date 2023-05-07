@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Problema 4</title>
+        <meta charset="utf-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <style>
+          table {
+            border-collapse: collapse;
+          }
+          table tr td {
+              padding-left: 8px;
+              padding-right: 8px;
+          }
+          table tr td:first-child {
+              padding-right: 16px;
+              font-weight: bold;
+          }
+          table tr {
+              /*border-bottom: 1px solid black;*/
+          }
+          table tr:last-child {
+              border-bottom: none;
+          }
+      </style>
+      <script>
+        $(document).ready(function(){
+        $("table tbody tr td:first-child").click(function(){
+            var switching= true;
+            
+            do {
+                switching = false;
+                
+                for (var c = 2; c <= $(this).parent().children().length - 1; c++) {
+                    var CurrValue = $(this).parent().children("td:nth-child(" + c + ")").text();
+                    var  NextValue = $(this).parent().children("td:nth-child(" + (c + 1) + ")").text();    
+                    if ($.isNumeric(CurrValue))
+                        CurrValue = parseInt (CurrValue);
+                    if ($.isNumeric(NextValue))
+                        NextValue = parseInt (NextValue);
+                      // sortare crescatoare
+                    if (!$(this).hasClass("ascendent") && CurrValue > NextValue) {
+                        for (var r = 1; r <= $(this).parent().parent().children().length; r++) {
+                            var temp = $(this).parent().parent().children("tr:nth-child(" + r + ")").children("td:nth-child(" + c + ")").text();
+                            $(this).parent().parent().children("tr:nth-child(" + r + ")").children("td:nth-child(" + c + ")").text(
+                                $(this).parent().parent().children("tr:nth-child(" + r + ")").children("td:nth-child(" + (c + 1) + ")").text());
+                            $(this).parent().parent().children("tr:nth-child(" + r + ")").children("td:nth-child(" + (c + 1) + ")").text(temp);
+                        }
+                        switching = true;
+                    }
+                    //sortare descrescatoare
+                    else 
+                      if (!$(this).hasClass("descendent") && $(this).hasClass("ascendent") && CurrValue < NextValue) {
+                        for (var r = 1; r <= $(this).parent().parent().children().length; r++) {
+                            var temp = $(this).parent().parent().children("tr:nth-child(" + r + ")").children("td:nth-child(" + (c + 1) + ")").text();
+                            $(this).parent().parent().children("tr:nth-child(" + r + ")").children("td:nth-child(" + (c + 1) + ")").text(
+                                $(this).parent().parent().children("tr:nth-child(" + r + ")").children("td:nth-child(" + c + ")").text());  
+                            $(this).parent().parent().children("tr:nth-child(" + r + ")").children("td:nth-child(" + c + ")").text(temp);
+                        }    
+                        switching = true;
+                    }
+                }
+            } while (switching);
+            
+            if ($(this).hasClass("ascendent"))
+                $(this).removeClass("ascendent").addClass("descendent");
+            else
+                $(this).removeClass("descendent").addClass("ascendent");
+        });
+});
+      </script>
+    </head>
+    
+    <body>
+        <table id="table1">
+            <tbody>
+                <tr>
+                    <td>Fructe</td>
+                    <td>Mere</td>
+                    <td>Pere</td>
+                    <td>Prune</td>
+                </tr>
+                <tr>
+                    <td>Pret</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Cantitate</td>
+                    <td>18</td>
+                    <td>20</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>Stoc</td>
+                    <td>300</td>
+                    <td>800</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+        <BR>
+
+        <table id="table2">
+            <tbody>
+                <tr>
+                    <td>Fructe</td>
+                    <td>Mere</td>
+                    <td>Pere</td>
+                    <td>Prune</td>
+                </tr>
+                <tr>
+                    <td>Pret</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Cantitate</td>
+                    <td>18</td>
+                    <td>20</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>Stoc</td>
+                    <td>300</td>
+                    <td>800</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

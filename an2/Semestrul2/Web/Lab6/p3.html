@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div#board{
+	background:black;
+	border:#999 1px solid;
+	width:676px;
+	height:450px;
+	padding:24px;
+	margin: auto;
+}
+div#board > div{
+	border:white 1px solid;
+	width:50px;
+	height:50px;
+	float:left;
+	margin:10px;
+	padding:20px;
+	font-size:64px;
+	cursor:pointer;
+	text-align:center;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+
+		var valori = [];
+		var tile_ids = [];
+		var flipped = 0;
+		var variabile = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H','I','I','J','J','K','K','L','L'];
+		var ids = '';
+		Array.prototype.tile_shuffle = function(){
+			var i = this.length, j, temp;
+			while(--i > 0){
+				j = Math.floor(Math.random() * (i+1));
+				temp = this[j];
+				this[j] = this[i];
+				this[i] = temp;
+			}
+		}
+
+		newPatrat();
+
+		function newPatrat(){
+			flipped = 0;
+			var output = '';
+			variabile.tile_shuffle();
+			for(var i = 0; i < variabile.length; i++)
+			{
+				output += `<div id="tile_${i}"></div>`;
+				if(i!= variabile.length - 1){
+					ids +=`#tile_${i}, `;
+				}
+				else{
+					ids +=`#tile_${i}`;
+				}
+			}
+			$('#board').append(output);
+		}
+
+		$('#board').children('div').click( function(){
+			var idTile = $(this).attr('id');
+			var tile = $(this);
+
+			var nr = idTile.split('_')[1];
+			var val = variabile[nr];
+
+			if(tile.text()=="" && valori.length < 2){
+				tile.css("background-color", '#FFF').text(variabile[nr])
+				if(valori.length == 0){
+					valori.push(val);
+					tile_ids.push(idTile);
+				} else 
+					if(valori.length == 1){
+						valori.push(val);
+						tile_ids.push(idTile);
+						if(valori[0] == valori[1]){
+							flipped += 2;
+							valori = [];
+							tile_ids = [];
+							if(flipped == variabile.length){
+								alert("Game over!");
+								$('#board').text() = "";
+								newBoard();
+							}
+						} else {
+							function reIntoarcere(){
+								var tile_1 = $(`#${tile_ids[0]}`);
+								var tile_2 = $(`#${tile_ids[1]}`);
+								tile_1.css("background-color", 'black').text("");
+								tile_2.css("background-color", 'black').text("");
+								valori = [];
+								tile_ids = [];
+							}
+							setTimeout(reIntoarcere, 500);
+						}
+					}
+				}
+		});
+		
+});
+	
+</script>
+<title>Problema 3</title>
+</head>
+<body>
+<h1 align="center"> Memory Game </h1>
+
+<div id="board"></div>
+
+</body>
+</html>

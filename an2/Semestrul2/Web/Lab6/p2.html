@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problema 2</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
+    <script>
+		function isANumber(str)
+		{
+			return !/\D/.test(str);
+		}
+        function validateForm() {
+
+            $(".mesaj").empty();
+            var out = ""
+            var nume = $("input[name=nume]").val();
+
+            var data = $("input[name=data]").val();
+            var varsta = $("input[name=varsta]").val();
+            var email = $("input[name=email]").val();
+
+            var p = $("<p></p>");
+            p.css("color", "red");
+
+            if (nume == "" || data == "" || varsta == "" || email == "") {
+
+                var err = [];
+
+                if (nume == "") {
+                    err.push("Nume");
+
+                    $("input[name=nume]").css("border", "2px solid red");
+
+
+                } else {
+                    $("input[name=nume]").css("border", "1px solid grey");
+                }
+
+                if (data == "") {
+                    err.push("Data");
+                    $("input[name=data]").css("border", "2px solid red");
+                } else {
+                    $("input[name=data]").css("border", "1px solid grey");
+                }
+
+                if (varsta == "" || !isANumber(varsta) || varsta>150 || varsta<0 ) {
+                    err.push("Varsta");
+                    $("input[name=varsta]").css("border", "2px solid red");
+                } else {
+                    $("input[name=varsta]").css("border", "1px solid grey");
+                }
+
+                if (email == "" || !/^.{1,20}@.{1,10}\..{1,5}$/.test(email)) {
+                    err.push("Email");
+                    $("input[name=email]").css("border", "2px solid red");
+                } else {
+                    $("input[name=email]").css("border", "1px solid grey");
+                }
+
+                var t;
+                if (err.length == 1) {
+                    // p.text(p.text() + "Campul ");
+                    out.append('Campul');
+                } else {
+                    // p.text(p.text() + "Campurile ");
+                    out.append('Campurile');
+
+                }
+
+                // $(".mesaj").append(p);
+                alert(p)
+
+                var first = 1;
+                err.forEach(function(element) {
+
+                    if (first != 1)
+                        out.append(', '+element);
+
+                    else
+                        out.append(' '+element);
+
+                    first = 0;
+
+                    // $(".mesaj").append(p);
+                    // alert(p)
+                });
+
+                if (err.length == 1) {
+                    p.text(p.text() + " sunt goale.");
+                    // $(".mesaj").append(p);
+                    alert(p)
+                } else {
+                    p.text(p.text() + " sunt goale.");
+                    // $(".mesaj").append(p);
+                    alert(p)
+                }
+
+                return false;
+            } else {
+                // p.css("color", "green");
+                // p.text(p.text() + "Datele au fost introduse corect !");
+                // $(".mesaj").append(p);
+                alert("Date corecte")
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="content">
+        <form class="test" name="myForm" onsubmit="return validateForm()" method="post">
+            <input type="text" name="nume" placeholder="Nume"><br><input type="date" name="data"><br><input type="number" placeholder="Varsta" name="varsta" min="0"><br><input type="email" name="email" placeholder="email">
+            <br><input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="mesaj">
+
+    </div>
+</body>
+
+</html>

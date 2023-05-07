@@ -8,10 +8,10 @@
         function muta(item, select, index) {
             let target, source;
             if (select == 1) {
-                target = document.getElementById("trei");
+                target = document.getElementById("doi");
                 source = document.getElementById("unu");
             } else if (select == 2) {
-                source = document.getElementById("trei");
+                source = document.getElementById("doi");
                 target = document.getElementById("unu");
             }
 
@@ -43,7 +43,7 @@
     </ul>
     <h2>Lista2</h2>
     <ul>
-        <select id="trei" multiple="multiple" ondblclick="muta(this.options[this.selectedIndex].text,2,this.selectedIndex);">
+        <select id="doi" multiple="multiple" ondblclick="muta(this.options[this.selectedIndex].text,2,this.selectedIndex);">
 			<option value="" disabled selected style="display:none;"></option>
 			<option value ="Optiune5">Optiunea 5</option>
 			<option value ="Optiune6">Optiunea 6</option>
