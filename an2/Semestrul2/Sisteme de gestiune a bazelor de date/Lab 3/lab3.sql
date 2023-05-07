@@ -112,8 +112,8 @@ end
 Select * from Client;
 Select * from Card_;
 Select * from Card_Actual;
-EXECUTE AddClientCard 'Marian2 David','marian.david@gmail.com', 'parola123', 12, 12,
-	'Revolut', 'Marian2 David', '7775199181819392', 'Credit', '2028-10-20';
+EXECUTE AddClientCard 'Marian555555555','marian.david@gmail.com', 'parola555555', 12, 12,
+	'Revolut', 'Marian555555555', '1175192181119303', 'Credit', '2025-10-20';
 Select * from Client;
 Select * from Card_;
 Select * from Card_Actual;

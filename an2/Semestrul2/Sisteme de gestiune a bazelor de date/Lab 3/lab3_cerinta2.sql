@@ -164,8 +164,8 @@ end
 Select * from Client;
 Select * from Card_;
 Select * from Card_Actual;
-EXECUTE AddClientCard_2 'Marian3 David3333','marian.david@gmail.com', 'parola123', 12, 12,
-	'Revolut', 'Marian2 David', '7775199181819392', 'Credit', '2028-10-20';
+EXECUTE AddClientCard_2 'Marian3333333','marian.david@gmail.com', 'parola555555', 12, 12,
+	'Revolut', 'Marian33333333333333', '1175192181119303', 'Credit', '2025-10-20';
 Select * from Client;
 Select * from Card_;
 Select * from Card_Actual;
@@ -174,7 +174,7 @@ Select * from Client;
 Select * from Card_;
 Select * from Card_Actual;
 EXECUTE AddClientCard_2 '','marian.david@gmail.com', 'parola123', 12, 12,
-	'Revolut', 'Marian David', '7775199181819392', 'Credit', '2028-10-20';
+	'Revolut', 'Marian David132567869', '3345199181819391', 'Credit', '2028-10-20';
 Select * from Client;
 Select * from Card_;
 Select * from Card_Actual;
@@ -182,7 +182,7 @@ Select * from Card_Actual;
 Select * from Client;
 Select * from Card_;
 Select * from Card_Actual;
-EXECUTE AddClientCard_2 'Marian3 David','marian.david@gmail.com', 'parola123', 12, 12,
+EXECUTE AddClientCard_2 'Marian99999999999','marian.david@gmail.com', 'parola123', 12, 12,
 	'Revolut', 'Marian David', '55555', 'Credit', '2028-10-20';
 Select * from Client;
 Select * from Card_;
