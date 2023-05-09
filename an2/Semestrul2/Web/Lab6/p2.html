@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Problema 2</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   
+    <title>Problema 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script>
-		function isANumber(str)
-		{
-			return !/\D/.test(str);
-		}
+        function isANumber(str) {
+            return !/\D/.test(str);
+        }
+
         function validateForm() {
 
             $(".mesaj").empty();
-            var out = ""
+            var out = "";
             var nume = $("input[name=nume]").val();
 
             var data = $("input[name=data]").val();
@@ -21,10 +22,11 @@
 
             var p = $("<p></p>");
             p.css("color", "red");
+            var err = [];
 
             if (nume == "" || data == "" || varsta == "" || email == "") {
 
-                var err = [];
+                err = [];
 
                 if (nume == "") {
                     err.push("Nume");
@@ -36,6 +38,7 @@
                     $("input[name=nume]").css("border", "1px solid grey");
                 }
 
+
                 if (data == "") {
                     err.push("Data");
                     $("input[name=data]").css("border", "2px solid red");
@@ -43,7 +46,7 @@
                     $("input[name=data]").css("border", "1px solid grey");
                 }
 
-                if (varsta == "" || !isANumber(varsta) || varsta>150 || varsta<0 ) {
+                if (varsta == "" || !isANumber(varsta) || varsta > 150 || varsta < 0) {
                     err.push("Varsta");
                     $("input[name=varsta]").css("border", "2px solid red");
                 } else {
@@ -57,27 +60,28 @@
                     $("input[name=email]").css("border", "1px solid grey");
                 }
 
-                var t;
                 if (err.length == 1) {
                     // p.text(p.text() + "Campul ");
-                    out.append('Campul');
+                    out += 'Campul';
                 } else {
                     // p.text(p.text() + "Campurile ");
-                    out.append('Campurile');
+                    out += 'Campurile';
 
                 }
 
                 // $(".mesaj").append(p);
-                alert(p)
+                //alert(p.text())
 
                 var first = 1;
                 err.forEach(function(element) {
 
                     if (first != 1)
-                        out.append(', '+element);
+                        out += ', ' + element;
+                    //out.append(', ' + element);
 
                     else
-                        out.append(' '+element);
+                        out += ' ' + element;
+                    //out.append(' ' + element);
 
                     first = 0;
 
@@ -85,14 +89,14 @@
                     // alert(p)
                 });
 
-                if (err.length == 1) {
-                    p.text(p.text() + " sunt goale.");
+                if (err.length > 0) {
+                    p.text(out + " sunt goale.");
                     // $(".mesaj").append(p);
-                    alert(p)
+                    alert(p.text())
                 } else {
-                    p.text(p.text() + " sunt goale.");
+                    p.text(out + " sunt goale.");
                     // $(".mesaj").append(p);
-                    alert(p)
+                    alert(p.text())
                 }
 
                 return false;

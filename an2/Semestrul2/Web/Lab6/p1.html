@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Problema 1</title>
-	<meta charset="utf-8" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
-    		$("#unu").dblclick(function(){
-        		var selectedOption =$( "#unu option:selected" );
-        		selectedOption.remove();
-        		$('#doi').append(selectedOption);
-    		});
-    		$("#doi").dblclick(function(){
-        		var selectedOption =$( "#doi option:selected" );
-        		selectedOption.remove();
-        		$('#unu').append(selectedOption);
-    		});
-		})
-	</script>
+    <title>Problema 1</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#unu").dblclick(function() {
+                var selectedOption = $("#unu option:selected");
+                selectedOption.remove();
+                $('#doi').append(selectedOption);
+
+                sortOptions($('#doi'));
+            });
+            $("#doi").dblclick(function() {
+                var selectedOption = $("#doi option:selected");
+                selectedOption.remove();
+                $('#unu').append(selectedOption);
+
+                sortOptions($('#unu'));
+            });
+
+            function sortOptions(select) {
+                var options = select.find("option");
+                options.sort(function(a, b) {
+                    if (a.text > b.text) {
+                        return 1;
+                    } else if (a.text < b.text) {
+                        return -1;
+                    } else {
+                        return 0;
+                    }
+                });
+                select.empty().append(options);
+            }
+        })
+    </script>
 </head>
+
 <body>
-	<h2>Lista1</h2>
-	<ul>
-		<select id="unu" multiple="multiple"  size =5>
+    <h2>Lista1</h2>
+    <ul>
+        <select id="unu" multiple="multiple" size=5>
 			<option value="" disabled selected style="display:none;"></option>
 			<option value ="Optiune1">Optiunea 1</option>
 			<option value ="Optiune2">Optiunea 2</option>
 			<option value ="Optiune3">Optiunea 3</option>
 			<option value ="Optiune4">Optiunea 4</option>
 		</select>
-	</ul>
-	<h2>Lista2</h2>
-	<ul>
-		<select id="doi" multiple="multiple" size = 5>
+    </ul>
+    <h2>Lista2</h2>
+    <ul>
+        <select id="doi" multiple="multiple" size=5>
 			<option value="" disabled selected style="display:none;"></option>
 			<option value ="Optiune5">Optiunea 5</option>
 			<option value ="Optiune6">Optiunea 6</option>
 			<option value ="Optiune7">Optiunea 7</option>
 			<option value ="Optiune8">Optiunea 8</option>
 		</select>
-	</ul>
+    </ul>
 </body>
+
 </html>
