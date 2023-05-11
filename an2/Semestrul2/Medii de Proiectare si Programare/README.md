@@ -18,7 +18,7 @@ https://www.youtube.com/watch?v=DMpTTIHpC-8
 2. Explicatii exemplu simplu gRPC
 https://www.youtube.com/watch?v=I2f_vdyREY0
 #### Curs 9
-. Explicatii exemplu Hibernate 
+1. Explicatii exemplu Hibernate 
 https://www.youtube.com/watch?v=AsZRRzRbnCg
 #### Curs 10
 1. Explicatii exemplu servicii REST (Chat user)
