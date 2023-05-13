@@ -3,3 +3,6 @@ Proiect facultativ in C# : https://github.com/TudorMurariu/NBA-League-Romania <b
 
 Useful stuff: https://www.youtube.com/watch?v=-oLDJ2dbadA&ab_channel=Geekific <br>
 https://www.youtube.com/watch?v=9XJicRt_FaI&t=9523s&ab_channel=BroCode
+
+Design Patterns Tutorial (in java):
+https://www.youtube.com/playlist?list=PLF206E906175C7E07
