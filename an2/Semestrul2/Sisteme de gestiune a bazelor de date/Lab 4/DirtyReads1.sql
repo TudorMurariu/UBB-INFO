@@ -1,0 +1,5 @@
+BEGIN TRANSACTION
+	UPDATE Client SET
+	parola='123ABCD' WHERE nume_complet = 'Stefan Nastasa'
+	WAITFOR DELAY '00:00:7'
+ROLLBACK TRANSACTION
