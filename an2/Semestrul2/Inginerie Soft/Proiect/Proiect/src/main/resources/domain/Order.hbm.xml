@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+    <class name="Order" table="ORDERS_ORM">
+        <id name="ID" column="ID" type="java.lang.Integer">
+            <generator class="increment"></generator>
+        </id>
+        <property name="quantity" column="quantity" type="java.lang.Integer"></property>
+        <property name="status" column="status">
+            <type name="domain.Status">
+                <param name="Status">status</param>
+                <param name="useNamed">true</param>
+            </type>
+        </property>
+
+
+        <many-to-one name="user" class="domain.User"
+                     column="idUser" not-null="true"  lazy="false" >
+        </many-to-one>
+
+    </class>
+</hibernate-mapping>

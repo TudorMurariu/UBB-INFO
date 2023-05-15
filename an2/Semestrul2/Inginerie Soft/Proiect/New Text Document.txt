@@ -1,0 +1,18 @@
+Cineva face ceva = un fel de actor
+Poate fi facut = use case (actiune pe care poti sa faci)
+Sunt relatii intre aceste chestii ? Da/Nu
+
+
+UseCase uri:
+Login
+Plasare Comanda
+Onorare Comanda
+
+Login separat ------- View separat
+
+
+Laborator -Saptamana 9:
+Reparatii:
+Functii chmate din nimic
+Butoane plasate altfel + buton de pedding 
+Dreptunghiul e un fel de functie...Ramane deschis cat e call ul

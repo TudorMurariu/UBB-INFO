@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="domain">
+    <class name="OrderItem" table="ORDERITEMS_ORM">
+        <id name="ID" column="ID" type="javafx.util.Pair"></id>
+        <property name="drugName" column="drugName" type="java.lang.String"></property>
+        <property name="quantity" column="quantity" type="java.lang.Integer"></property>
+        <many-to-one name="drug" class="domain.Drug" column="idDrug" not-null="true" >
+        </many-to-one>
+        <many-to-one name="order" class="domain.Order" column="idOrder" not-null="true" >
+        </many-to-one>
+
+    </class>
+</hibernate-mapping>

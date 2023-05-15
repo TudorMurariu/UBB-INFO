@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="684.0" style="-fx-background-color: #4065FC;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PharmacyController">
+   <children>
+      <SplitPane dividerPositions="0.4941383352872215" layoutY="-1.0" prefHeight="466.0" prefWidth="684.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #4065FC;">
+               <children>
+                  <TableView fx:id="tableViewOrders" layoutX="24.0" layoutY="68.0" prefHeight="310.0" prefWidth="288.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnSection" prefWidth="94.40002250671387" text="Section" />
+                      <TableColumn fx:id="tableColumnQuantity" prefWidth="90.39995574951172" text="Full Quantity" />
+                        <TableColumn fx:id="tableColumnStatus" prefWidth="101.60002136230469" text="Status" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="109.0" layoutY="38.0" text="All received orders">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #4065FC;">
+               <children>
+                  <TableView fx:id="tableViewOrderItem" layoutX="62.0" layoutY="70.0" prefHeight="310.0" prefWidth="218.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnOrderItemName" prefWidth="99.99999618530273" text="Drug Name" />
+                      <TableColumn fx:id="tableColumnOrderItemQuantity" prefWidth="115.99998474121094" text="Quantity" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="62.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleHonorOrder" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: #77FC40;" text="Honor Order" />
+                  <Button layoutX="192.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleRejectOrder" prefHeight="26.0" prefWidth="87.0" style="-fx-background-color: #FC4340;" text="Refuse Order" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="94.0" layoutY="42.0" text="Details of Selected Order">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Button layoutX="610.0" layoutY="465.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="31.0" prefWidth="74.0" text="Logout" />
+   </children>
+</AnchorPane>

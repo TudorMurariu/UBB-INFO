@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="677.0" style="-fx-background-color: #4065FC;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SectionController">
+   <children>
+      <SplitPane dividerPositions="0.5026595744680851" layoutX="1.0" layoutY="2.0" prefHeight="411.0" prefWidth="677.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="436.0" prefWidth="338.0" style="-fx-background-color: #4065FC;">
+               <children>
+                  <TableView fx:id="tableViewDrugs" layoutX="15.0" layoutY="62.0" prefHeight="256.0" prefWidth="310.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnName" prefWidth="113.60000324249268" text="Name" />
+                      <TableColumn fx:id="tableColumnPrice" prefWidth="65.60003662109375" text="Price" />
+                        <TableColumn fx:id="tableColumnDescription" prefWidth="129.59999084472656" text="Description" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="83.0" layoutY="34.0" prefHeight="20.0" prefWidth="174.0" text="List of Available Drugs">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="quantityTextField" layoutX="91.0" layoutY="336.0" prefHeight="20.0" prefWidth="118.0" promptText="Quantity" />
+                  <Button layoutX="220.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleAddOrderDrug" prefHeight="26.0" prefWidth="102.0" text="Add Order Drug" />
+                  <Line endX="555.2000122070312" layoutX="119.0" layoutY="410.0" startX="-119.00001525878906" startY="-0.4000244140625" />
+                  <Line endX="284.90716552734375" endY="-0.29290771484375" layoutX="390.0" layoutY="411.0" startX="-100.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #4065FC;">
+               <children>
+                  <TableView fx:id="tableOrderItems" layoutX="44.0" layoutY="63.0" prefHeight="275.0" prefWidth="230.0">
+                     <columns>
+                        <TableColumn fx:id="tableColumnOrderItemName" prefWidth="113.60000324249268" text="Drug Name" />
+                        <TableColumn fx:id="tableColumnOrderItemQuantity" prefWidth="115.19998779296876" text="Quantity" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="195.0" layoutY="344.0" mnemonicParsing="false" onAction="#handleAddOrder" prefHeight="48.0" prefWidth="78.0" text="Add Order" />
+                  <Button layoutX="128.0" layoutY="368.0" mnemonicParsing="false" onAction="#handleRemoveOrderItem" prefHeight="26.0" prefWidth="62.0" text="Cancel" />
+                  <Label layoutX="126.0" layoutY="31.0" text="Your order">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Button layoutX="599.0" layoutY="413.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="33.0" prefWidth="78.0" text="Logout" />
+      <Button layoutX="1.0" layoutY="413.0" mnemonicParsing="false" onAction="#handleYourOrders" prefHeight="33.0" prefWidth="118.0" text="Your Made Orders" />
+   </children>
+</AnchorPane>

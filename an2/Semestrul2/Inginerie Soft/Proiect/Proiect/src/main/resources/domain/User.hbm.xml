@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="domain">
+    <class name="User" table="USERS_ORM">
+        <id name="ID" column="ID" type="java.lang.Integer">
+            <generator class="increment"></generator>
+        </id>
+        <property name="username" column="username" type="java.lang.String" unique="true"></property>
+        <property name="password" column="password" type="java.lang.String"></property>
+        <property name="type" column="type">
+            <type name="domain.TypeUser">
+                <param name="TypeUser1">type</param>
+                <param name="useNamed">true</param>
+            </type>
+        </property>
+
+    </class>
+</hibernate-mapping>
