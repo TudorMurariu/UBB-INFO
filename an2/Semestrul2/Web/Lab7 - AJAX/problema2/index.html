@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Problema 2</title>
+		<script src="jquery-2.0.3.js"></script>
+		<script>
+			var pageNr = 0;
+			var pas = 3;
+			var isNext = false;
+			function checkNext(pageNumber){
+				$.ajax({
+					type : "GET",
+					url : "nrPersoane.php", 	
+					data: {page : pageNumber},
+					success: function(data,status) {
+							console.log("Numar randuri pagina urmatoare: "+data);
+							if(data != 0){
+								$('#next').prop('disabled', false);
+							}
+							else{
+								$('#next').prop('disabled', true);
+							}		
+					}
+					});
+			}
+			
+			
+			function showContent(pageNumber){
+				$.ajax({
+					type : "GET",
+					url : "showPersoane.php", 	
+					data: {page : pageNumber},
+					success: function(data,status) {
+							$("#myTable").html(data);
+					}
+				});
+			}
+			
+			function setButtons(pageNr){
+				if (pageNr-pas<0){
+					$('#prev').prop('disabled', true);
+				}
+				else{
+					$('#prev').prop('disabled', false);	
+				}
+				checkNext(pageNr+pas);
+			}
+			
+			$(document).ready(function(){
+				showContent(0);
+				$('#prev').prop('disabled', true);
+				checkNext(pageNr+pas);
+				
+				$('#prev').click(function(){
+					pageNr-=pas;
+					showContent(pageNr);
+					setButtons(pageNr);
+				});
+				
+				$('#next').click(function(){
+					pageNr+=pas;
+					showContent(pageNr);
+					setButtons(pageNr);
+				});
+			});
+		</script>
+	</head>
+	<body>
+	
+		<h1>My contact list</h1>
+		<table id="myTable">
+		</table>
+		<br>
+		<button id="prev">Previous</button>
+		<button id="next">Next</button>
+	</body>
+</html>

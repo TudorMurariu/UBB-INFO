@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			var xmlhttp;
+			function getPlecari() {
+				xmlhttp=GetXmlHttpObject(); 
+				if (xmlhttp==null)  {
+					alert ("Your browser does not support XMLHTTP!");
+					return;
+				}
+				var url="showPlecari.php";
+				xmlhttp.onreadystatechange=stateChangedPlecari;
+				xmlhttp.open("GET",url,true);
+				xmlhttp.send(null);
+			}
+			
+			function getSosiri(elem) {
+				xmlhttp=GetXmlHttpObject(); 
+				console.log("Intra "+elem.value);
+				if (xmlhttp==null)  {
+					alert ("Your browser does not support XMLHTTP!");
+					return;
+				}
+				var url="showSosiri.php";
+				url=url+"?name="+elem.value;
+				xmlhttp.onreadystatechange=stateChangedSosiri;
+				xmlhttp.open("GET",url,true);
+				xmlhttp.send(null);
+			}
+			
+			function stateChangedSosiri() {
+				if (xmlhttp.readyState==4) {
+				      document.getElementById("sosiri").innerHTML=xmlhttp.responseText;
+				}
+			}
+			
+			function stateChangedPlecari() {
+				if (xmlhttp.readyState==4) {
+				      document.getElementById("plecari").innerHTML=xmlhttp.responseText;
+				}
+			}
+			function GetXmlHttpObject() {
+				if (window.XMLHttpRequest) {     
+					return new XMLHttpRequest();
+				}
+			        if (window.ActiveXObject) {  
+					return new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				return null;
+			} 
+			
+		</script>
+	</head>
+	<body onload="getPlecari()">
+	
+		<h1>Mersul trenurilor</h1>
+		<span>
+        <label>
+            Statii plecare:
+            <select id="plecari" multiple size=6>
+            </select>
+        </label>
+		</span>
+		<span>
+        <label>
+            Statii sosire:
+            <select id="sosiri" multiple size=6>
+				<option>(none)</option>
+            </select>
+        </label>
+		</span>
+	</body>
+</html>

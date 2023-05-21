@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Problema 3</title>
+		<script>
+			var idCurrentBook = null;
+			var allSaved = true;
+			
+			var xmlhttp;
+			function getBooksId() {
+				xmlhttp=GetXmlHttpObject(); 
+				if (xmlhttp==null)  {
+					alert ("Your browser does not support XMLHTTP!");
+					return;
+				}
+				var url="showId.php";
+				xmlhttp.onreadystatechange=stateChanged;
+				xmlhttp.open("GET",url,true);
+				xmlhttp.send(null);
+			}
+			function stateChanged() {
+				if (xmlhttp.readyState==4) {
+				      document.getElementById("myList").innerHTML=xmlhttp.responseText;
+				}
+			}
+			function GetXmlHttpObject() {
+				if (window.XMLHttpRequest) {        // code for IE7+, Firefox, Chrome, Opera, Safari
+					return new XMLHttpRequest();
+				}
+			        if (window.ActiveXObject) {         // code for IE6, IE5
+					return new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				return null;
+			} 
+		
+			function showBook(idBook){
+				idCurrentBook = idBook;
+				if (allSaved){
+					xmlhttp=GetXmlHttpObject(); 
+					if (xmlhttp==null)  {
+						alert ("Your browser does not support XMLHTTP!");
+						return;
+					}
+					var url="showBook.php";
+					url=url+"?id="+idBook;
+					xmlhttp.onreadystatechange=stateChangedBook;
+					xmlhttp.open("GET",url,true);
+					xmlhttp.send(null);
+				}	
+				else{
+					alert("Datele nu au fost salvate");
+				}		
+			}
+			
+			function myFunction(){
+				allSaved=false;
+				console.log("Changed");
+				document.getElementById("myBtn").removeAttribute("disabled");
+			}
+			
+			function stateChangedBook() {
+				if (xmlhttp.readyState==4) {
+				      document.getElementById("myForm").innerHTML=xmlhttp.responseText;
+				}
+			}
+			
+			/*function submitFunction(){
+				xmlhttp=GetXmlHttpObject(); 
+				if (xmlhttp==null)  {
+					alert ("Your browser does not support XMLHTTP!");
+					return;
+				}
+				var url="updateBook.php";
+				var titluNou = document.getElementsByTagName("input")[0].value;
+				var autorNou = document.getElementsByTagName("input")[1].value;
+				var genNou = document.getElementsByTagName("input")[2].value;
+				var Params = "id="+idCurrentBook+"&titlu="+titluNou+"&autor="+autorNou+"&gen="+genNou;
+				alert(Params);
+				xmlhttp.onreadystatechange=stateChangedBookUpdated;
+				xmlhttp.open("POST",url,true);
+				//xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				xmlhttp.send(Params);
+				alert("Am facut update");
+			}
+
+			function stateChangedBookUpdated() {
+				if (xmlhttp.readyState==4) {
+					alert(xmlhttp.responseText);
+				  document.getElementById("myBtn").setAttribute("disabled");
+				}
+			}*/
+		
+			
+
+		
+		</script>
+	</head>
+	<body onload="getBooksId()">
+	
+		<h1>My books</h1>
+		<ul id="myList">
+		</ul>
+		<form id="myForm" action='updateBook.php' method='POST'>
+		</form>
+		
+	</body>
+</html>

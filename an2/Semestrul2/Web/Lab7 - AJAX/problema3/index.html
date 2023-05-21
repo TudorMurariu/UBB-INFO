@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Problema 3</title>
+		<script src="jquery-2.0.3.js"></script>
+		<script>
+			var idCurrentBook = null;
+			var allSaved = true;
+			function showId(){
+				$.ajax({
+					type : "GET",
+					url : "showId.php", 	
+					success: function(data,status) {
+							$("#myList").html(data);
+					}
+				});
+			}
+			
+			function showBook(idBook){
+				idCurrentBook = idBook;
+				$.ajax({
+					type : "GET",
+					url : "showBook.php", 	
+					data: {id: idBook},
+					success: function(data,status) {
+							$("#myForm").html(data);
+							$("input").on("input",function(){
+								allSaved=false;
+								console.log("Changed");
+								$("#myBtn").removeAttr("disabled");
+								});	
+							}
+				});
+			}
+					
+			$(document).ready(function(){
+				showId();
+				$("#myList").on("click", "li", function(){
+					if (allSaved){
+						showBook($(this).text());
+					}	
+					else{
+						alert("Datele nu au fost salvate");
+					}
+				});
+	
+				$('#myForm').on('submit',function(e){
+					e.preventDefault();
+					
+					var data = $(this).serializeArray(); // convert form to array
+					
+					data.push({name: "id", value: idCurrentBook});
+					
+					console.log('Sending request to '+$(this).attr('action')+' with data: '+ $.param(data));
+					$.ajax({
+						type     : "POST",
+						url      : $(this).attr('action'),
+						data:     $.param(data),
+						success  : function(data) {
+								alert(data);
+								allSaved=true;
+						}
+					});
+				});
+			
+			});
+			
+
+		
+		</script>
+	</head>
+	<body>
+	
+		<h1>My books</h1>
+		<ul id="myList">
+		</ul>
+		<form action="updateBook.php" method="post" id="myForm">
+		</form>
+		
+	</body>
+</html>

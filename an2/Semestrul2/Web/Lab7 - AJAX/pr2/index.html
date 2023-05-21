@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Problema 2</title>
+		
+	</head>
+	<body onload="getContent(0)">
+	
+		<h1>My contact list</h1>
+		<table id="myTable">
+		</table>
+		<br>
+		<button id="prev" onclick="previousPage()">Previous</button>
+		<button id="next" onclick="nextPage()">Next</button>
+		
+			<script>
+			var pageNr = 0;
+			var pas = 3;
+			var isNext = false;
+			var xmlhttp;
+			
+			function getContent(nrPage) {
+				xmlhttp=GetXmlHttpObject(); 
+				if (xmlhttp==null)  {
+					alert ("Your browser does not support XMLHTTP!");
+					return;
+				}
+				var url="showPersoane.php";
+				url=url+"?page="+nrPage;
+				xmlhttp.onreadystatechange=stateChanged;
+				xmlhttp.open("GET",url,true);
+				xmlhttp.send(null);
+			}
+			
+			function stateChanged() {
+				if (xmlhttp.readyState==4) {
+				    document.getElementById("myTable").innerHTML=xmlhttp.responseText;
+					if (pageNr===0){
+						document.getElementById('prev').setAttribute('disabled', true);
+						}
+					else{
+						document.getElementById('prev').removeAttribute("disabled");
+					}
+					checkNext(pageNr+pas);
+				}
+			}
+			function GetXmlHttpObject() {
+				if (window.XMLHttpRequest) {        // code for IE7+, Firefox, Chrome, Opera, Safari
+					return new XMLHttpRequest();
+				}
+			        if (window.ActiveXObject) {         // code for IE6, IE5
+					return new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				return null;
+			} 
+			
+			function nextPage(){
+				pageNr+=pas;
+				getContent(pageNr);
+			}
+			
+			function previousPage(){
+				pageNr-=pas;
+				getContent(pageNr);
+			}
+			
+			function checkNext(pageNumber){
+				xmlhttp=GetXmlHttpObject(); 
+				if (xmlhttp==null)  {
+					alert ("Your browser does not support XMLHTTP!");
+					return;
+				}
+				var url="nrPersoane.php";
+				url=url+"?page="+pageNumber;
+				xmlhttp.onreadystatechange=stateNext;
+				xmlhttp.open("GET",url,true);
+				xmlhttp.send(null);
+			}
+			
+			function stateNext() {
+				if (xmlhttp.readyState==4) {
+				    if(xmlhttp.responseText == 0){
+						document.getElementById('next').setAttribute('disabled', true);
+						}
+					else{
+						document.getElementById('next').removeAttribute("disabled");
+					}
+				}
+			}
+		</script>
+		
+	</body>
+</html>

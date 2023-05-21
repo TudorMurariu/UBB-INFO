@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <style>
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">   
+        </script>
+        <title>
+            Problema 5
+        </title>
+    </head>
+    <body >
+        <ul id="lista">
+            <li id="1" onclick="getFolders('1')" style="color: blue">root<ul></ul>
+            </li>
+        </ul>
+        <br>
+        <textarea id="explorer" rows="10" cols="100" readonly>
+
+        </textarea>
+
+
+    </body>
+
+    <script>
+        dict={};
+        dict["1"]="image";
+        cnt=1;
+        function getFolders(id){
+            
+            if($('#'+id).hasClass('opened') === true)
+                return;
+            $('#'+id).addClass("opened");
+            path = dict[id];
+            $ul = $('#'+id).children(":first");
+            request = new XMLHttpRequest();
+            request.onreadystatechange = function(){
+                if(request.readyState === 4){
+                    if(request.status === 200){
+                        console.log(request.responseText);
+                        var folders = JSON.parse(this.responseText);
+
+                        if(folders.length === 2){
+                            var li_nou = document.createElement('li');
+                            $ul.append(li_nou);
+                        }
+
+                        for(var i = 2; i<folders.length; i++){
+                            cnt = cnt + 1;
+
+                            folder = folders[i];
+                            if (folder.indexOf('.') === -1) {
+                                var li_nou = document.createElement('li');
+                                li_nou.innerText = folder;
+                                var ul_nou = document.createElement('ul');
+                                dict[cnt]=path+'/'+folder;
+                                let val = cnt;
+                                $(li_nou).on('click',function () {
+                                    getFolders(val);
+                                });
+                                $(li_nou).attr('id',cnt);
+                                $(li_nou).append(ul_nou);
+                                $(li_nou).css("color","blue");
+                                $ul.append(li_nou);
+                            }
+                            else{
+                                var li_nou = document.createElement('li');
+                                li_nou.innerText = folder;
+                                dict[cnt]=path+'/'+folder;
+                                let val = cnt;
+                                $(li_nou).on('click',function () {
+                                    getFile(val);
+                                });
+                                $ul.append(li_nou);
+                                //file
+                            }
+                        }
+                    }
+                    else{
+                        alert('Eroare request.status ' + request.status);
+                    }
+                }
+            };
+            console.log("getFolders.php?path="+path);
+            request.open('get', 'getFolders.php?path='+path,true);
+            request.send('');
+        }
+
+        function getFile(id){
+            path = dict[id];
+            request = new XMLHttpRequest();
+            request.onreadystatechange = function () {
+                if(request.readyState === 4){
+                    if(request.status === 200) {
+                        var content = request.responseText;
+                        $('#explorer').val(content);
+                    } else {
+                        alert('Eroare request.status' + request.status);
+                    }
+                }
+            };
+            console.log('getFile.php?path='+path);
+            request.open('GET','getFile.php?path='+path,true);
+            request.send('');
+        }
+    </script>
+</html>

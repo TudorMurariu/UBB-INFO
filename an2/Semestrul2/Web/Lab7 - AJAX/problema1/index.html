@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery-2.0.3.js"></script>
+		<script>
+			$(document).ready(function(){
+			
+					$.ajax({
+						type : "GET",
+						url : "showPlecari.php", 					
+						success: function(data,status) {
+								$("#plecari").html(data);
+						}
+					});
+			
+				$('#plecari').change(function(){ 
+					var value = $(this).val();
+					console.log(value[0]);
+					$.ajax({
+						type : "GET",
+						url : "showSosiri.php", 
+						data: {name : value[0]},					
+						success: function(data,status) {
+								$("#sosiri").html(data);
+						}
+					});
+				});
+			
+			});
+		</script>
+	</head>
+	<body>
+	
+		<h1>Mersul trenurilor</h1>
+		<span>
+        <label>
+            Statii plecare:
+            <select id="plecari" multiple size=6>
+            </select>
+        </label>
+		</span>
+		<span>
+        <label>
+            Statii sosire:
+            <select id="sosiri" multiple size=6>
+				<option>(none)</option>
+            </select>
+        </label>
+		</span>
+	</body>
+</html>

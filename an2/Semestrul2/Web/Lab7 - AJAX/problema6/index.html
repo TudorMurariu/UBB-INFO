@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Problema 6</title>
+		<script src="jquery-2.0.3.js"></script>
+		<script>
+		
+			var cond="";
+			
+			function colectData(){
+				return [$("#producator").find('option:selected').text(),
+						$("#procesor").find('option:selected').text(),
+						$("#memorie").find('option:selected').text(),
+						$("#capacitateHdd").find('option:selected').text(),
+						$("#placaVideo").find('option:selected').text(),
+						$("#diagonala").find('option:selected').text(),
+					]
+			}
+				
+			function showContent(){
+				$.ajax({
+					type : "GET",
+					url : "showProduse.php", 	
+					data: {items :colectData()},
+					success: function(data,status) {
+							$("#myTable").html(data);
+					}
+				});
+			}
+			
+			$(document).ready(function(){
+				showContent();
+				
+				$('select').change(function(){ 
+					var value = $(this).val();
+					showContent();
+				
+				});
+
+				
+			});
+		</script>
+	</head>
+	<body>
+		
+		<h1>Magazin online</h1>
+		<label >
+		Producator:
+		<select id="producator">
+		  <option value="none"></option>
+		  <option value="Asus">Asus</option>
+		  <option value="Apple">Apple</option>
+		  <option value="HP">HP</option>
+		  <option value="Acer">Acer</option>
+		  <option value="Lenovo">Lenovo</option>
+		</select>
+		</label>
+		<label>
+		Procesor:
+		<select id="procesor">
+		  <option value="none"></option>
+		  <option value="i5">i5</option>
+		  <option value="i7">i7</option>
+		</select>
+		</label>
+		<label>
+		Memorie:
+		<select id="memorie">
+		  <option value="none"></option>
+		  <option value="8gb">8 GB</option>
+		</select>
+		</label>
+		<label>
+		HDD:
+		<select id="capacitateHdd">
+		  <option value="none"></option>
+		  <option value="128gb">128 GB</option>
+		  <option value="256gb">256 GB</option>
+		  <option value="512gb">512 GB</option>
+		  <option value="1tb">1 TB</option>
+		</select>
+		</label>
+		<label>
+		Placa Video:
+		<select id="placaVideo">
+		  <option value="none"></option>
+		  <option value="dedicata">Dedicata</option>
+		  <option value="integrata">Integrata</option>
+		</select>
+		</label>
+		<label>
+		Diagonala:
+		<select id="diagonala">
+		  <option value="none"></option>
+		  <option value="15.6inch">15.6 inch</option>
+		  <option value="13.3inch">13.3 inch</option>
+		</select>
+		</label>
+		<br>
+		<br>
+		<table id="myTable">
+		</table>
+	</body>
+</html>
