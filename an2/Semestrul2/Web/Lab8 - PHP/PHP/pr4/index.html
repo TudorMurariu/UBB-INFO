@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema 4</title>
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+
+<div class ="container">
+	<h1>JOIN US</h1>
+	<table>
+	<tr>
+	<th>
+		Authentication
+	</th>
+	<th>
+		Registration
+	</th>
+	</tr>
+	<tr>
+	<td>
+	<form action="autentificare.php" method = "POST">
+		<label>Username</label><br>
+		<input type="text" name='username'  placeholder="Enter Username" required><br>
+		<label>Password</label><br>
+		<input type="password" name='password'  placeholder="Enter Password" required>
+		<small>(UpperCase, LowerCase and Number)</small><br><br>
+		<button type="submit" >Login </button>
+	</form>
+	</td>
+	<td>
+	<form action="inregistrare.php" method = "POST">
+		<label>Username</label><br>
+		<input type="text" name='username' placeholder="Enter Username" required><br>
+		<label>Email</label><br>
+		<input type="email" name='email'  placeholder="Enter Email" required><br>
+		<label>Password</label><br>
+		<input type="password" name='password'  placeholder="Enter Password" required>
+		<small>(UpperCase, LowerCase and Number)</small><br><br>
+		<button type="submit" >Sign up</button>
+	</form>
+	</td>
+	</tr>
+	</table>
+	</div>
+</body>
+</html>
