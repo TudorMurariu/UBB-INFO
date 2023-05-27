@@ -1,6 +1,6 @@
 # Medii de Proiectare si Programare
 
-Proiect spring boot + frontEnd: https://github.com/TudorMurariu/AgentieDeTurism-SpringBoot
+**Proiect spring boot + frontEnd: https://github.com/TudorMurariu/AgentieDeTurism-SpringBoot**
 
 ### Videouri de la profa:
 #### Curs 6
