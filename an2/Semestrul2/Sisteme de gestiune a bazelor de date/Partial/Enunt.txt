@@ -1,0 +1,5 @@
+Exact aceelasi enunt ca in modele, dar cu o baza de date diferita.
+
+1. C# app cu operatii CRUD intre doua tabele in relatie 1-n
+2. Un exemplu de Dirty reads
+3. Un index
