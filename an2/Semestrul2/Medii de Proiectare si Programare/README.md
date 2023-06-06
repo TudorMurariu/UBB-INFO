@@ -25,5 +25,10 @@ https://www.youtube.com/watch?v=AsZRRzRbnCg
 #### Curs 10
 1. Explicatii exemplu servicii REST (Chat user)
 https://www.youtube.com/watch?v=csuWDGL9ALc
+#### Curs 12
+1. Exemplu simplu ActiveMQ
+https://www.youtube.com/watch?v=uzhIwtUP-AA
+2. Exemplu MiniChat cu ActiveMQ
+https://www.youtube.com/watch?v=jciSKovKQAs
 
 *Nota: videourile sunt din 2020 si o parte din functii/configurari sunt deprecated*
