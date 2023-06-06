@@ -31,7 +31,7 @@
 			<button type="submit" name="upload">Upload</button>
 		</form>
 			<?php
-			$con = mysqli_connect("localhost", "root", "","problema5php_db");
+			$con = mysqli_connect("localhost", "root", "","lab8");
 			if (!$con) {
 				die('Could not connect: ' . mysqli_error());
 			}

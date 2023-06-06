@@ -5,7 +5,7 @@
 		return $variable; 
 	}
 
-	$con = mysqli_connect("localhost", "root", "","problema6php_db");
+	$con = mysqli_connect("localhost", "root", "","lab8");
 	if (!$con) {
 		die('Could not connect: ' . mysqli_error());
 	}
@@ -15,6 +15,6 @@
 	$sql = "INSERT INTO messages(username, message,active) VALUES ('" . $username ."','" . $message . "', 0);";
 	$result=mysqli_query($con,$sql);
 	$row=mysqli_fetch_array($result);
-	header("Location: http://localhost/phpApp/pr6/index.php");
+	header("Location: http://localhost/pr6/index.php");
 	mysqli_close($con);
 ?> 

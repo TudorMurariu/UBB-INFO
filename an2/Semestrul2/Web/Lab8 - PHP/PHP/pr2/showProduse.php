@@ -1,10 +1,14 @@
 <?php
-	$con = mysqli_connect("localhost", "root", "","magazin_db");
+	$con = mysqli_connect("localhost", "root", "","lab8");
 	if (!$con) {
 		die('Could not connect: ' . mysqli_error());
 	}
 	
 	$pageLimit = $_GET["laptop"];
+
+	if ($pageLimit == 0) {
+		die('Nu putem pune 0 laptopuri pe o pagina');
+	}
 	
 	$pattern = '/[0-9]{1,30}$/';
 	preg_match($pattern, $pageLimit, $matches, PREG_OFFSET_CAPTURE);

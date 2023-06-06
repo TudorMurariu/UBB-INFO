@@ -1,5 +1,5 @@
 <?php
-	$con = mysqli_connect("localhost", "root", "","problema6php_db");
+	$con = mysqli_connect("localhost", "root", "","lab8");
 	if (!$con) {
 		die('Could not connect: ' . mysqli_error());
 	}
@@ -20,7 +20,7 @@
 		$result=mysqli_query($con,$sql);
 		$row=mysqli_fetch_array($result);
 		if ($row[0]==1){
-			header("Location: http://localhost/phpApp/pr6/indexAdmin.php");
+			header("Location: http://localhost/pr6/indexAdmin.php?username=".$username);
 		}
 		else {
 			echo file_get_contents( "index.php" );

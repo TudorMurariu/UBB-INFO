@@ -58,7 +58,7 @@
 	</article>
 	<h3> Comentarii</h3>
 	<?php
-		$con = mysqli_connect("localhost", "root", "","problema6php_db");
+		$con = mysqli_connect("localhost", "root", "","lab8");
 		if (!$con) {
 			die('Could not connect: ' . mysqli_error());
 		}
@@ -105,7 +105,7 @@
 			$username = test_input($_POST["username"]);
 			$password = test_input($_POST["password"]);
 			if (preg_match("/^[a-zA-Z][a-zA-Z0-9-_\.]{1,30}$/",$username)) {
-				$con = mysqli_connect("localhost", "root", "","problema6php_db");
+				$con = mysqli_connect("localhost", "root", "","lab8");
 				if (!$con) {
 					die('Could not connect: ' . mysqli_error());
 				}
@@ -113,10 +113,10 @@
 				$result=mysqli_query($con,$sql);
 				$row=mysqli_fetch_array($result);
 				if ($row[0]==1){
-					header("Location: http://localhost/phpApp/pr6/indexAdmin.php");
+					header("Location: http://localhost/pr6/indexAdmin.php?username=".$username);
 				}
 				else {
-					header("Location: http://localhost/phpApp/pr6/index.php");
+					header("Location: http://localhost/pr6/index.php");
 				}
 					mysqli_close($con);
 				}
@@ -126,16 +126,16 @@
 		}
 		else  {
 			if ($tip =='comentariu'){
-				$con = mysqli_connect("localhost", "root", "","problema6php_db");
+				$con = mysqli_connect("localhost", "root", "","lab8");
 				if (!$con) {
 					die('Could not connect: ' . mysqli_error());
 				}
 				$username = test_input($_POST["username"]);
 				$message = test_input($_POST["message"]);
 				
-				$sql = "INSERT INTO messages(username, message,active) VALUES ('" . $username ."','" . $message . "', 0);";
+				$sql = "INSERT INTO messages(username, message, active) VALUES ('" . $username ."','" . $message . "', 0);";
 				$result=mysqli_query($con,$sql);
-				//header("Location: http://localhost/phpApp/pr6/index.php");
+				//header("Location: http://localhost/pr6/index.php");
 				mysqli_close($con);
 				
 			}

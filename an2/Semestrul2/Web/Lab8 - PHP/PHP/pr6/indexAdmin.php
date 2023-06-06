@@ -19,12 +19,15 @@
 	<td>
 	<h3>Comentarii in asteptare</h3>
 	<?php
-		$con = mysqli_connect("localhost", "root", "","problema6php_db");
+		$con = mysqli_connect("localhost", "root", "","lab8");
 		if (!$con) {
 			die('Could not connect: ' . mysqli_error());
 		}
-		
-		$sql = "SELECT * FROM messages WHERE active = 0;";
+
+
+		$username = $_GET['username'];  
+
+		$sql = "SELECT * FROM messages WHERE active = 0 AND username = '" . $username . "';";
 		$result = mysqli_query($con, $sql);
 		
 		

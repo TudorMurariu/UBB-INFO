@@ -12,7 +12,7 @@
 		Student: 
 		<select name ="idStudent" form="notare">
 		<?php
-			$con = mysqli_connect("localhost", "root", "","problema3php_db");
+			$con = mysqli_connect("localhost", "root", "","lab8");
 			if (!$con) {
 				die('Could not connect: ' . mysqli_error());
 			}
@@ -29,7 +29,7 @@
 		Disciplina: 
 		<select name ='idDisciplina' form="notare">
 		<?php
-			$con = mysqli_connect("localhost", "root", "","problema3php_db");
+			$con = mysqli_connect("localhost", "root", "","lab8");
 			if (!$con) {
 				die('Could not connect: ' . mysqli_error());
 			}
@@ -37,7 +37,7 @@
 			$result = mysqli_query($con, $sql);
 	
 			while($row = mysqli_fetch_array($result)){
-				echo "<option   value = '" .$row["id"] ."'>" .$row["denumire"] ."</option>";
+				echo "<option   value = '" .$row["id"] ."'>" .$row["nume"] ."</option>";
 				}
 		?>
 		</select>
@@ -79,13 +79,13 @@
 		$idS = test_input($_POST["idStudent"]);
 		$idD = test_input($_POST["idDisciplina"]);
 		$nota = test_input($_POST["idNota"]);
-		$con = mysqli_connect("localhost", "root", "","problema3php_db");
+		$con = mysqli_connect("localhost", "root", "","lab8");
 		if (!$con) {
 			die('Could not connect: ' . mysqli_error());
 		}
-		$sql = "INSERT INTO notare(idS, idD, nota) VALUES ($idS,$idD, $nota)";
+		$sql = "INSERT INTO notare(idS, idD, nota) VALUES ('$idS', '$idD', $nota)";
 		if ($con->query($sql) === TRUE) {
-			header("Location: http://localhost/phpApp/pr3/showNote.php");
+			header("Location: http://localhost/pr3/showNote.php");
 		} else {
 			echo "Error: " . $sql . "<br>" . $con->error;
 		}

@@ -9,18 +9,18 @@
 		<h1>Afisare Note</h1>
 		<hr>
 	
-		<table>
+		<table border="1">
 		<tr>
 		<th>Nume</th>
 		<th>Denumire</th>
 		<th>Nota</th>
 		</tr>
 		<?php
-			$con = mysqli_connect("localhost", "root", "","problema3php_db");
+			$con = mysqli_connect("localhost", "root", "","lab8");
 			if (!$con) {
 				die('Could not connect: ' . mysqli_error());
 			}
-			$sql = "SELECT st.nume as 'nume', sb.denumire as 'denumire', n.nota as nota FROM students st, subjects sb, notare n WHERE st.id = n.idS and sb.id = n.idD ";
+			$sql = "SELECT st.nume as 'nume', sb.nume as 'denumire', n.nota as nota FROM students st, subjects sb, notare n WHERE st.id = n.idS and sb.id = n.idD ";
 			$result = mysqli_query($con, $sql);
 	
 			while($row = mysqli_fetch_array($result)){

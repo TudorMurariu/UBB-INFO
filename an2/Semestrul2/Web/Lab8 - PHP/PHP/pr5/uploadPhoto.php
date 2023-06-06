@@ -86,12 +86,12 @@
   </form>
   <?php
   // Create database connection
-  $db = new mysqli("localhost", "root", "", "image_upload");
- $con = new mysqli("localhost","root","","useri");
+  $db = new mysqli("localhost", "root", "", "lab8");
+ $con = new mysqli("localhost","root","","lab8");
   // Initialize message variable
   $msg = $u= "";
   $image_text="";
-  $s="SELECT username from curnetUser where id=1";
+  $s="SELECT username from user_curent where id=1";
   	$stmt =  $con->query($s);
   	while($row = $stmt->fetch_assoc()){
   		$u = $row['username'];
