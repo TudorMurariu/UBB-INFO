@@ -1,0 +1,146 @@
+1. In algoritmul K-Means clusterii initiali se pot alege:
+	a. aleator
+	b. din regiunile cel mai dense
+	c. doar din datele de antrenament
+
+2. Care din urmatoarele probleme poate fi rezolvata cu un algoritm K-Means:
+	a. clasificarea unui set de documente in functie de continutul si subiectul acestora
+	b. stabilirea numarului de magazine care trebuie deschise si locatia acestora bazandu-ne pe istoricul comenzilor
+	c. stabilirea diferitelor clase de masini auto pe baza unui set de date dat
+
+3. Indexul Davies-Bouldin determina:
+	a. raportul dintre cea mai mica distanta dintre clusteri si cea mai mare distanta dintr-un cluster
+	b. distanta medie intre un obiect si clusterele din care obiectul nu face parte
+	c. raportul dintre suma distantelor intre centroizii a fiecarei perechi clustere si numarul de clustere
+
+4. Care din urmatoarele sunt tehnici de clustering:
+	a. algoritmi de tipul divide-et-impera
+	b. algoritmi divizativi
+	c. K-Means
+
+5. Care din urmatoarele probleme nu poate fi rezolvata cu un algoritm K-Means:
+	a. filtrarea mesajelor de tip spam
+	b. toate de mai sus pot fi rezolvate cu K-Means
+	c. identificarea sirilor false dintr-o colectie de articole
+	d. stabilirea zonelor in care se comanda cele mai multe taxiuri pe baza unui istoric
+
+6. Indexul Dunn determina:
+	a. distanta medie intre un obiect si clusterele din care obiectul nu face parte
+	b. raportul dintre cea mai mica distanta dintre clusteri si cea mai mare distanta dintr-un cluster
+	c. distanta intre centroizii a doua clustere
+
+7. O retea neuronala artificiala poate accepta date de intrare:
+	a. discrete
+	b. continue
+
+8. In regula delta de invatare calitatea modelului se stabileste:
+	a. pentru toate dintre datele de intrare
+	b pentru una dintre datele de intrare
+
+9. Intr-o iteratie a unei retele neuronale se proceseaza:
+	a. toate datele de antrenament daca reteaua este in procesul de invatare
+	b. o singura data de intrare
+	c. toate datele de intrare
+
+10. Valoarea data de formula: nr. de exemple pozitive corect clasificate / nr. total de exemple pozitive reprezinta:
+	a. eroarea
+	b. precizia
+	c. rapelul
+
+11. In versiunea Stochastic Gradient Descent eroarea se calculeaza:
+	a. pentru fiecare exemplu din datele de antrenament
+	b. pentru fiecare exemplu din datele de test
+	c. pentru fiecare exemplu atat din datele de test cat si pentru cele de antrenament
+
+12. Pentru care din scenariile de mai jos nu se poate aplica metoda celor mai mici patrate:
+	a. prezicerea genului unei persoane pe baza scrisului
+	b. prezicerea preturilor caselor pe baza zonei geografice
+	c. prezicerea numarului de albume care for fi vandute saptamana viitoare
+
+13. In versiunea Batch Gradient Descent eroarea se calculeaza:
+	a. pentru fiecare exemplu din datele de test
+	b. pentru fiecare exemplu din datele de antrenament
+	c. pentru fiecare exemplu atat din datele de test cat si pentru cele de antrenament
+
+14. Calitatea unui algoritm de invatare supervizata poate fi masurata prin:
+	a. robustete
+	b. scalabilitate
+	c. eficienta
+
+15. Metoda celor mai mici patrate se poate aplica:
+	a. pentru a prezice valori pe baza unui istoric
+	b. pe orice tip de date
+	c. pentru a determina relatia liniara dintre input si output
+
+16. Residual plot se foloseste pentru a verifica daca pe un set de date se poate aplica:
+	a. un algoritm de prezicere non-liniar
+	b. un algoritm de prezicere liniar
+	c. aplica algoritmul "metoda celor mai mici patrate"
+
+17. Scorul F1 combina:
+	a. eroarea
+	b. rapelul
+	c. precizia
+	d. acuratetea
+
+18. In cazul problemei comisului voiajor cu 50 orase, un algoritm de tip ACO poate lucra cu un nr de furnici egal cu:
+	a. 50!
+	b. 1
+	c. 25
+	d. 50
+
+19. Se considera problema comisului voiajor cu n orase si m = n * (n - 1)/2 muchii, orasele fiind uniform distantate intre ele (orice muchie din cele m intre 2 orase are acelasi cost c)
+si un algoritm ACO cu 5 furnici care lasa o unitate f de feromon pe fiecare muchie traversata. Cate unitati de feromon se vor afla dupa 5 pasi efectuati de fiecare furnica, pe muchia
+cu cel mai mult feromon(comisul voiajor doreste vizitarea tuturor oraselor, fara intoarcerea in orasul de start)?
+	a. mai mult de n*f
+	b. exact n*f
+	c. mai putin de n*f
+
+
+20. Pentru un cromozom cu reprezentarea de tip permutare c = (3, 4, 5, 2, 1, 7, 6), prin aplicarea unei mutatii prin inversare intre genele de pe pozitiile 2 si 5 
+(indexarea genelor incepe de la 1) se obtine cromozomul:
+	a. (3, 4, 7, 2, 1, 5, 6)
+	b. (3, 1, 2, 5, 4, 7, 6)
+	c. (3, 4, 5, 2, 1, 7, 6)
+	d. (3, 1, 5, 2, 4, 7, 6)
+
+21. Pentru problema comisului voiajor cu n orase se poate folosi o reprezentare de tip:
+	a. vector binar de lungime n
+	b. nici un raspuns nu este corect
+	c. matrice binara de dimensiune n * n
+	d. permutarea de n elemente
+
+22. Schema evolutiva generationala in cazul unui algoritm cu 10 cromozomi si 5 generatii presupune aplicarea operatorului de selectie de:
+	a. 50 ori
+	b. 10 ori
+	c. 5 ori
+	d. 100 ori
+
+23. Algoritmii de tip ACO identifica solutia unei probleme de optimizare in mod:
+	a. combinat
+	b. euristic
+	c. determinist
+
+24. Intr-un algoritm PSO fiecare particula are:
+	a. o pozitie
+	b. o viteza
+	c. un fitness
+
+25. In algoritmul ACO, o furnica va alege urmatorul oras vizitat in functie de:
+	a. viteza
+	b. fitness
+	c. feromon
+
+26. Pentru un cromozom cu reprezentarea de tip permutare c1 = (3, 4, 5, 2, 1, 7, 6) si c2 = (1, 2, 3, 4, 5, 6, 7), prin aplicarea unei incrucisari prin ordonarea folosind genele dintre 
+pozitiile 2 si 4 (indexarea incepe de la 1) se obtine cromozomul:
+	a. (3, 4, 5, 2, 6, 7, 1)
+	b. (1, 2, 3, 4, 5, 6, 7)
+	c. nici un raspuns nu este corect
+	d. (3, 4, 5, 2, 1, 7, 6)
+
+27. Care dintre operatorii de selectie se poate folosi in rezolvarea problemei comisului voiajor cu ajutorul unui algoritm genetic:
+	a. operatorul bazat pe inversare
+	b. operatorul bazat pe K-Turnir
+	c. operatorul bazat pe ruleta
+	d. operatorul bazat pe ranguri
+

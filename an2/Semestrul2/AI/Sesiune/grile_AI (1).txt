@@ -1,0 +1,462 @@
+1. In algoritmul K-Means clusterii initiali se pot alege:
+(X)	a. aleator
+(X)	b. din regiunile cel mai dense
+	c. doar din datele de antrenament
+
+2. Care din urmatoarele probleme poate fi rezolvata cu un algoritm K-Means:
+(X)	a. clasificarea unui set de documente in functie de continutul si subiectul acestora
+(X)	b. stabilirea numarului de magazine care trebuie deschise si locatia acestora bazandu-ne pe istoricul comenzilor
+(se pot crea clusteri care reprezinta locatia de provenienta a comenzii, apoi in functie de numarul de comenzi dintr-o anumita arie, daca trece de un threshold, ar putea insemna ca ar fi bine atat pentru clienti, cat si producator, ca sa construiasca acolo un magazin (sau la fiecare x clienti dintr-o zona se va construi un magazin, idk))
+(X)	c. stabilirea diferitelor clase de masini auto pe baza unui set de date dat
+
+3. Indexul Davies-Bouldin determina:
+	a. raportul dintre cea mai mica distanta dintre clusteri si cea mai mare distanta dintr-un cluster
+	b. distanta medie intre un obiect si clusterele din care obiectul nu face parte
+(X)	c. raportul dintre suma distantelor intre centroizii a fiecarei perechi clustere si numarul de clustere
+
+4. Care din urmatoarele sunt tehnici de clustering:
+	a. algoritmi de tipul divide-et-impera
+	b. algoritmi divizativi
+(X)	c. K-Means
+
+5. Care din urmatoarele probleme nu poate fi rezolvata cu un algoritm K-Means:
+	a. filtrarea mesajelor de tip spam
+(X)	b. toate de mai sus pot fi rezolvate cu K-Means
+	c. identificarea stirilor false dintr-o colectie de articole
+	d. stabilirea zonelor in care se comanda cele mai multe taxiuri pe baza unui istoric
+
+6. Indexul Dunn determina:
+	a. distanta medie intre un obiect si clusterele din care obiectul nu face parte
+(X)	b. raportul dintre cea mai mica distanta dintre clusteri si cea mai mare distanta dintr-un cluster
+	c. distanta intre centroizii a doua clustere
+
+7. O retea neuronala artificiala poate accepta date de intrare:
+(X)	a. discrete
+(X)	b. continue
+
+8. In regula delta de invatare calitatea modelului se stabileste:
+(X)	a. pentru toate dintre datele de intrare
+	b. pentru una dintre datele de intrare
+
+9. Intr-o iteratie a unei retele neuronale se proceseaza:
+	a. toate datele de antrenament daca reteaua este in procesul de invatare
+(X)	b. o singura data de intrare
+	c. toate datele de intrare
+
+10. Valoarea data de formula: nr. de exemple pozitive corect clasificate / nr. total de exemple pozitive reprezinta:
+	a. eroarea
+	b. precizia
+(X)	c. rapelul
+
+11. In versiunea Stochastic Gradient Descent eroarea se calculeaza:
+(X)	a. pentru fiecare exemplu din datele de antrenament
+	b. pentru fiecare exemplu din datele de test
+	c. pentru fiecare exemplu atat din datele de test cat si pentru cele de antrenament
+
+12. Pentru care din scenariile de mai jos nu se poate aplica metoda celor mai mici patrate:
+(X)	a. prezicerea genului unei persoane pe baza scrisului
+	b. prezicerea preturilor caselor pe baza zonei geografice
+	c. prezicerea numarului de albume care for fi vandute saptamana viitoare
+
+13. In versiunea Batch Gradient Descent eroarea se calculeaza:
+	a. pentru fiecare exemplu din datele de test
+(X)	b. pentru fiecare exemplu din datele de antrenament
+	c. pentru fiecare exemplu atat din datele de test cat si pentru cele de antrenament
+
+14. Calitatea unui algoritm de invatare supervizata poate fi masurata prin:
+(X)	a. robustete
+(X)	b. scalabilitate
+(X)	c. eficienta
+
+15. Metoda celor mai mici patrate se poate aplica:
+(X)	a. pentru a prezice valori pe baza unui istoric
+	b. pe orice tip de date
+(X)	c. pentru a determina relatia liniara dintre input si output
+
+16. Residual plot se foloseste pentru a verifica daca pe un set de date se poate aplica:
+(X)	a. un algoritm de prezicere non-liniar
+(X)	b. un algoritm de prezicere liniar
+(X)	c. aplica algoritmul "metoda celor mai mici patrate"
+
+17. Scorul F1 combina:
+	a. eroarea
+(X)	b. rapelul
+(X)	c. precizia
+	d. acuratetea
+
+18. In cazul problemei comisului voiajor cu 50 orase, un algoritm de tip ACO poate lucra cu un nr de furnici egal cu:
+	a. 50!
+(X)	b. 1
+(X)	c. 25
+(X)	d. 50
+
+19. Se considera problema comisului voiajor cu n orase si m = n * (n - 1)/2 muchii, orasele fiind uniform distantate intre ele (orice muchie din cele m intre 2 orase are acelasi cost c)
+si un algoritm ACO cu 5 furnici care lasa o unitate f de feromon pe fiecare muchie traversata. Cate unitati de feromon se vor afla dupa 5 pasi efectuati de fiecare furnica, pe muchia
+cu cel mai mult feromon(comisul voiajor doreste vizitarea tuturor oraselor, fara intoarcerea in orasul de start)?
+	a. mai mult de n*f
+	b. exact n*f
+(X)	c. mai putin de n*f
+
+
+20. Pentru un cromozom cu reprezentarea de tip permutare c = (3, 4, 5, 2, 1, 7, 6), prin aplicarea unei mutatii prin inversare intre genele de pe pozitiile 2 si 5 
+(indexarea genelor incepe de la 1) se obtine cromozomul:
+	a. (3, 4, 7, 2, 1, 5, 6)
+(X)	b. (3, 1, 2, 5, 4, 7, 6)
+	c. (3, 4, 5, 2, 1, 7, 6)
+	d. (3, 1, 5, 2, 4, 7, 6)
+
+21. Pentru problema comisului voiajor cu n orase se poate folosi o reprezentare de tip:
+	a. vector binar de lungime n
+	b. nici un raspuns nu este corect
+(?)	c. matrice binara de dimensiune n * n
+(X)	d. permutarea de n elemente
+
+22. Schema evolutiva generationala in cazul unui algoritm cu 10 cromozomi si 5 generatii presupune aplicarea operatorului de selectie de:
+	a. 50 ori
+	b. 10 ori
+	c. 5 ori
+(X)	d. 100 ori (selectezi cate 2 parinti pentru fiecare cromozom => pentru 10 cromozomi -> 20 de selectii; deci pentru 5 gen => 100)
+
+23. Algoritmii de tip ACO identifica solutia unei probleme de optimizare in mod:
+	a. combinat
+(X)	b. euristic
+	c. determinist
+
+24. Intr-un algoritm PSO fiecare particula are:
+(X)	a. o pozitie
+(X)	b. o viteza
+	c. un fitness
+
+25. In algoritmul ACO, o furnica va alege urmatorul oras vizitat in functie de:
+	a. viteza
+	b. fitness
+(X)	c. feromon
+
+26. Pentru un cromozom cu reprezentarea de tip permutare c1 = (3, 4, 5, 2, 1, 7, 6) si c2 = (1, 2, 3, 4, 5, 6, 7), prin aplicarea unei incrucisari prin ordonarea folosind genele dintre 
+pozitiile 2 si 4 (indexarea incepe de la 1) se obtine cromozomul:
+	a. (3, 4, 5, 2, 6, 7, 1)
+	b. (1, 2, 3, 4, 5, 6, 7)
+(X)	c. nici un raspuns nu este corect ( ar trebui sa fie 1 4 5 2 3 6 7 )
+	d. (3, 4, 5, 2, 1, 7, 6)
+	
+c1 = 3, 4, 5, 2, 1, 7, 6
+c2 = 1, 2, 3, 4, 5, 6, 7
+deci, c1 = 3, 4, 5, 2, 1, 7, 6
+"elem" = elementele de pe pozitiile 2-4 sunt: 4, 5, 2
+eliminam din c2 pe "elem": 1, -, 3, -, -, 6, 7
+offspring-ul este format din elementele ramase in c2 + "elem" + restul = 1 4 5 2 3 6 7
+
+
+27. Care dintre operatorii de selectie se poate folosi in rezolvarea problemei comisului voiajor cu ajutorul unui algoritm genetic:
+	a. operatorul bazat pe inversare (nu este operator de selectie, este de mutatie)
+(X)	b. operatorul bazat pe K-Turnir
+(X)	c. operatorul bazat pe ruleta
+(X)	d. operatorul bazat pe ranguri
+
+28. Pentru a rezolva problema comisului voiajor cu 5 orase intre care exista 10 muchii, un algoritm genetic va folosi un cromozom de lungime egala cu:
+	a. 20
+	b. 15
+(X)	c. 5
+	d. 10
+
+29. In rezolvarea problemei comisului voiajor cu un algoritm genetic, prin aplicarea asupra cromozomului c = (5, 4, 3, 2, 1, 6, 7) a mutatiei prin amestec intre genele de pe pozitiile
+2 si 4 (indexarea incepe de la 1) se poate obtine cromozomul:
+(X)	a. 5, 4, 2, 3, 1, 6, 7
+	b. 5, 4, 3, 1, 2, 6, 7
+	c. 5, 2, 1, 4, 3, 6, 7
+	(5, _, _, _, 1, 6, 7) -> "_" poate fi inlocuit cu 4, 3 sau 1
+
+30. Selectia dintr-un algoritm evolutiv lucreaza la nivel de:
+	a. fenotip
+(X)	b. populatie
+	c. genotip
+	d. individ
+
+31. Se dau 2 cromozomi c1 = (1, 2, 3, 4, 5, 6), c2 = (6, 5, 4, 3, 2, 1), daca se realizeaza o incrucisare cu 1 punct de taietura dupa al 3-lea element care din urmatorii cromozomi rezulta:
+	a. (6, 5, 4, 1, 2, 3)
+(X)	b. (1, 2, 3, 3, 2, 1)
+	c. (3, 2, 1, 4, 5, 6)
+	
+
+32. Diferenta intre un algoritm evolutiv generational si unul steady state se regaseste la nivel de:
+	a. mutatie
+	b. cromozomi
+	c. incrucisare
+(X)	d. selectie pentru supravietuire
+
+33. Care dintre urmatoarele reprezinta un model de populatie intr-un algoritm evolutiv:
+(X)	a. generational
+(X)	b. steady-state
+	c. elitist
+
+34. In algoritmii PSO particulele pot:
+(X)	a. sa tina minte o pozitie anterioara
+	b. sa isi modifice fitnessul aleator dupa cum doresc
+(X)	c. sa schimbe informatii cu vecinii lor
+
+35. PSO este o cautare:
+	a. singulara
+(X)	b. cooperativa
+	c. individuala
+
+36. ACO este o cautare:
+(X)	a. cooperativa
+	b. singulara
+	c. individuala
+
+37. Atunci cand se doreste reducerea numarului de False negatives, va trebui sa ne uitam la metrica:
+(X)	a. rapel
+	b. precizie
+	c. acuratete
+
+38. In cazul predictiei starii vremii, un algoritm care a folosit informatii colectate in ultimele 10 zile (toate fiind zile insorite) a prezis pentru aceste zile urmatoarele:
+[soare, soare, nori, nori, soare, soare, soare, ceata, ceata, soare]. Rapelul (recall) predictiei pentru clasa ceata este:
+(X)	a. 0
+	b. 0.2
+	c. 0.6
+
+39. Care este valoarea maxima a accuratetii pe care o poate obtine un clasificator?
+	a. 0.75
+	b. 0.5
+(X)	c. 1
+
+40. Presupunem un studiu in urma caruia s-a constatat ca intr-o anumita tara, speranta de viata (numarul mediu de ani cat traieste o persoana) in randul femei... vegetale este
+de 80 ani. Se mai presupune ca, in medie, barbatii traiesc cu 5 ani mai putin ca femeile. De asemenea, fiecare tigara fumata intr-o zi reduce .. an, iar o masa/portie de legume
+crescute speranta de viata cu un an. Estimati speranta de viata pentru urmatoarele persoane:
+(X)	a. A = 81, B = 73, C = 84
+	b. A = 86, B = 81, C = 84
+	c. A = 86, B = 73, C = 84
+
+41. Se considera o problema de regresie liniara in care fiecare exemplu din cele 14 avute la dispozitie este caracterizat prin 3 atribute si o valoare de output care trebuie
+prezisa. In cazul folosirii algoritmului bazat pe cele mai mici patrate, formula de identificare a modelului de regresie este W = inverse(Transpus*X)*Transpus*Y.
+Care este dimensiunea lui W in acest caz?
+	a. 1*4
+	b. 1*3
+	c. 3*1
+(X)	d. 4*1
+
+42. Intr-o problema de regresie liniara univariata, cresterea valorii atributului cu o unitate va determina modificarea valorii prezise(de iesire) cu un numar de unitati egal cu
+	a. valoarea atributului
+	b. 1
+	c. un numar oarecare
+(X)	d. valoarea pantei modelului de regresie
+
+43. | x | y |  Se considera un model liniar de regresie y = b0 + b1*x. Care va fi valoarea prezisa de model pentru un input egal cu 4 daca b0 = -1 si b1 = 0.5?
+    | 1 |0.5|
+    | 2 | 1 |
+    | 4 | 2 |
+    | 0 | 0 |
+	a. 4
+	b. 0
+	c. 2
+(X)	d. 1
+
+44. Doi cercetatori au antrenat modelele de predictie a pretului apartamentelor pe baza suprafetei acestora. Modelele celor 2 cercetatori sunt descrise prin aceeasi coeficienti.
+Acest lucru inseamna ca ei au folosit aceleasi date de antrenament?
+	a. da
+(X)	b. nu
+
+45. Presupunem problema clasificarii mesajelor (in spam = 1 si ham = 0) si rezolvarea ei prin folosirea unui model de regresie logistica a carui coeficienti sunt initializati cu 0.
+Carei clase ii  va fi asociat primul exemplu din setul de antrenament(folosind gradient descrescator care ia pe rand exemplele din setul de antrenament), daca pragul de decizie aplicat
+asupra scorului produs este 0.9? Dar daca pragul de decizie este 0.3?
+	a. pt 0.9 clasa 1, iar pt 0.3 clasa 0
+(X)	b. pt 0.9 clasa 0, iar pt 0.3 clasa 0
+	c. pt 0.9 clasa 0, iar pt 0.3 clasa 1
+	d. pt 0.9 clasa 1, iar pt 0.3 clasa 1
+
+46. Relatia dintre un TAD Network si un TAD Layer este o relatie de:
+(X)	a. asociere
+	b. mostenire
+
+47. Presupunem ca avem un model de predictie de forma y = w0 + w1*x + w2*x*x pentru datele reprezentate in grafic cu buline albastre. Cel mai bun model de predictie este desenat cu verde.
+Care dintre coeficientii acestui acestui model este estimat a fi egal cu 0?
+	a. w0
+	b. w1
+	c. w2
+	d. nici unul
+(X)	e. BRUH
+
+48. Se considera trei neuroni intr-o retea neuronala artificiala, fiecare avand ca functie de activare functia Sigmoid, functia identitate si, respectiv, functia
+Prag(sigm=1 / (1+exp(-x)), ident=x, step=0, daca x <= 1 si step = 1, daca x > 1). Fiecare neuron primeste un input = 5. Care dintre neuroni are cel mai mare output?
+	a. sigmoid
+(X)	b. identitate
+	c. prag
+
+49. Precizati cati coeficienti trebuie optimizati in cazul folosirii unei retele neuronale artificiale cu un strat ascuns cu 2 neuroni pentru predictia consumului de combustibil a unor
+vehicule pe baza puterii motorului si a anului de fabricatie a vehiculului. Excludeti din calcule bias-ul.
+	a. 4
+(X)	b. 6
+	c. 9
+	d. 12
+
+50. Care dintre urmatoarele probleme se poate rezolva prin folosirea unui algoritm de tip K-Means?
+	a. avand la dispozitie date meteo pentru perioada ian 2019 - aprilie 2020, sa se stabileasca daca ziua urmatoare va fi insorita sau innorata
+(X)	b. dandu-se articole de tip stire colectate de pe mai multe website-uri, sa se stabileasca principalele teme(topics) abordate de aceste articole
+(X)	c. avand la dispozitie informatii despre utilizarea unor site-uri de catre utilizatori, sa se identifice clasele diferite de utilizatori care exista
+
+51. Presupunem existenta a 3 centroizi: u1 = [1, 2], u2 = [-3, 0], u3 = [4, 2]. Sa se determine clasa din care face parte un exemplu din setul de antrenament x = [-1, 2] dupa prima iteratie
+a algoritmului K-Means:
+(X)	a. clasa 1
+	b. clasa 2
+	c. clasa 3
+	d. nici o clasa
+
+52. Algoritmul K-Means este unul iterativ in care se repeta 2 pasi. Care dintre urmatorii pasi se pot executa in cadrul acestei bucle in timpul antrenarii?
+	a. initializarea centroizilor cu valori random
+	b. testarea pe setul de validare
+(X)	c. deplasarea centroizilor prin modificarea atributelor lor
+(X)	d. atribuirea unei etichete pentru fiecare exemplu din setul de antrenament
+
+53. Care dintre urmatoarele probleme se poate rezolva prin folosirea unui algoritm de tip K-Means?
+(X)	a. avand informatii despre clientii unei banci privin operatiunile efectuate cu banca, sa se stabileasca principalele segmente de clientii carora banca trebuie sa-si adapteze oferta
+	b. avand la dispozitie date meteo pentru perioada ian 2019 - aprilie 2020, sa se stabileasca daca ziua urmatoare va fi insorita sau innorata
+(X)	c. se cunosc informatii despre vanzarile (produsele vandute, cantitatea vanduta din fiecare produs, etc.) unul supermarket. Sa se determine o modalitate de aranjare a produselor pe
+	rafturi astfel incat produsele de pe un anumit raft sa fie produse cumparate frecvente impreuna (ex. periute de dinti pe acelasi raft cu pasta de dinti)
+
+54. Se considera trei neuroni intr-o retea neuronala artificiala, fiecare avand ca functie de activare functia Sigmoid, functia identitate si, respectiv, functia
+Prag(sigm=1 / (1+exp(-x)), ident=x, step=0, daca x <= 1 si step = 1, daca x > 1). Fiecare neuron primeste un input = -2.5. Care dintre neuroni are cel mai mare output?
+(X)	a. sigmoid
+	b. prag
+	c. identitate
+
+55. Pentru a rezolva problema comisului voiajor cu 14 orase intre care exista 91 muchii, un algoritm genetic va folosi un cromozom de lungime egala cu:
+	a. 28
+	b. 42
+	c. 91
+(X)	d. 14
+
+56. In rezolvarea problemei comisului voiajor cu un algoritm genetic, prin aplicarea asupra cromozomilor c = (1, 2, 3, 4, 5, 6, 7) a mutatiei prin amestec intre genele de pe pozitiile
+3 si 5 (indexarea incepe de la 1) se poate obtine cromozomul:
+	a. (1, 2, 3, 4, 5, 6, 7)
+(X)	b. (1, 2, 5, 4, 3, 6, 7)
+(X)	c. (1, 2, 5, 3, 4, 6, 7)
+	d. (1, 2, 3, 4, 7, 6, 5)
+	
+	1, 2, _, _, _, 6, 7 - "_" inlocuit cu 3,4,5
+
+57. Care este valoarea maxima a rapelului pentru o clasa pe care o poate obtine un clasificator in cazul unei probleme cu 9 exemple uniform distribuite in 3 clase?
+	a. 0.33
+	b. 0.5
+(X)	c. 1
+
+58. Algoritmul ACO se poate folosi pentru:
+	a. a identifica solutia ecuatiei 3 * x^5 + sin * log(3-tg)
+	b. problema turnurilor din Hanoi
+(X)	c. a identifica o planificare optima a unor processe pe mai multe masini de calcul (PSO)
+
+59. Formarea comunitatilor intr-un graf este influentata in mod direct de catre
+(X)	a. numarul muchiilor din graf
+(X)	b. numarul vecinilor fiecarui nod
+
+60. | x | y |  Se considera un model liniar de regresie y = b0 + b1*x. Care va fi valoarea lui b0 si b1 obtinute prin aplicarea unui algoritm bazat pe gradient descrescator in vederea
+    | 1 |0.5|  invatarii unui regresor care se potriveste perfect cu datele?
+    | 2 | 1 |
+    | 4 | 2 |
+    | 0 | 0 |
+	a. b0 = 1, b1 = 0.5
+	b. b0 = 0.5, b1 = 0
+	c. b0 = 0.5, b1 = 0.5
+(X)	d. b0 = 0, b1 = 0.5
+	e. b0 = 1, b1 = 1
+
+61. In cazul problemei comisului voiajor cu n orase, m muchii si a unui algoritm ACO cu f furnicute, numarul de iteratii efectuate in cadrul algoritmului ACO este egal cu:
+	a. nr. de orase
+	b. nr. de muchii
+(X)	c. nr. de furnicute
+
+62. Pentru a rezolva problema comisului voiajor un algoritm genetic va folosi o functie de fitness care va:
+	a. maximiza numarul de orase vizitate
+	b. minimiza numarul de orase vizitate
+(X)	c. optimiza costul drumului parcurs
+	d. maximiza numarul de muchii parcurse
+
+63. Care afirmatii despre metoda gradientului descrescator sunt adevarate?
+(X)	a. este o metoda de optimizare
+(X)	b. este o metoda iterativa
+	c. este o metoda fara parametrii (learning rate etc...)
+
+64. Se considera o problema de regresie in care fiecare exemplu din cele 100 avut la dispozitie pentru antrenare are 6 atribute si un singur output. Pentru unul din exemple, modelul
+matematic al regresorului corespunde expresiei 10.0 + 5.4 * 8 + (-10.2) * 5 + (-0.1) * 22 + 101.4 * (-5) + 0.0 * 2 + 12.0 * (-3) = -543.0. Ce se intampla cu valoarea prezisa atunci
+atunci cand al cincilea atribut creste cu o unitate?
+	a. altceva
+	b. outputul creste si el cu o unitate
+(X)	c. nimic (0,0 este coeficientul)
+	d. outputul creste si el cu 2 unitati
+
+65. In algoritmul ACO, o furnica va alege urmatorul oras vizitat in functie de:
+(X)	a. distanta pana la acel oras
+	b. fitness-ul ei
+(X)	c. feromonul de pe muchia spre acel oras
+
+66.     	       |Predicted class|	Un clasificator binar a inregistrat rezultatul din figura. Clasificatorul este mai bun decat ghicitul random?
+		       |  Pos  |  Neg  |
+	| Actual | Pos | 5600  |  40   |
+	| class  | Neg | 1900  | 2460  |
+
+	a. nu
+(X)	b. da (80,6 % acuratete)
+
+67. Care dintre urmatorii cromozomi cu reprezentarea bazata pe etichete (label-based) pot reprezenta solutii pentru problema detectarii a 2 comunitati intr-un graf cu 5 noduri:
+(X)	a. (1, 2, 1, 2, 1)
+(X)	b. (4, 2, 4, 2, 4)
+
+68. Formarea comunitatilor intr-un graf este influentata in mod direct de catre:
+(X)	a. numarul vecinilor fiecarui nod
+(X)	b. numarul muchiilor din graf
+
+69. Se considera o problema de regresie in care fiecare exemplu din cele 100 avut la dispozitie pentru antrenare are 6 atribute si un singur output. Pentru unul din exemple, modelul
+matematic al regresorului corespunde expresiei 10.0 + 5.4 * 8 + (-10.2) * 5 + (-0.1) * 22 + 101.4 * (-5) + 0.0 * 2 + 12.0 * (-3) = -543.0. Care sunt valorile atributelor in acest model?
+	a. 43.2, -51.0, -2.2, -507.0, 0.0, -36.0
+	b. 5.4, 8, -10.2, -0.1, 22, 101.4, -5, 0.0, 2, 12.0, 3
+(X)	c. 8, 5, 22, -5, 2, -3 (typos)
+	d. 5.4, -10.2, -0.1, 101.4, 0.0, 12.0
+
+70. In cazul predictiei starii vremii, un algoritm care a folosit informatii colectate in ultimele 10 zile (toate fiind zile insorite) a prezis pentru aceste zile urmatoarele:
+[soare, soare, nori, nori, soare, soare, soare, ceata, ceata, soare]. Acuratetea acestei predictii este:
+(X)	a. 0.6
+	b. 0.4
+	c. 1
+
+71. In problema identificarii comunitatilor, ce se intampla intotdeauna prin aplicarea selectiei prin ruleta?
+	a. se alege cel mai bun cromozom din populatie
+	b. se alege cel mai slab cromozom din populatie
+(X)	c. se poate alege cel mai bun cromozom din populatie
+	d. se poate alege cel mai slab cromozom din populatie (este sansa ca pentru fitness == 0 sa nu primeasca ruleta)
+
+72. Pentru a rezolva problema comisului voiajor cu 4 orase intre care exista 6 muchii, un algoritm genetic va folosi un cromozom ...:
+	a. 6 gene
+	b. 10 gene
+(X)	c. 4 gene
+	d. 24 gene
+
+73. Formarea comunitatilor intr-un graf este influentata in mod direct de catre
+	a. lungimea muchiilor grafului
+(X)	b. numarul vecinilor fiecarui nod
+	c. numarul nodurilor din graf
+(X)	d. numarul muchiilor din graf
+
+
+74. Scopul clusterizarii prin folosirea unui algoritm de tip k-means pentru un set de exemple este acela de a identifica
+	a. o grupare e exemplelor pe clase
+	b. determinarea primilor k cei mai apropiati vecini ai fiecarui exemplu
+	c. cel mai bun exemplu
+
+
+75. Se considera urmatoare retea neuronala artificiala (gata antrenata) care primeste exemple cu 2 atribute de tip Boolean si a carei neuron foloseste functia identica de activare (f(x) = x). Care dintre urmatoarele functii logice sunt aproximate cu ajutorul acestei retele?
+(X)	a. AND
+	b. NOT AND
+	c. OR
+
+
+76. Se considera datasetul alaturat asupra caruia se aplica algoritmul k-means cu k=2 si valorile initiale ale centroizilor fiind u1=[2,2], u2=[-2,2] pana cand atribuirea exemplelor pe clusteri nu se mai modifica. Stabiliti care dintre cele 5 exemplare si-au modificat cel mai frecvent apartenenta la un anumit cluster de-a lungul iteratiilor in timpul antrenarii cu algoritmul k-means.
+(X)	a. exemplul 2
+(X)	b. exemplul 1
+(X)	c. exemplul 4
+(X)	d. exemplul 3
+(X)	e. exemplul 5
+
+u1 = [2,13,-2,235]
+u2 = [-2,093333333333333333333333333333,0,38]
+algoritmul converge dupa prima iteratie, nimic nu se schimba.
+
+
