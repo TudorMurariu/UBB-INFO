@@ -1,0 +1,40 @@
+Metode de selectie pentru algoritmi evolutivi:
+-> selectie bazata pe ranguri
+-> selectie bazata pe ruleta
+
+Operatorul de mutatie folosit de algoritmii evolutivi este un operator:
+-> unar
+
+Operatori de selectie pentru problema comis voiajorului
+-> operatorul bazat pe ranguri , ruleta , k-turnir
+
+Incrucisare cu punct de taietura
+
+Particle swarm optimisation este o tehnica de optimizare bazata pe:
+-> un proces de cautare euristic , cooperativ
+
+Scopul operatorului de selectie este de a favoriza supravietuirea solutiilor celor mai bune
+Scopul operatorului de mutatie este de a genera material genetic nou, reintroduce material genetic pierdut
+
+Elemente comune operatori: fac parte din algoritm evolutiv 
+
+Ce este aritate? 
+
+greedy efectueaza o traversare bazata pe metoda DFS
+
+TF.IDF este un concept care poate fi folosit cand se proceseaza informatii de tip: 
+-> numeric/textual/vizual
+
+Care dintre urmatoarele concepte pot reprezenta derivari (extinderi) ale conceptului de Metoda de invatare supervizata
+-> retea neuronala supervizata
+
+Care dintre urmatoarele metode se poate folosi pentru a rezolva o preblema de regresie?
+-> celor mai mici patrate
+-> ? k-means
+-> gradient descent
+
+Un algoritm de k-means poate fi evaluat folosind:
+-> acuratete/precizie/indecsi de evaluare interna
+
+cei ala recall in regresie
+ce e k-means
