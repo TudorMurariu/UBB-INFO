@@ -18,16 +18,16 @@
 * 📂 **First Semester**
    * [🗂️Databases](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1/Baze%20de%20date)
    * [💂‍♂️English](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1/Engleza)
-   * [🎨Advanced Methods of Programming](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1/Metode%20Avansate%20de%20Programare)
-   * [📉Probability and Statistics](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1/Probabilitati%20si%20statistica)
-   * [🔥Functional and Logic Programming](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1/Programare%20logica%20si%20functionala)
-   * [🌐Computer Networks](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1/Retele)
+   * [🎨Advanced Methods of Programming](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1/Metode%20Avansate%20de%20Programare) (MAP)
+   * [📉Probability and Statistics](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1/Probabilitati%20si%20statistica) 
+   * [🔥Functional and Logic Programming](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1/Programare%20logica%20si%20functionala) (PLF)
+   * [🌐Computer Networks](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul1/Retele) (Retele)
 * 📂 **Second Semester**
    * [🤖AI](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul2/AI)
    * [💂‍♂️English](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul2/Engleza)
    * [⚙️Software Engineering](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul2/Inginerie%20Soft)
-   * [🕵️Systems for Design and Implementation](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul2/Medii%20de%20Proiectare%20si%20Programare)
-   * [🔩Database Management Systems](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul2/Sisteme%20de%20gestiune%20a%20bazelor%20de%20date)
+   * [🕵️Systems for Design and Implementation](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul2/Medii%20de%20Proiectare%20si%20Programare) (MPP)
+   * [🔩Database Management Systems](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul2/Sisteme%20de%20gestiune%20a%20bazelor%20de%20date) (SGBD)
    * [🕸️Web](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul2/Web)
 
 ![Poza cu berimde](https://github.com/TudorMurariu/UBB-INFO/blob/main/an1/Semestrul1/Analiza/Partial/SUbiectPartialA.jpg)<br>
