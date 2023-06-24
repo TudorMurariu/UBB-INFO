@@ -29,6 +29,8 @@
    * [🕵️Systems for Design and Implementation](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul2/Medii%20de%20Proiectare%20si%20Programare) (MPP)
    * [🔩Database Management Systems](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul2/Sisteme%20de%20gestiune%20a%20bazelor%20de%20date) (SGBD)
    * [🕸️Web](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul2/Web)
-
+## Third Year
+* 📂 **First Semester**
+ 
 ![Poza cu berimde](https://github.com/TudorMurariu/UBB-INFO/blob/main/an1/Semestrul1/Analiza/Partial/SUbiectPartialA.jpg)<br>
 Berimde
