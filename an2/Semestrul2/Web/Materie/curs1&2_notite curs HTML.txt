@@ -1,0 +1,122 @@
+Chestionar
+
+https://forms.office.com/r/Q7Vgwcgdcp
+
+Curs 1 & 2 - Programare Web, notite curs
+
+Bibliografie pentru intreg semestrul: www.w3schools.com
+Cerinte curs si laborator
+Examinare finala
+
+Bibliografie pentru cursul 1 si 2 (HTML):
+http://www.w3schools.com/html/default.asp
+http://www.w3schools.com/html/html_forms.asp
+http://www.w3schools.com/html/html5_intro.asp
+http://www.w3schools.com/tags/
+
+HTML
+- definitie,
+- caracteristici
+
+Arhitectura de comunicare WEB
+Browser -> HTTP -> Server Web -> Sistem de fisiere
+Browser -> HTTP -> Server Web -> Server Aplicatii -> Baza de date (sau alte servere sau servicii web)
+                              -> Sistem de fisiere
+
+URL - Definitie
+protocol:[//[user[:password]@]server[:port]][/path][?querystring][#fragment]
+
+Pagini Web - Statice
+           - Dinamice
+
+Tehnologii WEB
+- Client-side: HTML, CSS, JavaScript;
+- Server-side (majoritatea dinamice).
+
+Tehnologii WEB dinamice:
+- Client-side: JavaScript (inclusiv librarii peste JavaScript, jQuery, Angular, React) (deprecate: Flash (AS3), Applet-uri Java);
+- Server-side (majoritatea pentru a genera pagini dinamice): CGI, PHP, Java (JSP, Servlet), ASP, ASP.NET, chiar si JavaScript (Node.js)
+
+Independenta fata de browser, testarea pe mai multe browsere, rezolutii diferite, responsive web design
+Tool-uri necesare in cadrul cursului:
+- browsere,
+- instrumente de debuging: Developer Tools, Firebug,
+- editoare (preferabil un editor care sa faca highlight la sintaxa si autocomplete)
+- servere web si containere de aplicatii
+- servere de date (baze de date)
+
+Protocolul HTTP - caracterul stateless (vs caracterul statefull al unui protocol)
+
+Diferenta dintre incarcarea in browser a unui fisier cerut prin intermediul protocolului HTTP de la un server Web si incarcarea locala din cadrul sistemului de fisiere.
+
+Notiunea de tag - cu corp, fara corp
+
+HTML4.01, XHTML, HTML5 (diferenta dintre standarde si un pic de istorie a lor)
+
+Sintaxa generala a unui tag
+Cu corp: <tag></tag>
+Fara corp: <tag> sau <tag/>
+atribute si valori (attribute minimization)
+<tag attr1="val1" attr2 attr3="val3">
+
+Structura generala a unei pagini web
+
+Taguri importante
+
+- doctype
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
+- html
+- head
+- title
+- a
+- body, bgcolor (deprecated, presentation attribute)
+- font, size, color -> deprecated inlocuit de span
+- div, span (display inline vs. display block, box model)
+- img, src, height, width
+- br
+- b -> strong (insistat pe diferenta dintre prezentare si semantica tagului)
+- i -> em
+- h1, h2, h3
+- center (deprecated, inlocuit cu echivalent CSS)
+- table
+- tr, td, th, colspan, rowspan
+- p
+- iframe
+
+- comentarii in HTML, <!-- --> (uneori folosite pentru hack-uri IE)
+- culori HTML
+- Diactricie HTML & entitati HTML
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="UTF-8">
+
+- formulare web si controale de tip input (continuare in cursul viitor)
+
+Setarea contului personal de la facultate pentru gazduirea paginilor web
+Pe serverul linux de la facultate (dupa logarea cu un client ssh - putty):
+
+$HOME reprezinta valoarea variabile de mediu HOME ce contine home directory-ul utilizatorului (rulati echo $HOME)
+Fiind pozitionati in directorul personal (rulati pwd), creati directorul public_html
+mkdir $HOME/public_html
+Pe directorul personal dati drept de "x" pentru "altii" (se da dreptul de a intra in directorul vostru personal pentru "others" - categorie de utilizatori sub care ruleaza si serverul web Apache care trebuie sa fie capabil sa intre in directorul vostru personal pentru a ajunge in directorul public_html de unde va citi fisierele cerute de catre browser):
+chmod o+x $HOME
+
+Paginile din directorul public_html vor fi servite browserelor de catre
+un server Web Apache care ruleaza pe www.scs.ubbcluj.ro. Astfel, aceste pagini pot sa
+fie accesate cu un URL de forma:
+
+       http://www.scs.ubbcluj.ro/~username
+
+De insistat pe:
+semantica html, taguri noi introduse in html5 si ce e depracated din html4, containere html5,
+h1, h2, h3 in ordine,
+tabele colspan, rowspan,
+linkuri relative, absolute,
+td vs th,
+comentarii, hack-uri IE folosind comentarii,
+iframe cu exemple
+formulare, action, method,
+inputuri de diverse tipuri, diferenta dintre nume si id, label for
+butoane radio, input de tip hidden si explicat utilitatea
+select, option cu value (id din db)
