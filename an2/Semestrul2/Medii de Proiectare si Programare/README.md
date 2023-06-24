@@ -1,6 +1,6 @@
 # Medii de Proiectare si Programare
 
-**Proiect spring boot + frontEnd: https://github.com/TudorMurariu/AgentieDeTurism-SpringBoot**
+**Proiect spring boot + frontEnd: https://github.com/TudorMurariu/AgentieDeTurism-SpringBoot** <br>
 **Spring Boot + Angular Tutorial: https://www.youtube.com/watch?v=8ZPsZBcue50&t=3602s&ab_channel=Amigoscode**
 
 ### Videouri de la profa:
