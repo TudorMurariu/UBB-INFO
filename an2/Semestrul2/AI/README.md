@@ -8,4 +8,8 @@
 3. Data Science: http://leilei.ink/wp-content/uploads/2020/03/Python_Data_Science_Handbook.pdf
 4. Python Automation: https://edu.anarcho-copy.org/Programming%20Languages/Python/Automate%20the%20Boring%20Stuff%20with%20Python.pdf
 
-
+## Exercises:
+1. Numpy https://www.w3resource.com/python-exercises/numpy/index.php
+2. Matplotlib https://www.w3resource.com/graphics/matplotlib/
+3. Pandas https://www.w3resource.com/python-exercises/pandas/index.php
+4. Machine Learning https://www.w3resource.com/machine-learning/scikit-learn/iris/index.php
