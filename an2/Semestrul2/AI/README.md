@@ -1,4 +1,4 @@
-# La aceasta materie va trebui sa invatati mare parte singuri asa ca in urmatoarele randuri am pregatit mai multe materiale (sper sa va ajute)
+## La aceasta materie va trebui sa invatati mare parte singuri asa ca in urmatoarele randuri am pregatit mai multe materiale (sper sa va ajute)
 ## Standford AI course: <br> https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU
 
 ## Ml tutorial : <br> https://www.youtube.com/watch?v=ujTCoH21GlA&list=PLzMcBGfZo4-mP7qA9cagf68V06sko5otr&ab_channel=TechWithTim
