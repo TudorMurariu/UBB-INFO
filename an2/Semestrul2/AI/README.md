@@ -1,7 +1,10 @@
 ## La aceasta materie va trebui sa invatati mare parte singuri asa ca in urmatoarele randuri am pregatit mai multe materiale (sper sa va ajute)
 ## Standford AI course: <br> https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU
 
-## Ml tutorial : <br> https://www.youtube.com/watch?v=ujTCoH21GlA&list=PLzMcBGfZo4-mP7qA9cagf68V06sko5otr&ab_channel=TechWithTim
+## Tutorials:
+1. Ml yt tutorial : https://www.youtube.com/watch?v=ujTCoH21GlA&list=PLzMcBGfZo4-mP7qA9cagf68V06sko5otr&ab_channel=TechWithTim
+2. W3s MatplotLib tutorial: https://www.w3schools.com/python/matplotlib_intro.asp
+3. W3s Ml tutorial: https://www.w3schools.com/python/python_ml_getting_started.asp
 
 ## AI Books: <br>
 1. Data Analysis https://bedford-computing.co.uk/learning/wp-content/uploads/2015/10/Python-for-Data-Analysis.pdf
