@@ -18,3 +18,5 @@
 2. Matplotlib https://www.w3resource.com/graphics/matplotlib/
 3. Pandas https://www.w3resource.com/python-exercises/pandas/index.php
 4. Machine Learning https://www.w3resource.com/machine-learning/scikit-learn/iris/index.php
+5. 
+### Mit Deep Learning Basics (Lex Fridman 2019): https://www.youtube.com/watch?v=O5xeyoRL95U&ab_channel=LexFridman
