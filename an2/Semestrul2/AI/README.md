@@ -3,7 +3,7 @@
 
 ## Tutorials:
 1. Intro to ML on yt: https://www.youtube.com/watch?v=7eh4d6sabA0&ab_channel=ProgrammingwithMosh
-2. Ml yt tutorial : https://www.youtube.com/watch?v=ujTCoH21GlA&list=PLzMcBGfZo4-mP7qA9cagf68V06sko5otr&ab_channel=TechWithTim
+2. ML yt tutorial : https://www.youtube.com/watch?v=ujTCoH21GlA&list=PLzMcBGfZo4-mP7qA9cagf68V06sko5otr&ab_channel=TechWithTim
 3. W3s MatplotLib tutorial: https://www.w3schools.com/python/matplotlib_intro.asp
 4. W3s Ml tutorial: https://www.w3schools.com/python/python_ml_getting_started.asp
 
