@@ -1,5 +1,6 @@
 ## La aceasta materie va trebui sa invatati mare parte singuri asa ca in urmatoarele randuri am pregatit mai multe materiale (sper sa va ajute)
 ## Standford AI course: <br> https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU
+## Harvard CS50 Introduction to AI: https://www.youtube.com/watch?v=gR8QvFmNuLE&list=PLhQjrBD2T381PopUTYtMSstgk-hsTGkVm&ab_channel=CS50
 
 ## Tutorials:
 1. Intro to ML on yt: https://www.youtube.com/watch?v=7eh4d6sabA0&ab_channel=ProgrammingwithMosh
