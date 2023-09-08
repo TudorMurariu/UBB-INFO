@@ -1,4 +1,4 @@
-## La aceasta materie va trebui sa invatati mare parte singuri asa ca in urmatoarele randuri am pregatit mai multe materiale (sper sa va ajute)
+## La aceasta materie va trebui sa invatati in mare parte singuri asa ca in urmatoarele randuri am pregatit mai multe materiale (sper sa va ajute)
 ## Harvard CS50 Introduction to AI: https://www.youtube.com/watch?v=gR8QvFmNuLE&list=PLhQjrBD2T381PopUTYtMSstgk-hsTGkVm&ab_channel=CS50 (Recomand)
 ## Standford AI course: <br> https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU
 
