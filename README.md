@@ -32,7 +32,7 @@
 ## Third Year
 * 📂 **First Semester**
   * [Limbaje formale si tehnici de compilare]()
-  * [Programare pentru dispozitive mobile]()
+  * [📱Programare pentru dispozitive mobile](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul1/Mobile)
   * [Programare paralela si distribuita]()
   * Optionale:
     * [Computer vision si deep learning]()
