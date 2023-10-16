@@ -49,7 +49,7 @@ Identificatori: Pot conține litere, cifre și underscore (_) și trebuie să î
        * string   = string
        * 🖨️      = cout <<
        * citeste  = cin >>
-       * ❓       = if  (nu sunt sigur daca e simbol sau cuvant cheie)
+       * ❓       = if  (nu sunt sigur daca e operator sau cuvant cheie)
        * altfel   = else
        * 🔁      = while
   
@@ -108,7 +108,7 @@ citeste : 13
 
 ```html
 <program> ::= <antet_program> <functie>
-<antet_program> ::= 🏁 | 🏁 <declarare>
+<antet_program> ::= 🏁 (\n)* | 🏁 <declarare> (\n)*
 <functie> ::= <antet_functie> <corp>
 <antet_functie> ::= <tip> ID (<lista_decl>) | <tip> ID ()
 <tip> ::= int | float | string
@@ -117,10 +117,10 @@ citeste : 13
 <corp> ::= { <instr_compusa> }
 <instr_compusa> ::= <instr> <instr_compusa> | <instr>
 <instr> ::= <declarare> | <atribuire> | <instr_citire> | <instr_afisare> | <instr_while> | <instr_if>
-<declarare> ::= <tip> ID ; | <tip> <atribuire>
+<declarare> ::= <tip> ID ; (\n)* | <tip> <atribuire> (\n)*
 <atribuire> ::= ID = <expr_aritmetica> ;
 <instr_citire> ::= citeste ( ID ) ;
-<instr_afisare> ::= 🖨️ ( <expr_aritmetica> ) ;
+<instr_afisare> ::= 🖨️ ( <expr_aritmetica> ) ; (\n)*
 <expr_aritmetica> ::= <expr_aritmetica> <op_artimetic> <expr_aritmetica> | ID | CONST
 <op_artimetic> ::= + | - | * | / | %
 <instr_while> ::= 🔁 ( <conditie> ) <corp>
@@ -134,6 +134,7 @@ CONST ::= <const_int> | <const_float> | <const_string>
 <const_float> ::= (+ | -)?(0 | 1 | ... | 9)+ | (+ | -)?(0 | 1 | ... | 9)+\.(0 | 1 | ... | 9)*
 <const_string> ::= ".*"
 
+sau
 ID ::= ^[_a-zA-Z]([_a-zA-Z0-9]){0,249}$
 CONST ::= <const_int> | <const_float> | <const_string>
 <const_int> ::= ^[+-]?[0-9]+$
@@ -239,3 +240,11 @@ int main() {
     return 0; // eroare - return nedefinit
 }
 ```
+
+
+
+### Diferente MLP si C++
+
+1. nu exista for
+2. nu se pot declara vectori
+
