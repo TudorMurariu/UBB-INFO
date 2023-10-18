@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1697615213 source:c:\users\tudor\onedrive\desktop\ubb info\an3\semestrul1\ppd\lab in class\lab3\dinamic\main.cpp
+	<iostream>
+	<thread>
+	<chrono>
+
