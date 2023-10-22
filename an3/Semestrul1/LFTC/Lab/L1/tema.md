@@ -92,6 +92,8 @@ citeste : 13
 >=      : 25
 ❓      : 26
 🏁      : 27
+"       : 28
+main    : 29
 ```
 
 **Mapa Semne Regex:**
