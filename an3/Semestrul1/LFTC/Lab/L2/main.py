@@ -8,7 +8,7 @@ cod = ""
 with open('cod.cpp', 'r', encoding='utf-8') as f:
     cod = f.read()
 
-ts = getTS(cod, keywords)
+ts, exception = getTS(cod, keywords)
 
 # Print the TS table
 print('TS')
@@ -18,7 +18,7 @@ print('--------------------')
 print()
 
 
-fip = getFIP(cod, keywords, ts)
+fip, exception2 = getFIP(cod, keywords, ts)
 
 # print the FIP table
 print('FIP')
@@ -26,3 +26,9 @@ print('--------------------')
 for key in fip.keys():
     print(key + " : " + fip[key])
 print('--------------------')
+
+if exception != None:
+    raise exception
+
+if exception2 != None:
+    raise exception2

@@ -9,12 +9,15 @@ def getTS(cod: str, keywords : dict):
     variables = re.findall(pattern_variables, cod)
     variables = [var[1] for var in variables]
 
+    exception = None
+
     # remove reserved keywords from the variable list
     for var in variables:
         if var in keywords.keys():
             variables.remove(var)
         elif len(var) > 8:
-            raise Exception("A variable must have less than 9 characters")
+            variables.remove(var)
+            exception = Exception("A variable must have less than 9 characters")
 
     ts = BinarySearchTree()
     for var in variables:
@@ -45,4 +48,4 @@ def getTS(cod: str, keywords : dict):
     for c in constants:
         ts.insert(c)
 
-    return ts
+    return ts, exception

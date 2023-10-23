@@ -8,10 +8,10 @@ int main ( ) {
     float P = 2 * pi * raza ;
     float A = pi * raza * raza ;
 
-    🖨️ ( P );
+    🖨️ ( P ) ;
 
     int w = 3 ;
-    int q123456789 = 3 ;
+    int q112345678 = 3 ;
     string cuvant = "abcd" ;
 
     🖨️ ( " " ) ;
