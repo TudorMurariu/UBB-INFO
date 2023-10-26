@@ -23,7 +23,6 @@ public class Vectorizare {
             int startIndex = k * elementsPerThread;
             int endIndex = (k == p - 1) ? totalElements : (k + 1) * elementsPerThread;
 
-
             threads[k] = new MyThread(startIndex, endIndex);
             threads[k].start();
         }

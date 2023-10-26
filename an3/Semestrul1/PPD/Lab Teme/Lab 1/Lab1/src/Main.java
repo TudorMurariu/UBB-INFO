@@ -18,14 +18,14 @@ public class Main {
 //        Secvential p1 = new Secvential(N, n, p, mat, convMat);
 //        p1.run();
 
-//        Linii p2 = new Linii(N, n, p, mat, convMat);
-//        p2.run();
+        Linii p2 = new Linii(N, n, p, mat, convMat);
+        p2.run();
 
 //        Coloane p3 = new Coloane(N, n, p, mat, convMat);
 //        p3.run();
 
-        Vectorizare p4 = new Vectorizare(N, n, p, mat, convMat);
-        p4.run();
+//        Vectorizare p4 = new Vectorizare(N, n, p, mat, convMat);
+//        p4.run();
 
         long endTime = System.currentTimeMillis();
         System.out.println();

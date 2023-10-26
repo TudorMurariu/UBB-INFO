@@ -1,4 +1,14 @@
 Tip Matrice,Nr threads,Timp executie
-,4,
-,4,0
-,4,1.44E-05
+Vectorizare,4,1.44E-05
+Vectorizare,4,1.52E-05
+Vectorizare,5,1.55E-05
+Vectorizare,2,1.41E-05
+Coloane,4,1.65E-05
+Coloane,5,1.58E-05
+Coloane,2,1.24E-05
+Coloane,2,1.46E-05
+Linii,5,1.64E-05
+Linii,2,1.57E-05
+Linii,10,9.4E-06
+Linii,2,1.4E-05
+Linii,4,1.6E-05

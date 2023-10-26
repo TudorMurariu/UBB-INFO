@@ -4,12 +4,9 @@
 #include <fstream>
 using namespace std;
 
-const int MAX_N = 100;
-
 int N, n, p;
-int mat[MAX_N][MAX_N];
-int convMat[MAX_N][MAX_N];
-int newMat[MAX_N][MAX_N];
+int **mat, **convMat;
+int **newMat;
 
 void readInput() {
     ifstream inputFile("date.txt");
@@ -19,16 +16,22 @@ void readInput() {
     }
 
     inputFile >> N;
+    mat = new int*[N];
+    newMat = new int*[N];
 
     for (int i = 0; i < N; ++i) {
+        mat[i] = new int[N];
+        newMat[i] = new int[N];
         for (int j = 0; j < N; ++j) {
             inputFile >> mat[i][j];
         }
     }
 
     inputFile >> n;
+    convMat = new int*[n];
 
     for (int i = 0; i < n; ++i) {
+        convMat[i] = new int[n];
         for (int j = 0; j < n; ++j) {
             inputFile >> convMat[i][j];
         }
@@ -40,7 +43,9 @@ void readInput() {
 }
 
 void secvential() {
+    int **newMat = new int*[N];
     for (int i = 0; i < N; ++i) {
+        newMat[i] = new int[N];
         for (int j = 0; j < N; ++j) {
             int sum = 0;
             for (int i1 = 0; i1 < n; ++i1) {
@@ -211,7 +216,7 @@ void vectorizare() {
     thread threads[p];
 
     for(int k=0;k<p;++k) {
-        int startIndex = k * elementsPerThread;
+        int startIndex = k * elementsPerThread + restCompleted;
         int endIndex = (k == p - 1) ? totalElements : (k + 1) * elementsPerThread;
 
         if(rest != 0) {
@@ -219,6 +224,7 @@ void vectorizare() {
             ++endIndex;
             ++restCompleted;
         }
+
 
         threads[k] = thread(ThreadVectorizare(startIndex, endIndex));
     }
@@ -242,8 +248,8 @@ int main()
     readInput();
     //secvential();
     //linii();
-    coloane();
-    //vectorizare();
+    //coloane();
+    vectorizare();
 
     auto stop = chrono::high_resolution_clock::now();
     chrono::duration<double, std::micro> duration = stop - start;
