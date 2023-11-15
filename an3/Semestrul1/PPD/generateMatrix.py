@@ -1,6 +1,6 @@
 import random
 n = 10000
-m = 10
+m = 10000
 
 with open('data.txt', 'w') as f:
     for i in range(n):

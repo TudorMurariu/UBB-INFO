@@ -57,7 +57,7 @@ public class Main {
     }
 
     private static void readInput() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("date.txt"));
+        Scanner scanner = new Scanner(new File("date1.txt"));
         N = scanner.nextInt();
         M = scanner.nextInt();
         mat = new int[N][M];
@@ -87,22 +87,17 @@ public class Main {
             int[][] arr = new int[2][M];
 
             if(start > 0)
-                for(int j = 0;j < M;++j)
-                    arr[0][j] = mat[start - 1][j];
+                System.arraycopy(mat[start - 1], 0, arr[0], 0, M);
 
             if(end < N)
-                for(int j = 0;j < M;++j)
-                    arr[1][j] = mat[end][j];
+                if (M >= 0) System.arraycopy(mat[end], 0, arr[1], 0, M);
 
             int[][] matCopy = new int[end - start][M];
             for(int i = start;i < end;++i)
-                for(int j = 0;j < M;++j)
-                    matCopy[i - start][j] = mat[i][j];
+                if (M >= 0) System.arraycopy(mat[i], 0, matCopy[i - start], 0, M);
 
             try {
-//                System.out.println("aaa");
                 barrier.await();
-//                System.out.println("bbb");
             } catch (InterruptedException | BrokenBarrierException e) {
                 throw new RuntimeException(e);
             }

@@ -1,167 +1,238 @@
-#include <barrier>
 #include <iostream>
-#include <thread>
-#include <chrono>
 #include <fstream>
+#include <barrier>
+#include <string>
+#include <chrono>
+#include <thread>
 using namespace std;
 
-int N, M, n, p;
-int** mat, ** convMat;
-int** newMat;
+int p;
+int n, m, k;
 
-void readInput() {
-    ifstream inputFile("date.txt");
-    if (!inputFile) {
-        cerr << "Error opening file." << endl;
-        return;
-    }
+int** f;
+int** c;
 
-    inputFile >> N;
-    inputFile >> M;
-    mat = new int* [N];
-    newMat = new int* [N];
-
-    for (int i = 0; i < N; ++i) {
-        mat[i] = new int[M];
-        newMat[i] = new int[M];
-        for (int j = 0; j < M; ++j) {
-            inputFile >> mat[i][j];
+void read_input_file(const string& filename) {
+    ifstream fin(filename);
+    fin >> n >> m;
+    f = new int* [n];
+    for (int i = 0; i < n; ++i)
+        f[i] = new int[m];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            fin >> f[i][j];
         }
     }
-
-    inputFile >> n;
-    convMat = new int* [n];
-
-    for (int i = 0; i < n; ++i) {
-        convMat[i] = new int[n];
-        for (int j = 0; j < n; ++j) {
-            inputFile >> convMat[i][j];
+    fin >> k >> k;
+    c = new int* [k];
+    for (int i = 0; i < k; ++i)
+        c[i] = new int[k];
+    for (int i = 0; i < k; i++) {
+        for (int j = 0; j < k; j++) {
+            fin >> c[i][j];
         }
-    }
-
-    inputFile >> p;
-
-    inputFile.close();
-}
-
-void secvential() {
-    int** newMat = new int* [N];
-    for (int i = 0; i < N; ++i) {
-        newMat[i] = new int[N];
-        for (int j = 0; j < M; ++j) {
-            int sum = 0;
-            for (int i1 = 0; i1 < n; ++i1) {
-                for (int j1 = 0; j1 < n; ++j1) {
-                    if (i - n / 2 + i1 >= 0 && j - n / 2 + j1 >= 0 && i - n / 2 + i1 < N && j - n / 2 + j1 < N) {
-                        sum += mat[i - n / 2 + i1][j - n / 2 + j1] * convMat[i1][j1];
-                    }
-                }
-            }
-            newMat[i][j] = sum;
-        }
-    }
-
-    // Print the new matrix
-    for (int i = 0; i < N; ++i) {
-        for (int j = 0; j < M; ++j) {
-            cout << newMat[i][j] << " ";
-        }
-        cout << endl;
     }
 }
 
-class ThreadLinii {
-private:
-    int start, stop;
+void write_to_file() {
+    ofstream fout("C:\\Users\\tudor\\OneDrive\\Desktop\\L2\\output2.txt");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            fout << f[i][j] << " ";
+        }
+        fout << '\n';
+    }
+}
 
-public:
-    ThreadLinii(int start, int stop, barrier barrier_) : start(start), stop(stop) {}
+void deallocateMemory(int**& arr, int rows) {
+    for (int i = 0; i < rows; i++) {
+        delete[] arr[i];
+    }
+    delete[] arr;
+    arr = nullptr;
+}
 
-    void operator()() {
-        int arr[2][M];
-        int copyMat[stop - start][M];
+void aplica_convolutie(int i, int j, int end, int* prev_line, int* curr_line, int* next_line) {
+    int s = 0;
+    int diff = (k - 1) / 2;
+    for (int x = 0; x < k; x++) {
+        for (int y = 0; y < k; y++) {
+            int ii = i - diff + x;
+            int jj = j - diff + y;
+            if (ii < 0) {
+                ii = 0;
+            }
+            if (ii >= n) {
+                ii = n - 1;
+            }
+            if (jj < 0) {
+                jj = 0;
+            }
+            if (jj >= m) {
+                jj = m - 1;
+            }
 
-        if (start > 0)
-            for (int j = 0; j < M; ++j)
-                arr[0][j] = mat[start - 1][j];
+            int elem_cov;
+            if (ii < i) {
+                elem_cov = prev_line[jj];
+            }
+            else if (ii == i) {
+                elem_cov = curr_line[jj];
+            }
+            else if (ii >= end) {
+                elem_cov = next_line[jj];
+            }
+            else {
+                elem_cov = f[ii][jj];
+            }
+            s += elem_cov * c[x][y];
+        }
+    }
+    f[i][j] = s;
+}
 
-        if (stop < N)
-            for (int j = 0; j < M; ++j)
-                arr[1][j] = mat[stop][j];
+void run_sequential() {
+    int* previous_line = new int[m];
+    int* curr_line = new int[m];
+    int* next_line = new int[m];
 
-        for (int i = start; i < stop; ++i)
-            for (int j = 0; j < M; ++j)
-                matCopy[i - start][j] = mat[i][j];
+    for (int i = 0; i < m; i++) {
+        previous_line[i] = f[0][i];
+        curr_line[i] = f[0][i];
+        next_line[i] = f[n - 1][i];
 
-        barrier.arrive_and_wait();
-        for (int i = start; i < stop; ++i) {
-            for (int j = 0; j < M; ++j) {
-                int sum = 0;
-                for (int i1 = 0; i1 < n; ++i1) {
-                    for (int j1 = 0; j1 < n; ++j1) {
-                        if (i - n / 2 + i1 >= 0 && j - n / 2 + j1 >= 0 && i - n / 2 + i1 < N && j - n / 2 + j1 < M)
-                            if (i - n / 2 + i1 < start)
-                                sum += arr[0][j - n / 2 + j1] * convMat[i1][j1];
-                            else if (i - n / 2 + i1 >= stop)
-                                sum += arr[1][j - n / 2 + j1] * convMat[i1][j1];
-                            else
-                                sum += matCopy[i - n / 2 + i1 - start][j - n / 2 + j1] * convMat[i1][j1];
-                    }
-                }
-                newMat[i][j] = sum;
+    }
+    for (int i = 0; i < n; i++) {
+        if (i != 0) {
+            for (int j = 0; j < m; j++) {
+                previous_line[j] = curr_line[j];
+                curr_line[j] = f[i][j];
+            }
+        }
+        for (int j = 0; j < m; j++) {
+            aplica_convolutie(i, j, n, previous_line, curr_line, next_line);
+        }
+    }
+}
+
+void verify_results() {
+    int** thread_result = f;
+    run_sequential();
+    int** seq_result = f;
+    for (int i = 0; i < n; ++i)
+    {
+        for (int j = 0; j < m; ++j)
+        {
+            if (thread_result[i][j] != seq_result[i][j])
+            {
+                std::cerr << "The result is not correct!" << endl;
+                return;
             }
         }
     }
-};
+}
 
-void linii(barrier barrier_) {
-    int startRow = 0;
-    int endRow = -1;
-    int rowsPerThread = N / p;
-    int remainingRows = N % p;
+void rows_thread(int start, int end, barrier<_No_completion_function>& my_barrier) {
+    int* previous_line = new int[m];
+    int* curr_line = new int[m];
+    int* next_line = new int[m];
 
-    thread threads[p];
-
-    for (int k = 0; k < p; ++k) {
-        endRow = startRow + rowsPerThread;
-        if (remainingRows > 0) {
-            endRow++;
-            remainingRows--;
-        }
-
-        threads[k] = thread(ThreadLinii(startRow, endRow));
-        startRow = endRow;
+    int previous_line_number = start - 1;
+    int next_line_number = end;
+    if (previous_line_number < 0) {
+        previous_line_number = 0;
+    }
+    if (next_line_number >= n) {
+        next_line_number = n - 1;
     }
 
-    for (int i = 0; i < p; ++i)
+    for (int i = 0; i < m; i++) {
+        previous_line[i] = f[previous_line_number][i];
+        curr_line[i] = f[previous_line_number][i];
+        next_line[i] = f[next_line_number][i];
+    }
+
+    my_barrier.arrive_and_wait();
+
+    for (int i = start; i < end; i++)
+    {
+        if (i != previous_line_number) {
+            for (int j = 0; j < m; j++)
+            {
+                previous_line[j] = curr_line[j];
+                curr_line[j] = f[i][j];
+            }
+        }
+
+        for (int j = 0; j < m; j++) {
+            aplica_convolutie(i, j, end, previous_line, curr_line, next_line);
+        }
+    }
+}
+
+void run_with_rows() {
+    thread* threads = new thread[p];
+    int cat = n / p;
+    int rest = n % p;
+    int start = 0;
+    int end;
+    barrier my_barrier{ p };
+    for (int i = 0; i < p; i++) {
+        int currentNoRows = cat;
+        if (rest > 0) {
+            rest--;
+            currentNoRows++;
+        }
+        end = start + currentNoRows;
+        threads[i] = thread(rows_thread, start, end, ref(my_barrier));
+        start += currentNoRows;
+    }
+    for (int i = 0; i < p; i++)
+    {
         threads[i].join();
+    }
 }
 
-int check(int a[N][M], int b[N][M]) {
-    int i, j;
-    for (i = 0; i < N; i++)
-        for (j = 0; j < M; j++)
-            if (a[i][j] != b[i][j])
-                return 0;
-    return 1;
-}
-
-int main()
+int main(int argc, char* argv[])
 {
-    readInput();
-    barrier barrier_{ p };
+    //p = stoi(argv[1]);
+    //const int file_number = stoi(argv[2]);
+    //const int run_option = stoi(argv[3]);
+    //const int check_result = stoi(argv[4]);
+    //const string filename = "input" + to_string(file_number) + ".txt";
 
-    secvential();
-    auto start = chrono::high_resolution_clock::now();
+    p = stoi("1");
+    const int file_number = stoi("2");
+    const int run_option = stoi("0");
+    const int check_result = stoi("1");
+    const string filename = "C:\\Users\\tudor\\OneDrive\\Desktop\\L2\\input" + to_string(file_number) + ".txt";
 
-    linii(barrier_);
+    read_input_file(filename);
 
-    auto stop = chrono::high_resolution_clock::now();
-    chrono::duration<double, std::micro> duration = stop - start;
-    double microseconds = duration.count();
-    cout << check(newMat, mat);
+    const auto start = std::chrono::high_resolution_clock::now();
+    switch (run_option)
+    {
+    case 0:
+        run_sequential();
+        break;
+    case 1:
+        run_with_rows();
+        break;
+    default:
+        std::cerr << "Invalid run option." << std::endl;
+        return 0;
+    }
 
-    cout << microseconds / 1000000 << endl;
+    const auto end = std::chrono::high_resolution_clock::now();
+    const std::chrono::duration<double, std::milli> duration = end - start;
+    std::cout << duration.count();
 
-    return 0;
+    if (check_result == 1)
+    {
+        verify_results();
+        write_to_file();
+    }
+
+    deallocateMemory(f, n);
+    deallocateMemory(c, k);
 }
