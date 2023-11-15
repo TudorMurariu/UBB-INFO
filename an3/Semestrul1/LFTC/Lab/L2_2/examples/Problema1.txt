@@ -1,0 +1,13 @@
+🏁
+
+int main()
+{
+    double r ⬅️ 10;
+    double pi;
+    pi ⬅️ -3.1415;
+    double arie, perimetruuu;
+
+    arie ⬅️ 2 * pi * r - 0;
+    perimetruuu ⬅️ pi * r * r;
+    print( arie ) ;
+}

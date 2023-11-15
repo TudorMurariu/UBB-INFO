@@ -1,0 +1,18 @@
+🏁
+
+int main() {
+    int a;
+    int b;
+    
+    citire (a);
+    citire (b);
+
+    int r ⬅️ -1;
+    🔁 (r != 0) {
+        r ⬅️ a % b;
+        a ⬅️ b;
+        b ⬅️ r;
+    }
+
+    print (a);
+}
