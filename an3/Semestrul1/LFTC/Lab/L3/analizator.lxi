@@ -1,0 +1,154 @@
+%{
+#include <stdlib.h>
+#include <string.h>
+#include "BST.c"
+
+typedef struct {
+	char atom[100];
+	int codAtom;
+	int codAtomTS;
+}FIP;
+
+typedef struct {
+	char atom[100];
+	int codAtomTS;
+}TS;
+
+int lenFIP = 0;
+FIP fip[300];
+struct TreeNode *ts;
+
+int currentLine = 1;
+
+void addToFIP(char atom[], int codAtom, int codAtomTS) {
+	strcpy(fip[lenFIP].atom, atom);
+	fip[lenFIP].codAtom = codAtom;
+	fip[lenFIP].codAtomTS = codAtomTS;
+	lenFIP++;
+}
+
+
+void printFIP() {
+	printf("FORMA INTERNA A PROGRAMULUI:\n");
+	int i;
+	for (i = 0; i < lenFIP; i++)
+		if (fip[i].codAtomTS == -1)
+			printf("%s  |  %d  |  -\n", fip[i].atom, fip[i].codAtom);
+		else
+			printf("%s  |  %d  |  %d\n", fip[i].atom, fip[i].codAtom, fip[i].codAtomTS);
+}
+%}
+
+%option noyywrap
+
+DIGIT           [0-9]
+LETTER          [a-z_]
+ID              {LETTER}({LETTER}|{DIGIT})*
+KEYWORD         ❓|altfel|citire|🔁|print|int|float|string|main|🏁
+OPERATOR        "=="|"+"|"-"|"%"|"*"|"<="|">="|"<"|">"|"!="|"="
+SEPARATOR       ";"|"{"|"}"|"("|")"|"."|"<<"|">>"|","|"#"|"<"|">"
+CONST           {DIGIT}|[1-9]{DIGIT}+|{DIGIT}"."{DIGIT}{DIGIT}*
+%%
+
+{KEYWORD} {
+	int codAtom = -1;
+	if (strcmp("❓", yytext) == 0) codAtom = 2;
+	if (strcmp("altfel", yytext) == 0) codAtom = 3;
+	if (strcmp("citire", yytext) == 0) codAtom = 4;
+	if (strcmp("int", yytext) == 0) codAtom = 5;
+	if (strcmp("float", yytext) == 0) codAtom = 6;
+	if (strcmp("main", yytext) == 0) codAtom = 7;
+	if (strcmp("🔁", yytext) == 0) codAtom = 8;
+	if (strcmp("print", yytext) == 0) codAtom = 9;
+	if (strcmp("string", yytext) == 0) codAtom = 10;
+	if (strcmp("🏁", yytext) == 0) codAtom = 11;
+
+	addToFIP(yytext, codAtom, -1);
+}
+
+{ID} {
+	if (yyleng > 8) {
+        printf("Error: Length of yytext exceeds 8 characters\n");
+	}
+
+	int index = getIndexRecursive(ts, yytext, 0);
+	if(index == -1)
+	{
+		ts = insertRecursive(ts, yytext); 
+		index = getIndexRecursive(ts, yytext, 0);
+	}
+	addToFIP(yytext, 0, index);
+}
+
+{CONST} {
+	int index = getIndexRecursive(ts, yytext, 0);
+	if(index == -1)
+	{
+		ts = insertRecursive(ts, yytext); 
+		index = getIndexRecursive(ts, yytext, 0);
+	}
+	addToFIP(yytext, 1, index);
+}
+
+
+{OPERATOR} {
+	int codAtom = -1;
+	if (strcmp("+", yytext) == 0) codAtom = 16;
+	if (strcmp("-", yytext) == 0) codAtom = 17;
+	if (strcmp("*", yytext) == 0) codAtom = 18;
+	if (strcmp("%", yytext) == 0) codAtom = 19;
+	if (strcmp(">", yytext) == 0) codAtom = 20;
+	if (strcmp("<", yytext) == 0) codAtom = 21;
+	if (strcmp("<=", yytext) == 0) codAtom = 22;
+	if (strcmp(">=", yytext) == 0) codAtom = 23;
+	if (strcmp("!=", yytext) == 0) codAtom = 24;
+	if (strcmp("==", yytext) == 0) codAtom = 25;
+	if (strcmp("=", yytext) == 0) codAtom = 26;
+	if (strcmp("++", yytext) == 0) codAtom = 27;
+	addToFIP(yytext, codAtom, -1);
+}
+
+{SEPARATOR} {
+	int codAtom = -1;
+	if (strcmp(";", yytext) == 0) codAtom = 28;
+	if (strcmp("{", yytext) == 0) codAtom = 29;
+	if (strcmp("}", yytext) == 0) codAtom = 30;
+	if (strcmp("(", yytext) == 0) codAtom = 31;
+	if (strcmp(")", yytext) == 0) codAtom = 32;
+	if (strcmp(".", yytext) == 0) codAtom = 33;
+	if (strcmp(",", yytext) == 0) codAtom = 34;
+	if (strcmp("<<", yytext) == 0) codAtom = 35;
+	if (strcmp(">>", yytext) == 0) codAtom = 36;
+
+	addToFIP(yytext, codAtom, -1);
+}
+
+[\n] {
+	currentLine++;
+}
+
+[ \t\r]+ ;
+
+. {
+	printf("Error on line %d. Unrecognized character: %s\n", currentLine, yytext);
+}
+
+%% 
+int main(argc, argv) 
+int argc; 
+char **argv; 
+{ 
+	printf("ABCACSAC\n");
+	++argv, --argc;
+	if (argc > 0) 
+		yyin = fopen(argv[0], "r"); 
+	else 
+		yyin = stdin; 
+	
+    ts = initializeTree();
+    
+    yylex();
+    printf("TABELA DE SIMBOLURI\n");
+	inorderRecursivePrint(ts);
+	printFIP();
+}
