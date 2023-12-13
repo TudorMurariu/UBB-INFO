@@ -1,0 +1,3 @@
+8. Definiti o clasa gramaticala. Simbolurile gramaticii (terminale si neterminale) sunt caractere.
+ Se da un fisier cu regulile de productie ale unei gramatici. cititi gramatica din fisier si
+ afisati regulile de productie care contin un anumit ne-terminal (citit de la tastatura).
