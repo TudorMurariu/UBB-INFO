@@ -6,3 +6,4 @@ MIT Introduction to Deep Learning: https://www.youtube.com/watch?v=QDX-1M5Nj7s&l
 Cool tutorial (Handwritten Digit Recognition Using PyTorch): https://towardsdatascience.com/handwritten-digit-mnist-pytorch-977b5338e627
 
 1. networks and backpropagation: https://www.youtube.com/watch?v=VMj-3S1tku0
+2. optimizers: https://www.youtube.com/watch?v=JhQqquVeCE0&ab_channel=DigitalSreeni
