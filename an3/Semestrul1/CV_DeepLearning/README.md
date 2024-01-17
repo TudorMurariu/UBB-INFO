@@ -9,6 +9,7 @@ Videos:
 1. networks and backpropagation: https://www.youtube.com/watch?v=VMj-3S1tku0
 2. optimizers: https://www.youtube.com/watch?v=JhQqquVeCE0&ab_channel=DigitalSreeni
 3. Gradient Descent in 3mins: https://www.youtube.com/watch?v=qg4PchTECck
+4. Dataset and DataLoader: https://www.youtube.com/watch?v=PXOzkkB5eH0
 
 Sites:
 1. Gradient Descent: https://www.ibm.com/topics/gradient-descent
