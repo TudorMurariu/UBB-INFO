@@ -10,7 +10,7 @@ Videos:
 2. optimizers: https://www.youtube.com/watch?v=JhQqquVeCE0&ab_channel=DigitalSreeni
 3. Gradient Descent in 3mins: https://www.youtube.com/watch?v=qg4PchTECck
 4. Dataset and DataLoader: https://www.youtube.com/watch?v=PXOzkkB5eH0
-5. Vanishing/Exploding Gradients: [https://www.youtube.com/watch?v=qhXZsFVxGKo](https://www.youtube.com/watch?v=qO_NLVjD6zE)
+5. Vanishing/Exploding Gradients: https://www.youtube.com/watch?v=qO_NLVjD6zE
 
 Sites:
 1. Gradient Descent: https://www.ibm.com/topics/gradient-descent
