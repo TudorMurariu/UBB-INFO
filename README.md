@@ -31,13 +31,13 @@
    * [🕸️Web](https://github.com/TudorMurariu/UBB-INFO/tree/main/an2/Semestrul2/Web)
 ## Third Year
 * 📂 **First Semester**
-  * [Limbaje formale si tehnici de compilare](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul1/LFTC)
+  * [💬Limbaje formale si tehnici de compilare](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul1/LFTC)
   * [📱Programare pentru dispozitive mobile](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul1/Mobile)
-  * [Programare paralela si distribuita](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul1/PPD)
+  * [🔪Programare paralela si distribuita](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul1/PPD)
   * Optionale:
-    * [Computer vision si deep learning](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul1/CV_DeepLearning)
-    * [Interactiunea om-calculator]()
-    * [Proiectarea produselor inovative]()
+    * [🦾Computer vision si deep learning](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul1/CV_DeepLearning)
+    * [👶Interactiunea om-calculator]()
+    * [🚀Proiectarea produselor inovative]()
  
 ![Poza cu berimde](https://github.com/TudorMurariu/UBB-INFO/blob/main/an1/Semestrul1/Analiza/Partial/SUbiectPartialA.jpg)<br>
 Berimde

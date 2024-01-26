@@ -5,4 +5,12 @@ Tenserflow playground: [link](https://playground.tensorflow.org/#activation=tanh
 MIT Introduction to Deep Learning: https://www.youtube.com/watch?v=QDX-1M5Nj7s&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI <br>
 Cool tutorial (Handwritten Digit Recognition Using PyTorch): https://towardsdatascience.com/handwritten-digit-mnist-pytorch-977b5338e627
 
+Videos:
 1. networks and backpropagation: https://www.youtube.com/watch?v=VMj-3S1tku0
+2. optimizers: https://www.youtube.com/watch?v=JhQqquVeCE0&ab_channel=DigitalSreeni
+3. Gradient Descent in 3mins: https://www.youtube.com/watch?v=qg4PchTECck
+4. Dataset and DataLoader: https://www.youtube.com/watch?v=PXOzkkB5eH0
+5. Vanishing/Exploding Gradients: https://www.youtube.com/watch?v=qO_NLVjD6zE
+
+Sites:
+1. Gradient Descent: https://www.ibm.com/topics/gradient-descent
