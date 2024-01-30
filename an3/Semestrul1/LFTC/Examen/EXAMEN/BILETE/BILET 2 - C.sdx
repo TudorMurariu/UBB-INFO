@@ -1,0 +1,10 @@
+Bilet 2
+1.a) Ce este analiza sintactica
+1.b) Procedeul de obtinere a unui AF dintr-o GR
+1.c) Regulile de constructie pentru tabelul SLR
+
+2.a)O gramatica data, sa se obtina ER si AF
+2.b)O gramatica data, sa se calculeze functia FIRST
+
+3.a)Stiind ca L1, L2 sunt limbaje independente de context, sa se arate ca L1L2 este un limbaj independent de context.
+3.b)Se dau 5 stari/productii, sa se decida care din ele pot coexista intr-o stare pentru LR(0)

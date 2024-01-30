@@ -1,0 +1,13 @@
+Subject:	 [info20052008] LFTC Bilet 5
+
+1
+a) Care-i ideea la LR(1). 1pct
+b) def si algoritm pt functia FOLLOW 1pct
+c) Ce este un automat finit 1pct
+2 Se da o gramatica
+a) sa se construiasca colectia canonica LR(0) 2pct
+b) sa se dem ca limbajul generat de gramatica L(G)=L 2pct
+["=>" prin inductie ; "<=" prin derivari succesive]
+3.
+a) ? 1pct
+b) ? 1pct

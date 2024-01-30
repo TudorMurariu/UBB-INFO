@@ -1,0 +1,6 @@
+biletul 8: (cred ca ii asta)
+1. fazele compilarii, constructia tabelului LR(1), eliminarea simbolurilor inaccesibile
+2. AF care accepta L={(01)^n + 01^m | n>=0, m>0}
+    Se da colectia canonica, sa se construiasca tabelul LR(0) si analiza
+3. algoritm pt construirea tabelului LL(1)
+    dati conditia necesara si suficienta ca o gramatica sa fie LR(0)

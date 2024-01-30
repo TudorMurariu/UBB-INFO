@@ -1,0 +1,27 @@
+I 1) definiti expresiile regulare 
+2) algoritmul lr(0) 
+II 
+1) din expresie regulara in AF si gramatica regulara 
+2) first si follow pt o gramatica 
+III
+ 1) str de date eficienta pt arborele de analiza sintactica 
+ 2) apd
+
+
+alt bilet
+1.1 Def. arbore de analiza sintactica 
+1.2 Alg pentru eliminarea neterminalilor neproductivi
+2.1 Se da o gramatica -> AF si expr regular 
+2.2 Se da o gramatica -> starile LR(0) 
+3.1 Structura de date eficienta pentru Tabela de simboluri + explicatie. 
+3.2 Automat pushdown pentru L = aˆn b^n c^m , n > 0, m >= 0
+
+altul
+
+1. A) definitie expresii regulare
+B) algoritm lr0
+
+2. A) 1(0* + 01)* in gramatica si automat
+B) first follow
+3. A) stR de. Date pt arborele sintactic (nu stiu ce e aia)
+B) push down. L = a^nb^m cu n>0 m>0

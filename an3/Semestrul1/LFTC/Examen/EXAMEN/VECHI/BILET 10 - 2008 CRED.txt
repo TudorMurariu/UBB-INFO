@@ -1,0 +1,23 @@
+Subject:	 [info20052008] Bilet 10 - LFTC
+
+1
+a Ierarhia lui Chomsky
+b algoritmult pentru colectia canonica a analizorului LR0
+c tranzitiile LL1
+
+2
+a Sa se arate ca limbajul L={0^n1^n|n> =1} nu e regular
+(0^n=0 la puterea n)
+b Sa se arate ca gramatica G nu e de tip LR0, G=(N,Sigma,P, S)
+N={S,L,R}
+Sigma={=,*,id}
+P:S->L=R
+S->R
+L->*R
+L->id
+R->L
+
+3
+a Sa se arate ca gramatica G={{S},{a},{ S->Sa|a}, S} este regulara
+b Sa se scrie un algoritm de completare a tabelului LR0, pornind de
+la gramatica si colectia canonica

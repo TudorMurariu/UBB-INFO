@@ -1,0 +1,9 @@
+1. a) Principiul LL( k )
+   b) Limbajul generat de o gramatica si limbajul generat de un automat
+   c) Algoritm ce construieste colectia canonica pentru LR(1)
+
+2. a) Sa se construiasca automatul pentru expresia ab* + bc+
+   b) Se da gramatica, FIRST, FOLLOW. Sa se construiasca tabelul LL(1) si sa se analizeze o secventa
+
+3. a) Structuri de date pentru: element LR(0), stare LR(0), colectia canonica LR(0)
+   b) Algoritm de construire a tabelului SLR. Se da: gramatica, colectia canonicala fel

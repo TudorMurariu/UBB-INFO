@@ -1,0 +1,16 @@
+a - defini?ia gramaticii
+b - algoritm follow
+2 
+a - automat finit ?i gramatica regulara pentru (10+01)*11*
+b - starile canonice LR(1) pentru ceva
+3
+a - structura eficienta pentru starile analizatorului cu reveniri
+b - cod intermediar cu cvadruple pt o bucata de program
+
+bilet 5:
+1.a. limbaj generat de gramatica si limbaj acceptat de automat finit
+b. algoritm FIRST
+2. a. se dadea un automat finit. sa faci gramatica regulara si expresia regulara
+b. se dadea o gramatica. sa faci colectia canonica pt LR(1)
+3. a. structura de date eficienta pt analiza sintatica LR(0)
+b. cod intermediar

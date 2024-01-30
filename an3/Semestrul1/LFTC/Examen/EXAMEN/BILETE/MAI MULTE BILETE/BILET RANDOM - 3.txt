@@ -1,0 +1,12 @@
+1.
+a)enumerati modurile de reprezentare a TS
+b)definiti functia goto LR(0)
+c)un algoritm de calcul pt FIRST
+
+2.
+a)fiind data o expresie regulara .... dati gramatica regulara care o genereaza
+2)Fiind data gramtica G={...} si valorile functiei First ..calculati functia FOLLOW
+
+3.
+a)pt o gramatica ,fie w apartine L(G) ,demostrati ca  w apartine lui L(G) <=>exita un arbore de analiza sintactica  care are ca frontiera w
+b)demontrari  ca orice gramatica SLR este si LR(0)

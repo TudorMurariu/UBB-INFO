@@ -1,0 +1,14 @@
+1.
+a)Sa se defineasca functia goto a analizorului lr(0)(sau la care analizor)(1p)
+b)sa se enumere modalitatile de organizare a tabelei de simboluri(1p) 
+c)Sa se descrie un algoritm care construieste functia first(1p)
+
+2.
+a)Se dadeao gramatica si se dadeau valorile functiei first pt ceva neterminale si 
+sa se calculeze functiile follow pt fiecare pt care se poate sauasa ceva:D(1p)
+b) Se dadea o expresie regulara si sa construiesti gramatica regulara corespunzatoare
+(2p)
+3.
+a)Sa se construiasca automatul push - down pentru analizorul ll(1)
+b)sa se demonstreze ceva teorema de la limbaje formale....nu mai tine minte
+

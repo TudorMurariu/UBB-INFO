@@ -1,0 +1,12 @@
+Bilet 5.
+1. a) Principiul LR(k).
+    b) Definitia pentru FOLLOW si algoritmul
+    c) Definitia automatului finit
+
+2. a) S->abA, A->bS|b
+       Sa se determine limbajul +demonstratie
+    b) Colectia canonica pentru LR(0)
+      S->aSa, S->bSb, S->c
+
+3. a) o conditie necesara si suficienta pentru ca o gramatica regulara sa fie de tipul LL(1)
+    b)Ce puteti spune despre Follow(A) aplicat unei gramatici regulare

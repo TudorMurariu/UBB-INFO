@@ -1,0 +1,21 @@
+subiect 1
+
+1. sa se scrie reprezentarea echivalenta pt instr. pascal in cod intermediar cu 3 adrese, reprezentare
+cvadruple:
+
+repeat
+	a:=a-b
+until a<b
+
+2. se da gramatica:
+S->aSbS
+S->aS
+S->c
+
+a) sa se demonstreze ca gramatica este ambigua
+b) sa se rescrie gramatica pt eliminarea ambiguitatii
+
+3. Sa se scrie gramatica si APD pt gramatica care genereaza toate combinatiile corecte de paranteze 
+
+4. se da o gramatica..
+Sa se verifice cu LL(1) daca secventa abb apartine L(G)

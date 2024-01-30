@@ -1,0 +1,24 @@
+subiect LFTC 2014
+
+1.
+s:=0
+for i:=1 to 256 do
+	s:=s+1
+se cere: cod intermediar cu 3 adrese, repr cvadruple.
+ce valoare are i la iesire? (atentie la codul intermediar)
+
+2.L={a^n, b^n, c^n | n nr natural} este regular ?
+
+3.
+scrieti gramatici pt
+L1={a^n, b^n | n nr natural}
+L2={a^n, b^2n | n >=1 }
+L = L1 U L2
+
+4.
+S->AA
+A->aA
+A->b
+A->epsilon
+
+este grmatica LL(1) ?

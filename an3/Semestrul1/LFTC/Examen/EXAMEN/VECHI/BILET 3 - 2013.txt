@@ -1,0 +1,25 @@
+Bilet nr. 3 - acelasi la toti (24.01.2013)
+
+1p of
+
+1.(2 p)  
+Se cere o reprezentare echivalenta pentru urmatoarea instructiune Pascal, in cod intermediar cu 3 adrese, reprezentare cvadruple: repeat  a:=a-b  until a<b 
+
+2.(2.5 p) 
+Pentru urm. limbaj : L= {a^(2n)c| n>=1} sa se dea o gramatica echivalenta care il genereaza. Sa se dem ca L=L(G).
+
+3. (2 p) 
+Se da urmatoarea gramatica:
+ S->aSbS
+ S->aS
+ S->c
+ a) Sa se dem. ca e ambigua.
+ b) Sa se dea o gramatica neambigua echivalenta. Enuntati ideile pe care v-ati bazat cand ati contruit-o.
+ 
+4. (2.5 p)
+Se da gramatica: 
+S->AA
+A->aS
+A->b
+a) Se se construiasca FIRST1 si FOLLOW1.
+b) Folosinf LL(1), sa se verifice daca abbb apartine lui L(G).

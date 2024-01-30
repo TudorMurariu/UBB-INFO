@@ -1,0 +1,14 @@
+Bilet 4
+
+1
+a) princpiul analizei LL(k)
+b) Limbajul acceptat de o gramatica si limbajul acceptat de un automat
+c) ceva de SLR/LR nu mai stiu exact
+
+2
+a) din ER  in automat finit
+b) se dadeau o gramatica, First si Fallow si se cerea tabelul LL(1) si analiza unei secvente
+
+3
+a) structuri de date pentru a reprezenta mai multe chestii cu care lucreaza LR (0)
+b) algoritmul de constructie a tabelei pentru SLR

@@ -1,0 +1,20 @@
+1.a. Define parsing
+b. Give an alg to transform a regular Grammar to a FA(Finite Automata)
+c. Give the rules to complete the SLR table
+
+
+2a.Se da gramatica:
+S->0A | 1B
+B-> 1 | 1B
+A-> 0 | 1B | 0A
+Give the coresponding FA and reg expr
+b. Given a grammar compute FIRST
+
+
+3a. Given 2 cfg L1 and L2 dem that L1L2 is a cfc( cfg=contex free grammar)
+b.Which states can not coexist in a LR(0) state?
+    [A->P.Q] and [B->Q.P]
+    [A->P.Q] and [B->QP.]
+    [A->.x] and [B->x.]
+     [A->P.Q] and [B->P.Q]
+    [A->P.Q] and [A->.Q] 

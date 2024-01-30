@@ -1,0 +1,29 @@
+Bilet 2
+
+1)(1+1+1)
+   a)Ce este analiza sintactica?
+   b)Reguli de construire a tabelului SRL
+   c)Descrie algoritmul care construieste un Automat FInit din Gramatica REgulara
+
+2) (2+2)
+  a) Se da gramatica G: ({S,A,B},{0,1},P,S)
+   
+     P: S->0A|1B
+        A->0A|1B|0
+        B->1|1B
+     Se cere Automatul finit si expresia regulara
+
+  b) Se da gramatica G: ({S,A,B,C,D},{a,b,c,d,e},P,S)
+     
+     P: S->Aa
+        A->BC
+        B->b|Dd
+        C->epsilon|cA
+        D->e
+      Se cere funstia First
+
+3)(1+1)
+  a)Daca L1 si L2 sunt limbaje independente de context , demonstrati ca L1L2 e limbaj independent de context
+  b) Care perechi pot coexista in LR(0)
+     ///nu am mai apucat sa le scriu
+       

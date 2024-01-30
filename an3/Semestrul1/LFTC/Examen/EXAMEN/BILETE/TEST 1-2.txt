@@ -1,0 +1,21 @@
+Test 1
+
+1. a) Ce sunt expr. regulare ? 
+   b) Functia GOTO pt LR(1) . 
+   c) Algoritm pt eliminarea Eps productiilor.
+2. a) Ti se da un automat sa generezi limbajul. 
+   b) Ti se da colectia canonica pt gramatica unui SLR si sa faci tabelul + sa vezi daca o secv data este sau nu acceptata.
+3. a) Algoritm pt construirea tabelului LR(1)
+   b) Daca ai L - limbaj indep de context, sa dem ca si L* este indep de context.
+
+Test 2
+
+1. a) Principiul LL(k)
+   b) Limbajul acceptat de o gramatica + limbajul acceptat de un automat finit.
+   c) Algoritm ce construieste colectia canonica la gramatici LR(1).
+
+2. a) ab*+bc+ (c-ul la puterea +) - automat finit
+   b) Se da gramatica, First,FOllow. Sa se construiasca tabelul pt analizorul LL(1) si sa se verifice daca o secv apartine limbajului.
+
+3. a) Structuri de date pt: elementul de analiza LR(0), stare LR(0) si colectia LR(0).
+   b) Se da gramatica, colectia canonica si FOLLOW. Sa se scrie un algoritm care construieste tabelulu SLR.

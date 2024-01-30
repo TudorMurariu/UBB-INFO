@@ -1,0 +1,23 @@
+1) Se considera urmatoarea instructiune pascal:
+ if a >= b then a := a-b
+ a) Se cere o reprezentare in cod intermediar cu 3 adrese, reprezentare cvadruple
+ b) Gramatica independenta de context ce descrie (cel putin) sintaxa intructiunii if si dati un AF care sa fie un cuvant al gramaticii (ceva de genul)
+ c) Atributati gramatica
+ Introduceti cel putin atriibutul cod (intermediar cu 3 adrese) si
+ definiti regula de evaluare pt atributul cod folosind si alte
+ atribute daca e nevoie
+ d) Descrieti evaluarea atributului cod pt exemplul dat (folosind si arbori de derivare)
+ 
+2) Consideram gramatica:
+ S -> abS
+ S -> ab
+ si
+ L = { (ab)^n | n >= 1 }. Aratati ca L(G) = L
+ 
+3) Definiti folosind multimi limbajul numerelor naturale in reprezentare zecimala.
+ Dati un AF care accepta acest limbaj.
+ 
+4) Fie gramatica:
+ S -> aSc
+ S -> i
+ Verificati ca aic apartine L(G) folosind SLR

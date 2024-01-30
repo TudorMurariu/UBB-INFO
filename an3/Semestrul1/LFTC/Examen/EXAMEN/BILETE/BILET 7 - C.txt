@@ -1,0 +1,14 @@
+Examen LFTC
+Bilet 7
+
+1.	a) Definiti arborele de analiza sintactica
+b) Formarea tabelului LL(1)
+c) Algoritmul de eliminare a simbolurilor neproductive
+
+2.	a) Limbajul generat de AF: 
+
+
+b) Se da o colectie canonca, sa se faca tabelul SLR + analiza unei secvente.
+
+3.	a) Dati un algoritm pentru constructia tabelului LR(1), avand ca input colectia canonica si gramatica.
+b) Daca L e 

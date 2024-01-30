@@ -1,0 +1,1 @@
+Seminarii: https://www.cs.ubbcluj.ro/~dana/LFTC/Resurse/activitati.htm
