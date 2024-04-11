@@ -38,6 +38,14 @@
     * [🦾Computer vision si deep learning](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul1/CV_DeepLearning)
     * [👶Interactiunea om-calculator]()
     * [🚀Proiectarea produselor inovative]()
+* 📂 **Second Semester**
+  * [📏Calcul Numeric](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul2/Calcul%20Numeric)
+  * Verificarea și Validarea Sistemelor Soft
+  * Elaborare Licenta
+  * Optionale:
+    * [🎮Game Dev](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul2/Game%20Dev)
+    * Gestiunea sitemelor soft
+    * Etica
  
 ![Poza cu berimde](https://github.com/TudorMurariu/UBB-INFO/blob/main/an1/Semestrul1/Analiza/Partial/SUbiectPartialA.jpg)<br>
 Berimde
