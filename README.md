@@ -39,7 +39,7 @@
     * [👶Interactiunea om-calculator]()
     * [🚀Proiectarea produselor inovative]()
 * 📂 **Second Semester**
-  * [Calcul Numeric](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul2/Calcul%20Numeric)
+  * [📏Calcul Numeric](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul2/Calcul%20Numeric)
   * Verificarea și Validarea Sistemelor Soft
   * Elaborare Licenta
   * Optionale:
