@@ -37,7 +37,7 @@
   * Optionale:
     * [🦾Computer vision si deep learning](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul1/CV_DeepLearning)
     * [👶Interactiunea om-calculator]()
-    * [🚀Proiectarea produselor inovative]()
+    * [🚀Proiectarea produselor inovative](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul1/PPI)
 * 📂 **Second Semester**
   * [📏Calcul Numeric](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul2/Calcul%20Numeric)
   * Verificarea și Validarea Sistemelor Soft
