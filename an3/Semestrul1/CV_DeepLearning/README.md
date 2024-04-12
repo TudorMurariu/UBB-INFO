@@ -16,4 +16,6 @@ Videos:
 Sites:
 1. Gradient Descent: https://www.ibm.com/topics/gradient-descent
 
-Playlist cool de la 3blue1brown: https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+Playlists:
+1. 3blue1brown DeepLearning: https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi <br>
+2. Image classification with PyTorch: https://www.youtube.com/playlist?list=PL3Dh_99BJkCEhE7Ri8W6aijiEqm3ZoGRq
