@@ -1,0 +1,13 @@
+Probleme: 1,2,3,4,5
+
+3,4 - tratate simultan (functia exponentiala, cate noduri vrem > 2)
+
+Probleme practice: 1,2,3,4
+
+1 - iese repede
+2 - ca la 1 
+3 - mai greu (alegem sqrt(x) si noduri: x=81, 100, 121, 144 etc)
+4 - problema de desenat
+
+
+!!!Polinomul de interpolare Lagrange al unui polinom este polinomul insusi.

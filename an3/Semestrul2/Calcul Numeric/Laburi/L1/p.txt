@@ -1,0 +1,4 @@
+problemele 5 7 si 8
+
+functia pentru care testam o sa fie e la x
+parametrii : k = 2 , m = 2

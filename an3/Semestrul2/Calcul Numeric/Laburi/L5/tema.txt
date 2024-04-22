@@ -1,0 +1,8 @@
+Tema:
+1,2 si 4
+
+-de implementat algoritmi
+(matrici rare si la ex 3 gasesc)
+- incearca dimensiuni cat mai mari 20x20
+
+!! diag: comanda de reat matrice diagonala

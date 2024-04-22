@@ -1,0 +1,4 @@
+tema: 
+1 (prima problema 1) 
+2, 3
+(ajuta formulele de la labul 2 , sunt si in curs)

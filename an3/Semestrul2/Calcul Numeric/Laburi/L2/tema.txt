@@ -1,0 +1,12 @@
+2, 3
+
+52 in pdf de citit i guess
+
+cuadratura = formula numerica de aproximare a unei integrale
+discretizare = impartire a domeniului pe care lucram?? 
+
+
+!!!  Aprox cu 3 zecimale exacte =>>>    ( eroarea < 10 la -3 )
+
+btw la problema 3 ca input
+x 4 5    (x = 10*pi)

@@ -1,0 +1,21 @@
+%Application on two-points boundary value problem
+%Example
+%y''-p(x)y'-q(x)y=r(x)
+%a=1, b=2; alpha=1, beta=2;
+%N=9;
+%p(x)=-2/x; q(x)=2/x^2; r(x)=sin(ln(x))/x^2;
+
+p=@(x) -2./x;
+q=@(x) 2./x.^2;
+r=@(x) sin(log(x))./x.^2;
+a=1; b=2;
+alpha=1; bet=2; 
+N=9;
+[x,y]=bilocal(p,q,r,a,b,alpha,bet,N);
+[x2,y2]=bilocalsim(p,q,r,a,b,alpha,bet,N);
+%Exact solution 
+c2=1/70*(8-12*sin(log(2))-4*cos(log(2)));
+c1=11/10-c2;
+ye=c1*x+c2./x.^2-3/10*sin(log(x))-1/10*cos(log(x));
+%plot(x,y,x,ye,x2,y2)
+disp([x,y,y2,ye])

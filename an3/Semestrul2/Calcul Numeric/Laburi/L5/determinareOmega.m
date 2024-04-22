@@ -1,0 +1,1 @@
+function omega=determinareOmega(A)% determina valoarea optima a parametrului omega% A - matricea sistemului  M = diag(diag(A))  N = M-A;  T = M\N;  e = eig(T); % vector de valori proprii  p = max(abs(e)); %raza spectrala a matricei Jacobi  omega = 2/(1+sqrt(1-p^2));

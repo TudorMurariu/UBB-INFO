@@ -1,0 +1,112 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+      <!--
+This HTML is auto-generated from an M-file.
+To make changes, update the M-file and republish this document.
+      -->
+      <title>plotrmembrnf</title>
+      <meta name="generator" content="MATLAB 7.7">
+      <meta name="date" content="2008-11-14">
+      <meta name="m-file" content="plotrmembrnf"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head>
+   <body>
+      <div class="content"><pre class="codeinput"><span class="comment">% Plot first fifty approximate and exact frequencies</span>
+[w,wex,modes,x,y,nx,ny,ax,by]=recmemnfr;
+
+m=1:min([50,length(w),length(wex)]);
+pcter=100*(wex(m)-w(m))./wex(m);
+
+clf; plot(m,wex(m),<span class="string">'k-'</span>,m,w(m),<span class="string">'k.'</span>,m,pcter,<span class="string">'k--'</span>)
+xlabel(<span class="string">'frequency number'</span>);
+ylabel(<span class="string">'frequency and % error'</span>)
+legend(<span class="string">'exact frequency'</span>,<span class="string">'approx. frequency'</span>,<span class="keyword">...</span>
+    <span class="string">'percent error'</span>,2)
+s=[<span class="string">'MEMBRANE FREQUENCIES FOR AX / BY = '</span>,<span class="keyword">...</span>
+    num2str(ax/by,5),<span class="string">' AND '</span>,num2str(nx*ny),<span class="keyword">...</span>
+    <span class="string">' GRID POINTS'</span>];
+title(s), grid <span class="string">on</span>, shg
+</pre><img vspace="5" hspace="5" src="plotrmembrnf_01.png" alt=""> <p class="footer"><br>
+            Published with MATLAB&reg; 7.7<br></p>
+      </div>
+      <!--
+##### SOURCE BEGIN #####
+% Plot first fifty approximate and exact frequencies
+[w,wex,modes,x,y,nx,ny,ax,by]=recmemnfr;
+
+m=1:min([50,length(w),length(wex)]);
+pcter=100*(wex(m)-w(m))./wex(m);
+
+clf; plot(m,wex(m),'k-',m,w(m),'k.',m,pcter,'kREPLACE_WITH_DASH_DASH')
+xlabel('frequency number');
+ylabel('frequency and % error')
+legend('exact frequency','approx. frequency',...
+    'percent error',2)
+s=['MEMBRANE FREQUENCIES FOR AX / BY = ',...
+    num2str(ax/by,5),' AND ',num2str(nx*ny),...
+    ' GRID POINTS'];
+title(s), grid on, shg
+
+##### SOURCE END #####
+-->
+   </body>
+</html>

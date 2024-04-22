@@ -1,0 +1,29 @@
+function [X,Y,Z]=HermiteBoolSum(u,v,f,f10,f01,f11)
+%HERMITESUMBOOL - interpolant Hermite suma booleana 
+%noduri [0,1]x[0,1]
+%apel [X,Y,Z]=HermiteBoolSum(u,v,f,f10,f01,f11)
+%u,v -punctele
+%f - functia
+%f10, f01, f11 - derivatele partiale
+
+h00=@(t) 2*t.^3-3*t.^2+1;
+h10=@(t) -2*t.^3+3*t.^2;
+h01=@(t) t.^3-3*t.^2+t;
+h11=@(t) t.^3-t.^2;
+[X,Y]=meshgrid(u,v);
+h00X=h00(X); h00Y=h00(Y); h10X=h10(X); h10Y=h10(Y);
+h01X=h01(X); h01Y=h01(Y); h11X=h11(X); h11Y=h11(Y);
+zx0=zeros(size(X)); zy0=zeros(size(Y));
+zx1=ones(size(X)); zy1=ones(size(Y));
+f0Y=f(zx0,Y); fX0=f(X,zy0); f1Y=f(zx1,Y); fX1=f(X,zy1);
+
+Z=h00X.*f0Y+h10X.*f1Y+h01X.*f10(zx0,Y)+h11X.*f10(zx1,Y)+...
+    h00Y.*fX0+h10Y.*fX1+h01Y.*f01(X,zy0)+h11Y.*f01(X,zy1)...
+    -h00X.*h00Y*f(0,0)-h00X.*h10Y*f(0,1)...
+    -h00X.*h01Y*f01(0,0)-h00X.*h11Y*f01(0,1)...
+    -h10X.*h00Y*f(1,0)-h10X.*h10Y*f(1,1)...
+    -h10X.*h01Y*f01(1,0)-h10X.*h11Y*f01(1,1)...
+    -h01X.*h00Y*f10(0,0)-h01X.*h10Y*f10(0,1)...
+    -h01X.*h01Y*f11(0,0)-h01X.*h11Y*f11(0,1)...
+    -h11X.*h00Y*f10(1,0)-h11X.*h10Y*f10(1,1)...
+    -h11X.*h01Y*f11(1,0)-h11X.*h11Y*f11(1,1);

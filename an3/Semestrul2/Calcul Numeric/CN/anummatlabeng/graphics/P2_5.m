@@ -1,0 +1,6 @@
+subplot(1,3,1)
+para(1,2)
+subplot(1,3,2)
+para(1,1)
+subplot(1,3,3)
+para(2,1)

@@ -1,0 +1,23 @@
+%P6_8 Operatorul Favard-Szasz
+
+ft=@(x) 1./(1+x.^2);
+limsup=input('limita superioara:');
+nrt=input('numar de termeni')
+x=linspace(0,limsup,200);
+i=0;
+ss=cell(5,1);
+for m=10:10:50
+    s=zeros(size(x));
+    u=ones(size(x));
+    for k=0:limsup
+        u=(m*x).^k/gamma(k+1).*exp(-m*x)*ft(k/m);
+        s=s+u;
+    end
+    plot(x,s); hold on
+    i=i+1;
+    ss{i}=sprintf('m=%d',m);
+end
+legend(ss,'Location','EastOutside')
+plot(x,ft(x),'r-')
+hold off
+  

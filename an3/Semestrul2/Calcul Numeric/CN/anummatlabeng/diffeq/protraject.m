@@ -1,0 +1,59 @@
+function [y,x,t]=protraject(angle,vinit,grav,dragc,xfinl)
+%PROTRAJECT - trajectory of a projectile
+% angle - initial angle in degrees
+% vinit - initial velocity of the projectile
+% gravty - the gravitational constant
+% cdrag - drag coefficient 
+% xfinl - largest x value for which the
+% solution is computed. %
+% y,x,t - the y, x and time vectors produced
+% by integrating the equations of motion
+
+% Default data case generated 
+if nargin < 5, xfinl=1000; end
+if nargin < 4, dragc=0.002; end
+if nargin < 3, grav=9.81; end
+if nargin < 2, vinit=340; end
+if nargin < 1, angle=45; end
+
+% Evaluate initial velocity
+ang=pi/180*angle;
+vtol=vinit/1e6;
+%initial conditions
+z0=[vinit*cos(ang); vinit*sin(ang); 0; 0];
+
+% Integrate the equations of motion defined
+% in function projcteq
+deoptn=odeset('RelTol',1e-6,'Events',@eventsh);
+[x,z,te,ze,ie]=ode45(@projcteq,[0,xfinl],z0,deoptn);
+
+% Plot the trajectory curve
+y=z(:,3); t=z(:,4);
+plot(x,y,'-',x(end),y(end),'o');
+ss=sprintf('{t_{final} = %5.2f\\rightarrow }',t(end));
+text(x(end),y(end),ss,'HorizontalAlignment','Right',...
+    'FontSize',14);
+xlabel('x','FontSize',14); ylabel('y','FontSize',14);
+title(['Projectile Trajectory for ', ...
+    'Velocity Squared Drag'],'FontSize',14);
+axis('equal'); grid on; 
+%error
+if ~isempty(te)
+    error('initial velocity too small')
+end
+
+%-----------------------
+    function zp=projcteq(t,y)
+        %PROJCTEQ - DE of projectile
+        v=sqrt(y(1)^2+y(2)^2);
+        zp=[-dragc*v; -(grav+dragc*v*y(2))/y(1); ...
+            y(2)/y(1); 1/y(1)];
+    end
+%------------------------
+    function [val,isterm,dir] = eventsh(t,y)
+        %EVENTSH - event handling function
+        val = abs(y(1)) - vtol;
+        dir = -1;
+        isterm =1;
+    end
+end

@@ -1,0 +1,9 @@
+%P2_4
+subplot(2,2,1)
+corkscrew(1,1)
+subplot(2,2,2)
+corkscrew(3,1)
+subplot(2,2,3)
+corkscrew(1,0)
+subplot(2,2,4)
+corkscrew(1,-3/2)

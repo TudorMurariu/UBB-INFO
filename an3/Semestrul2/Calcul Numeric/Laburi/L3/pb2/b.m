@@ -1,0 +1,1 @@
+for n = 10:15    k = 1:n;    t = ones(1, n)./k;     V = vander(t);    cond(V, inf)end

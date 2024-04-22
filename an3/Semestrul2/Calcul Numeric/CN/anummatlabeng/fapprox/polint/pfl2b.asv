@@ -1,0 +1,17 @@
+function  Z=pfl2b(x,t)
+%PFL2b - comput basic Lagrange polynomials
+%call Z=PFL2B(x,t)
+%x - nodurile de interpolare
+%t - punctele in care se face evaluarea
+
+m=length(x);
+n=length(t);
+[T,X]=meshgrid(t,x);
+TT=T-X;
+Z=zeros(m,n);
+[U,V]=meshgrid(x,x);
+XX=U-V;
+for i=1:m
+   TX=prod(XX([1:i-1,i+1:m],i));
+   Z(i,:)=prod(TT([1:i-1,i+1:m],:))/TX;
+end

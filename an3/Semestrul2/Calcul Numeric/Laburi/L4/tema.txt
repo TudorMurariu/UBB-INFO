@@ -1,0 +1,4 @@
+1,2,4
+
+Moetodele directe studiate in l4 se recomanda a fi folosite la 
+sistemele de ecuatii liniare in care matricea sistemului este Densa.

@@ -1,0 +1,12 @@
+%THT - test heat transfer
+c = [1e-8, 1e-7, 1e-6];
+n=20;
+x=zeros(n+2,3);
+y=x;
+L=1;
+s={'r-','k--','b:'}
+for k=1:length(c)
+    [x(:,k),y(:,k)]=HeatTransfer(L,c(k),n);
+end
+h=plot(x,y);
+for k=1:
