@@ -1,0 +1,1 @@
+x = [0 1 2];fx = exp(x);dfx = exp(x);valLagrange = Lagrange(x, fx, 0.25)valHermite = hermite(x, fx, dfx, 0.25)exp(0.25)
