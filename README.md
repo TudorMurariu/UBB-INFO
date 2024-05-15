@@ -44,8 +44,8 @@
   * [🎓Elaborare Licenta](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul2/Licenta)
   * Optionale:
     * [🎮Game Dev](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul2/Game%20Dev)
-    * Gestiunea sitemelor soft
-    * Etica
+    * 📒Gestiunea sitemelor soft
+    * [⛨Etica](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul2/Etica)
  
 ![Poza cu berimde](https://github.com/TudorMurariu/UBB-INFO/blob/main/an1/Semestrul1/Analiza/Partial/SUbiectPartialA.jpg)<br>
 Berimde
