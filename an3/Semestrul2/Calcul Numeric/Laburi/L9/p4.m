@@ -14,9 +14,11 @@ zs = polyval(cs, xs);
 est = polyval(cs, (1975 - 1950) / 50);
 plot(t, y, 'o', x, zs, '-', w, est, '*');
 text(1990, est, num2str(est));
-title("Popula?ia SUA în anul 1975", "FontSize", 14);
+title("Populatia SUA in anul 1975", "FontSize", 14);
 xlabel("Anul", "FontSize", 12);
 ylabel("Milioane", "FontSize", 12);
+
+
 %{
 w = 2010;
 
@@ -27,7 +29,7 @@ zs = polyval(cs, xs);
 est = polyval(cs, (2010 - 1950) / 50);
 plot(t, y, 'o', x, zs, '-', w, est, '*');
 text(1990, est, num2str(est));
-title("Popula?ia SUA în anul 2010", "FontSize", 14);
+title("Popula?ia SUA in anul 2010", "FontSize", 14);
 xlabel("Anul", "FontSize", 12);
 ylabel("Milioane", "FontSize", 12);
 %}
