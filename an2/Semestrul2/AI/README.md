@@ -9,9 +9,9 @@
 4. W3s Ml tutorial: https://www.w3schools.com/python/python_ml_getting_started.asp
 
 ## AI Books: <br>
-1. Data Analysis https://bedford-computing.co.uk/learning/wp-content/uploads/2015/10/Python-for-Data-Analysis.pdf
-2. Machine Learning: https://falksangdata.no/wp-content/uploads/2022/07/python-machine-learning-and-deep-learning-with-python-scikit-learn-and-tensorflow-2.pdf
-3. Data Science: http://leilei.ink/wp-content/uploads/2020/03/Python_Data_Science_Handbook.pdf
+1. Data Analysis https://nibmehub.com/opac-service/pdf/read/Python%20for%20Data%20Analysis%20_%20data%20wrangling%20with%20Pandas-%20NumPy-%20and%20IPython.pdf
+2. Machine Learning: https://www.nrigroupindia.com/e-book/Introduction%20to%20Machine%20Learning%20with%20Python%20(%20PDFDrive.com%20)-min.pdf
+3. Data Science: https://github.com/terencetachiona/Python-Data-Science-Handbook/blob/master/Python%20Data%20Science%20Handbook%20-%20Jake%20VanderPlas.pdf
 4. Python Automation: https://edu.anarcho-copy.org/Programming%20Languages/Python/Automate%20the%20Boring%20Stuff%20with%20Python.pdf
 
 ## Exercises:
