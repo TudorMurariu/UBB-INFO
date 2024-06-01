@@ -40,7 +40,7 @@
     * [🚀Proiectarea produselor inovative](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul1/PPI)
 * 📂 **Second Semester**
   * [📏Calcul Numeric](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul2/Calcul%20Numeric)
-  * Verificarea și Validarea Sistemelor Soft
+  * [🧪Verificarea și Validarea Sistemelor Soft](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul2/VVSS)
   * [🎓Elaborare Licenta](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul2/Licenta)
   * Optionale:
     * [🎮Game Dev](https://github.com/TudorMurariu/UBB-INFO/tree/main/an3/Semestrul2/Game%20Dev)
