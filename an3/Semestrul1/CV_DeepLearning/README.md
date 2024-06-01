@@ -12,6 +12,7 @@ Videos:
 4. Dataset and DataLoader: https://www.youtube.com/watch?v=PXOzkkB5eH0
 5. Vanishing/Exploding Gradients: https://www.youtube.com/watch?v=qO_NLVjD6zE
 6. Transormers: https://www.youtube.com/watch?v=wjZofJX0v4M
+7. YOLO algorithm (object detection): https://www.youtube.com/watch?v=ag3DLKsl2vk
 
 Sites:
 1. Gradient Descent: https://www.ibm.com/topics/gradient-descent
