@@ -1,0 +1,21 @@
+Ion Popescu 10/3/1961:Colinei,2,Cluj-Napoca:0740-123456 3500
+Vasile Georgescu 5/10/1942:Piata Republicii,35,Cluj-Napoca:0722-654321 2850
+Alexandru Ionescu 3/7/1971:Aleea Bibliotecii,10,Cluj-Napoca:0721-124536 3875
+Tudor Alexandrescu 2/5/1963:Aleea Baisoara,53,Cluj-Napoca:0742-235641 2355
+Victor Baciu 25/9/1968:Eroilor,105,Floresti:0723-162453 4560
+Horatiu Vasilescu 23/4/1965:Piata Marasti,13,Cluj-Napoca:0741-485769 37005
+Adrian Pintea 11/8/1957:Lacrimioarelor,22,Cluj-Napoca:0742-258369 1942
+Mircea Diaconu 6/11/1946:Prieteniei,7,Someseni:0744-147258 2565
+Ovidiu Moldovan 17/1/1942:Almasului,65,Cluj-Napoca:0722-123789 1968
+Puiu Calinescu 21/6/1920:Pitesti,88,Cluj-Napoca:0723-452163 1971
+Olga Tudorache 24/1/1932:Florilor,41,Floresti:0744-458712 1942
+Stela Enache 28/2/1952:Sindicatelor,75,Cluj-Napoca:0745-563214 1946
+Radu Beligan 8/4/1949:Zambilei,98,Someseni:0744-852369 1957
+Octavian Cotescu 17/12/1954:Stejarului,68,Floresti:0745-789456 32150
+Silviu Achim 19/10/1936:Tudor Vladimirescu,18,Cluj-Napoca:0726-369147 1932
+Toma Voicu 27/5/1948:Sportului,43,Floresti:0740-987125 1949
+Ilarion Ciobanu 4/7/1931:Xenopol,32,Cluj-Napoca:0728-456987 1946
+Gheorghe Dinica 30/2/1934:Vrabiilor,6,Someseni:0740-256314 1963
+Liviu Ciulei 26/9/1947:Maramuresului,43,Cluj-Napoca:0741-785469 1920
+Victor Rebengiuc 31/3/1931:Paris,9,Cluj-Napoca:0723-254136 1954
+Vlad Nicolaescu 13/3/1965:Oasului,15,Cluj-Napoca:0745-741289 1949
