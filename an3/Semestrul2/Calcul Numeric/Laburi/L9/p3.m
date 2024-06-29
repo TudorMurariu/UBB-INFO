@@ -9,4 +9,4 @@ a = linsolve(X, Y);
 AB = a(1,1);
 BC = a(2,1);
 CD = a(3, 1);
-fprintf("AB = %7.2f, BC = %7.2f, CD = %7.2f", AB, BC, CD);
+fprintf("AB = %7.2f, BC = %7.2f, CD = %7.2f\n", AB, BC, CD);

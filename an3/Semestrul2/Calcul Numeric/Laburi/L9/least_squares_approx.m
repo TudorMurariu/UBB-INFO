@@ -1,4 +1,4 @@
-%Aproximare folosind metoda celor mai mici p?trate:
+%Aproximare folosind metoda celor mai mici patrate:
 %x, y - date de antrenament; y = f(x)
 %functions - func?iile de baz?
 %points - punctele de aproximat

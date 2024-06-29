@@ -1,0 +1,1 @@
+# Proiect PizzaShop: https://github.com/Sapcile-Rosii/lab1

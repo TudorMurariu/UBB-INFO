@@ -1,0 +1,5 @@
+Sa se imp meth lui newton, metoda secantei, metoda aproximatiilor succesive
+
+2.3 imp newton,  si metoda aproximatiilor succesive pt sis de ecuatii neliniare
+
+
