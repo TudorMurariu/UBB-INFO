@@ -21,4 +21,5 @@ Cool tutorial (Handwritten Digit Recognition Using PyTorch): https://towardsdata
 1. 3blue1brown DeepLearning: https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi <br>
 2. Image classification with PyTorch: https://www.youtube.com/playlist?list=PL3Dh_99BJkCEhE7Ri8W6aijiEqm3ZoGRq
 
+### Fun fact:
 ![image](https://github.com/user-attachments/assets/89730026-1ac9-4d2c-915e-237f03245d5c)
