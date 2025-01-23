@@ -3,10 +3,11 @@
 ## Standford AI course: <br> https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU
 
 ## Tutorials:
-1. Intro to ML on yt: https://www.youtube.com/watch?v=7eh4d6sabA0&ab_channel=ProgrammingwithMosh
-2. ML yt tutorial : https://www.youtube.com/watch?v=ujTCoH21GlA&list=PLzMcBGfZo4-mP7qA9cagf68V06sko5otr&ab_channel=TechWithTim
-3. W3s MatplotLib tutorial: https://www.w3schools.com/python/matplotlib_intro.asp
-4. W3s Ml tutorial: https://www.w3schools.com/python/python_ml_getting_started.asp
+1. Kaggle ML course: https://www.kaggle.com/learn/intermediate-machine-learning
+2. Intro to ML on yt: https://www.youtube.com/watch?v=7eh4d6sabA0&ab_channel=ProgrammingwithMosh
+3. ML yt tutorial : https://www.youtube.com/watch?v=ujTCoH21GlA&list=PLzMcBGfZo4-mP7qA9cagf68V06sko5otr&ab_channel=TechWithTim
+4. W3s MatplotLib tutorial: https://www.w3schools.com/python/matplotlib_intro.asp
+5. W3s Ml tutorial: https://www.w3schools.com/python/python_ml_getting_started.asp
 
 ## AI Books: <br>
 1. Data Analysis https://nibmehub.com/opac-service/pdf/read/Python%20for%20Data%20Analysis%20_%20data%20wrangling%20with%20Pandas-%20NumPy-%20and%20IPython.pdf
