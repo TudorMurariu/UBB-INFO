@@ -5,6 +5,9 @@ Tenserflow playground: [link](https://playground.tensorflow.org/#activation=tanh
 MIT Introduction to Deep Learning: https://www.youtube.com/watch?v=QDX-1M5Nj7s&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI <br>
 Cool tutorial (Handwritten Digit Recognition Using PyTorch): https://towardsdatascience.com/handwritten-digit-mnist-pytorch-977b5338e627
 
+### Books:
+Deep Learning with PyTorch: https://isip.piconepress.com/courses/temple/ece_4822/resources/books/Deep-Learning-with-PyTorch.pdf
+
 ### Videos:
 1. networks and backpropagation: https://www.youtube.com/watch?v=VMj-3S1tku0
 2. optimizers: https://www.youtube.com/watch?v=JhQqquVeCE0&ab_channel=DigitalSreeni
