@@ -2,6 +2,8 @@
 ## Harvard CS50 Introduction to AI: https://www.youtube.com/watch?v=gR8QvFmNuLE&list=PLhQjrBD2T381PopUTYtMSstgk-hsTGkVm&ab_channel=CS50 (Recomand)
 ## Standford AI course: <br> https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU
 
+UBB Course: https://github.com/lauradiosan/AI-UBB
+
 ## Tutorials:
 1. Kaggle ML course: https://www.kaggle.com/learn/intermediate-machine-learning
 2. Intro to ML on yt: https://www.youtube.com/watch?v=7eh4d6sabA0&ab_channel=ProgrammingwithMosh
