@@ -1,3 +1,4 @@
+# BOYCOTT CREIC !!!
 # UBB-INFO
 **🏡 All projects from university + useful resources.**
 ## First Year
